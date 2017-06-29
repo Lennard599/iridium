@@ -129,9 +129,7 @@ public class Iridium {
 		else
 			meinFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		meinFrame.setVisible(true);
-		//meinFrame.setLayout(new BorderLayout());
 		meinFrame.setMenuBar(menue);
-		//meinFrame.add(Feld,BorderLayout.SOUTH);
 		meinFrame.add(scrol);
 		meinFrame.setIconImage(icon.getImage());
 		meinFrame.setMinimumSize(new Dimension(600, 400));
@@ -235,7 +233,11 @@ public class Iridium {
 				OptionenF.add(Jp7);
 		});
 
-		getshort.addActionListener(e -> methods.getShortcut());
+		getshort.addActionListener(e -> {
+			methods.getShortcut();
+			methods.posi = 0;
+			methods.p = 0;
+			methods.firstup();});
 
 		Programme.addActionListener(e -> {
 				ArrayList<String> a = methods.getProgramm();
@@ -307,7 +309,11 @@ public class Iridium {
 		
 		Hilfei.addActionListener(e -> methods.Hilfe());
 
-		cleari.addActionListener(e -> methods.clear());
+		cleari.addActionListener(e -> {
+			methods.clear();
+			methods.posi = 0;
+			methods.p = 0;
+			methods.firstup();});
 
 		shortcuti.addActionListener(e -> methods.Short());
 		

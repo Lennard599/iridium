@@ -37,7 +37,7 @@ public class methods extends Iridium {
 	//private static String cursor = "<span style=\"color: yellow\">_</span>";
 	private static String out_l,out_r = "";
 	private static ArrayList<String> history = new ArrayList<>();
-	private static int posi,p = 0;
+	public static int posi,p = 0;
 
 	private static Runnable Ru = new Runnable() {
 		public void run() {
@@ -230,8 +230,7 @@ public class methods extends Iridium {
 		prefix = "<html><font color=yellow>" + NameB + "@" + System.getProperty("os.name") + ": " + "</font>";
 		out_l = "";
 		Aus.setContentType("text/html");
-		Inhalt += prefix + Farbe ;
-		Aus.setText(Inhalt + cursor);
+		Aus.setText(Inhalt + prefix + Farbe + cursor);
 	}
 
 	public static void updatek(){
@@ -254,7 +253,7 @@ public class methods extends Iridium {
 	    			String local_out = out_l + out_r;
 	    			out_l = local_out.substring(0, posi);
 	    			out_r = local_out.substring(posi);
-	    			Aus.setText(Inhalt + out_l + cursor + out_r);
+	    			Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 				}
 				if (e.getKeyCode() == 38)
 				{
@@ -265,7 +264,7 @@ public class methods extends Iridium {
 						out_l = history.get(p);
 						p++;
 						Aus.setContentType("text/html");
-						Aus.setText(Inhalt + out_l + cursor + out_r);
+						Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 					}
 				}
 
@@ -276,17 +275,17 @@ public class methods extends Iridium {
 					String local_out = out_l + out_r;
 					out_l = local_out.substring(0, posi);
 					out_r = local_out.substring(posi);
-					Aus.setText(Inhalt + out_l + cursor + out_r);
+					Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 				}
 				if (e.getKeyCode() == 40){
 					if(!(history.size()==0)) {
-						if (p < 0)
-							p = history.size()-1;
+						if (p == 0)
+							p = history.size();
 						out_r = "";
 						p--;
 						out_l = history.get(p);
 						Aus.setContentType("text/html");
-						Aus.setText(Inhalt + out_l + cursor + out_r);
+						Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 					}
 				}
 
@@ -296,7 +295,7 @@ public class methods extends Iridium {
                     posi++;
 
                     Aus.setContentType("text/html");
-                    Aus.setText(Inhalt + out_l + cursor + out_r);
+                    Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
                 }
                 if (e.getKeyCode() == 8) {
                     if (out_l.length() > 0){
@@ -305,11 +304,11 @@ public class methods extends Iridium {
 							out_l = out_l.substring(0, out_l.length() - 1);
 
 							Aus.setContentType("text/html");
-							Aus.setText(Inhalt + out_l + cursor + out_r);
+							Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 					}
                 }
                 if ( e.getKeyCode() == 10){
-                    Inhalt += out_l + out_r + "<br>";
+                    Inhalt += prefix + Farbe + out_l + out_r + "<br>";
                     Aus.setContentType("text/html");
                     Aus.setText(Inhalt);
                     runCommand(out_l + out_r);
@@ -390,7 +389,9 @@ public class methods extends Iridium {
 				if (sec == time) {
 					t.cancel();
 					sec = 0;
-					update("Fertig", false);
+					Inhalt += "Fertig";
+					Aus.setContentType("text/html");
+					Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 				}
 			}
 		};
@@ -607,7 +608,9 @@ public class methods extends Iridium {
 				else
 					Schreiben(text.getText(), Path, false, false);
 				Ausgabe.dispose();
-				update("Gespeicher", false);
+			Inhalt += "Gespeichert";
+			Aus.setContentType("text/html");
+			Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 		});
 
 	}
@@ -667,7 +670,9 @@ public class methods extends Iridium {
 				else
 					Schreiben(text.getText(), Path, false, false);
 				Ausgabe.dispose();
-				update("Gespeicher", false);
+				Inhalt += "Gespeichert";
+				Aus.setContentType("text/html");
+				Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
 			}
 		});
 
