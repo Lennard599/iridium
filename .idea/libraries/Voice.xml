@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Voice">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../lib/lib/Voice" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../lib/lib/Voice" recursive="false" />
+  </library>
+</component>
