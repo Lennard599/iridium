@@ -1,75 +1,26 @@
 package iridium;
 
 import java.awt.*;
-import java.awt.datatransfer.*;
-import java.awt.datatransfer.StringSelection;
 import java.awt.event.*;
 import java.net.URL;
 import java.util.*;
 
 import javax.swing.*;
-import java.awt.Toolkit;
-import java.io.*;
 import java.util.Timer;
 
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.sun.speech.freetts.*;
-import javazoom.jl.player.advanced.AdvancedPlayer;
-import javazoom.jl.player.advanced.PlaybackEvent;
-import javazoom.jl.player.advanced.PlaybackListener;
-import org.omg.PortableInterceptor.INACTIVE;
+import com.sun.speech.freetts.Voice;
 
-
-public class methods extends Iridium {
+public class methods {
 	private static Call call = new Call();
 	private static int sec = 0;
-	private static String prefix = "<html><font color=yellow>#-# </font>";
-	private static String Inhalt = "";
-	private static String aa = "";
-	public static String Farbe = "";
-	private static boolean erste = false;
-	private static boolean stop = true;
-	private static FileInputStream f;
-	private static AdvancedPlayer play;
-	private static int frame = 0;
 	private static String[] splited ;
-	private static String cursor =  "<font color=yellow>&#9611</font>";
-
-	//private static String cursor = "<span style=\"color: yellow\">_</span>";
-	private static String out_l,out_r = "";
-	private static ArrayList<String> history = new ArrayList<>();
-	public static int posi,p = 0;
-
-	private static Runnable Ru = new Runnable() {
-		public void run() {
-			while (t1.isAlive()) {
-				try {
-					if (!stop) {
-						f = new FileInputStream(aa);
-						play = new AdvancedPlayer(f);
-						play.setPlayBackListener(new PlaybackListener() {
-							public void playbackFinished(PlaybackEvent playbackEvent) {
-								super.playbackFinished(playbackEvent);
-								frame += playbackEvent.getFrame() / (1000 / 44.1);
-								stop = true;
-							}
-						});
-
-						play.play(frame, Integer.MAX_VALUE);
-						play.stop();
-					}
-				} catch (Exception ignore) {
-
-				}
-			}
-		}
-	};
-
-	private static Thread t1 = new Thread(Ru);
 
 	public methods() {
-		call.setCommand("clear", () -> clear());
-		call.setCommand("ping", () -> update("pong", false));
-		call.setCommand("hi",  () -> update("Hi", false));
+		call.setCommand("clear", () -> Presentation.clear());
+		call.setCommand("ping", () -> Presentation.update("pong", false));
+		call.setCommand("hi",  () -> Presentation.update("Hi", false));
 		call.setCommand("timer", () -> {
 			int a = Integer.parseInt(splited[1]);
 			timer(a);
@@ -88,20 +39,20 @@ public class methods extends Iridium {
 					z2 = Double.parseDouble(splited[3]);
 
 					if (z1 * z2 < Integer.MAX_VALUE)
-						update(String.valueOf(rechner(z1, splited[2], z2)), false);
+						Presentation.update(String.valueOf(rechner(z1, splited[2], z2)), false);
 					else
-						update("0,0", false);
+						Presentation.update("0,0", false);
 				} catch (java.lang.NumberFormatException e) {
-					update("Falsche Parameter", false);
+					Presentation.update("Falsche Parameter", false);
 				}
 		});
-		call.setCommand("play",  () ->  Spiele(splited));
-		call.setCommand("stop",  () -> Stop());
-		call.setCommand("weiter",  () -> stop = false);
-		call.setCommand("create",  () -> Datei(splited[1]));
-		call.setCommand("delete",  () -> Löschen(splited[1]));
-		call.setCommand("list",  () -> getFiles("iridium/Dateien", true));
-		call.setCommand("open",  () -> AusgabeFeld(methods.Lesen(splited[1], true), splited[1], true, true));
+		call.setCommand("play",  () ->  Player.Spiele(splited));
+		call.setCommand("stop",  () -> Player.Stop());
+		call.setCommand("weiter",  () -> Player.stop = false);
+		call.setCommand("create",  () -> Filehandeling.Datei(splited[1]));
+		call.setCommand("delete",  () -> Filehandeling.Löschen(splited[1]));
+		call.setCommand("list",  () -> Filehandeling.getFiles("iridium/Dateien", true));
+		call.setCommand("open",  () -> AusgabeFeld(Filehandeling.Lesen(splited[1], true), splited[1], true, true));
 		call.setCommand("setshort",  () -> SetShort(splited));
 		call.setCommand("short", () -> {
 				if (splited.length > 1) {
@@ -113,15 +64,15 @@ public class methods extends Iridium {
 		});
 		call.setCommand("background", () -> {
 		if (splited[1].equals("rot") || splited[1].equals("blau") || splited[1].equals("grün") || splited[1].equals("weiß") || splited[1].equals("schwarz") || splited[1].equals("gelb"))
-					HintergrundF(splited[1], FarbeS2);
+			Presentation.HintergrundF(splited[1], Iridium.FarbeS2);
 				else
-					update("Farbe nicht Verfügbar", false);
+					Presentation.update("Farbe nicht Verfügbar", false);
 		});
 		call.setCommand("font", () -> {
 		if (splited[1].equals("rot") || splited[1].equals("blau") || splited[1].equals("grün") || splited[1].equals("weiß") || splited[1].equals("schwarz") || splited[1].equals("gelb"))
-					SchriftF(FarbeH2, splited[1]);
+			Presentation.SchriftF(Iridium.FarbeH2, splited[1]);
 				else
-					update("Farbe nicht Verfügbar", false);
+					Presentation.update("Farbe nicht Verfügbar", false);
 		});
 		call.setCommand("spotify", () -> open("https://open.spotify.com"));
 		call.setCommand("link", () -> {
@@ -129,11 +80,47 @@ public class methods extends Iridium {
 					splited[1] = "https://" + splited[1];
 				open(splited[1]);
 		});
-		call.setCommand("start", () -> ProgrammStart(splited[1]));
-		call.setCommand("addprogramm", () -> addProgramm(splited));
-		call.setCommand("help",  () -> update(call.getCommands(),false));
+		call.setCommand("start", () -> Programmstart.ProgrammStart(splited[1]));
+		call.setCommand("addprogramm", () -> Programmstart.addProgramm(splited));
+		call.setCommand("help",  () -> Presentation.update(call.getCommands(),false));
 				//methods.Hilfe();
-		call.setCommand("quit", () -> System.exit(1));
+		call.setCommand("quit", () -> System.exit(0));
+		call.setCommand("QR", () -> {
+			String text = "";
+			int size = 250;
+			String name = "";
+			Color col = Color.BLACK;
+			ErrorCorrectionLevel level = ErrorCorrectionLevel.L;
+
+			ArrayList<String> a = new ArrayList<>();
+			HashMap<String, Color> b = new HashMap<>();
+			b.put("red", Color.RED);
+			b.put("blue", Color.BLUE);
+			b.put("black", Color.BLACK);
+			b.put("yellow", Color.YELLOW);
+			b.put("green", Color.GREEN);
+			for (int i = 0;i < splited.length;i++)
+				a.add(splited[i]);
+
+			if(a.contains("-size") && !a.contains("\\-size"))
+				size = Integer.parseInt(a.get(a.indexOf("-size") + 1));
+
+			if(a.contains("-color") && !a.contains("\\-color"))
+				col = b.get(a.get(a.indexOf("-color")+1));
+
+				level = ErrorCorrectionLevel.valueOf(a.get(a.indexOf("-level") + 1));
+
+			name = splited[splited.length-2];
+			text = splited[splited.length-1];
+
+			System.out.println(text +" "+ size + " " + name +" "+ col);
+			try {
+				MyQRCode.createQRImage(text, size, name, col, level, "png");
+			} catch (Exception ignore){}
+		});
+		call.setCommand("update",  () ->  {if(splited.length>1&&splited[1].equals("-keep"))Updater.update(true);
+		else Updater.update(false);});
+
 	}
 
 	private static void open(String urlString) {
@@ -155,233 +142,8 @@ public class methods extends Iridium {
 		return b;
 	}
 
-	public static void update(String in, boolean user) {
-
-		/*if (user) {
-			Inhalt += Farbe + in + "<br>";
-			Aus.setContentType("text/html");
-			Aus.setText(Inhalt);
-		}*/
-
-		if (!user) {
-			Inhalt += Farbe + in + "<br>";
-			Aus.setContentType("text/html");
-			Aus.setText(Inhalt);
-		}
-	}
-
-	public static void copyToClipboard(String text) {
-		Thread th = new Thread( () -> {
-			Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-			StringSelection clip = new StringSelection(text);
-			clpbrd.setContents(clip, null);
-		});
-		th.start();
-
-	}
-
-	public static void Mouse(){
-		Aus.addMouseListener(new MouseListener() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if (e.getButton() == 3){
-					Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-					Transferable t = clpbrd.getContents( null );
-					try {
-						if (t.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-							Object o = t.getTransferData(DataFlavor.stringFlavor);
-							String data = (String) t.getTransferData(DataFlavor.stringFlavor);
-							out_l += data;
-							Aus.setText(Inhalt + out_l + cursor + out_r);
-						}
-					}catch (Exception ignore){
-
-					}
-				}
-			}
-
-			@Override
-			public void mousePressed(MouseEvent e) {
-
-			}
-
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				if (Aus.getSelectedText() != null) {
-					String s = Aus.getSelectedText();
-
-					copyToClipboard(s);
-				}
-			}
-
-			@Override
-			public void mouseEntered(MouseEvent e) {
-
-			}
-
-			@Override
-			public void mouseExited(MouseEvent e) {
-
-			}
-		});
-	}
-
-	public static void firstup(){
-		prefix = "<html><font color=yellow>" + NameB + "@" + System.getProperty("os.name") + ": " + "</font>";
-		out_l = "";
-		Aus.setContentType("text/html");
-		Aus.setText(Inhalt + prefix + Farbe + cursor);
-	}
-
-	public static void updatek(){
-	    Aus.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-            	System.out.println(e.getKeyCode());
-				if(e.getKeyCode() == KeyEvent.VK_ENTER){
-					e.consume();
-				}
-				if (e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-					e.consume();
-				}
-				if (e.getKeyCode() == KeyEvent.VK_DELETE) {
-					e.consume();
-				}
-				if (e.getKeyCode() == 37){
-					if(posi > 0)
-	    				posi--;
-	    			String local_out = out_l + out_r;
-	    			out_l = local_out.substring(0, posi);
-	    			out_r = local_out.substring(posi);
-	    			Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
-				}
-				if (e.getKeyCode() == 38)
-				{
-					if(!(history.size()==0)) {
-						if (p >= history.size())
-							p = 0;
-						out_r = "";
-						out_l = history.get(p);
-						p++;
-						Aus.setContentType("text/html");
-						Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
-					}
-				}
-
-
-				if (e.getKeyCode() == 39) {
-					if(out_r.length() != 0)
-						posi++;
-					String local_out = out_l + out_r;
-					out_l = local_out.substring(0, posi);
-					out_r = local_out.substring(posi);
-					Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
-				}
-				if (e.getKeyCode() == 40){
-					if(!(history.size()==0)) {
-						if (p == 0)
-							p = history.size();
-						out_r = "";
-						p--;
-						out_l = history.get(p);
-						Aus.setContentType("text/html");
-						Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
-					}
-				}
-
-
-				if ( e.getKeyCode() != 10 & e.getKeyCode() != 38 & e.getKeyCode() != 40 & e.getKeyCode() != 20 & e.getKeyCode() != 16 & e.getKeyCode() != 0 & e.getKeyCode() != 18 & e.getKeyCode() != 17 & e.getKeyCode() != 37 & e.getKeyCode() != 39 & e.getKeyCode() != 157 & e.getKeyCode() != 8) {
-                    out_l += e.getKeyChar();
-                    posi++;
-
-                    Aus.setContentType("text/html");
-                    Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
-                }
-                if (e.getKeyCode() == 8) {
-                    if (out_l.length() > 0){
-							posi--;
-
-							out_l = out_l.substring(0, out_l.length() - 1);
-
-							Aus.setContentType("text/html");
-							Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
-					}
-                }
-                if ( e.getKeyCode() == 10){
-                    Inhalt += prefix + Farbe + out_l + out_r + "<br>";
-                    Aus.setContentType("text/html");
-                    Aus.setText(Inhalt);
-                    runCommand(out_l + out_r);
-                    history.add(0, out_l + out_r);
-                    posi = 0;
-                    p = 0;
-                    firstup();
-                }
-            }
-        });
-    }
-
-	public static Color FarbeHintergrund(String farbe) {
-		Color output = null;
-
-		if (farbe.equals("2") || farbe.equals("blau")) {
-			output = Color.BLUE;
-			FarbeH2 = "2";
-		}
-		if (farbe.equals("1") || farbe.equals("grün")) {
-			output = Color.GREEN;
-			FarbeH2 = "1";
-		}
-		if (farbe.equals("0") || farbe.equals("weiß")) {
-			output = Color.WHITE;
-			FarbeH2 = "0";
-		}
-		if (farbe.equals("3") || farbe.equals("schwarz")) {
-			output = Color.BLACK;
-			FarbeH2 = "3";
-		}
-		if (farbe.equals("4") || farbe.equals("rot")) {
-			output = Color.RED;
-			FarbeH2 = "4";
-		}
-		if (farbe.equals("5") || farbe.equals("gelb")) {
-			output = Color.YELLOW;
-			FarbeH2 = "5";
-		}
-
-		return output;
-	}
-
-	public static String Farbeschrift(String farbe) {
-		if (farbe.equals("3") || farbe.equals("blau")) {
-			FarbeS2 = "3";
-			return "<font color=blue>";
-		}
-		if (farbe.equals("1") || farbe.equals("grün")) {
-			FarbeS2 = "1";
-			return "<font color=green>";
-		}
-		if (farbe.equals("2") || farbe.equals("weiß")) {
-			FarbeS2 = "2";
-			return "<font color=white>";
-		}
-		if (farbe.equals("0") || farbe.equals("schwarz")) {
-			FarbeS2 = "0";
-			return "<font color=black>";
-		}
-		if (farbe.equals("4") || farbe.equals("rot")) {
-			FarbeS2 = "4";
-			return "<font color=red>";
-		}
-		if (farbe.equals("5") || farbe.equals("gelb")) {
-			FarbeS2 = "5";
-			return "<font color=yellow>";
-		}
-		return "";
-	}
-
 	private static void timer(int time) {
-		update("start", false);
+		Presentation.update("Start <br>", true);
 		Timer t = new Timer();
 		TimerTask tt = new TimerTask() {
 			public void run() {
@@ -389,9 +151,7 @@ public class methods extends Iridium {
 				if (sec == time) {
 					t.cancel();
 					sec = 0;
-					Inhalt += "Fertig";
-					Aus.setContentType("text/html");
-					Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
+					Presentation.update("Finished", true);
 				}
 			}
 		};
@@ -422,131 +182,6 @@ public class methods extends Iridium {
 		}
 	}
 
-	public static void Spiele(String[] name) {
-		if (stop) {
-			aa = "";
-			for (int i = 1; i < name.length; i++)
-				aa += name[i] + " ";
-			aa = aa.substring(0, aa.length() - 1);
-			aa = "iridium/Musik/" + aa + ".mp3";
-			Spiele(aa);
-		}
-	}
-
-	public static void Spiele(String Path) {
-		if (stop) {
-			aa = Path;
-			try {
-				f = new FileInputStream(aa);
-				play = new AdvancedPlayer(f);
-				frame = 0;
-			} catch (Exception e) {
-				update("Mp3 nicht gefunden", false);
-			}
-			stop = false;
-		}
-
-		if (!erste) {
-			t1.start();
-			erste = true;
-		}
-	}
-
-	private static void Stop() {
-		stop = true;
-		try {
-			play.stop();
-			play.close();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	private static void Datei(String Name) {
-		File folder = new File("iridium/Dateien");
-		File file = new File("iridium/Dateien/" + Name + ".txt");
-		if (!folder.exists()) {
-			folder.mkdir();
-		}
-		if (!file.exists()) {
-			try {
-				file.createNewFile();
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}
-		}
-		update("Erfolgreich", false);
-	}
-
-	private static void Löschen(String Name) {
-		File file = new File("iridium/Dateien/" + Name);
-
-		if (file.delete())
-			update("Erfolgreich", false);
-		else
-			update("Fehler!!", false);
-
-	}
-
-	private static File[] getFiles(String wo, boolean out) {
-		String inhalt = "";
-		File folder = new File(wo);
-		File[] listOfFiles = folder.listFiles();
-
-		for (File file : listOfFiles) {
-			if (file.isFile()) {
-				inhalt += file.getName() + "  ";
-			}
-		}
-		if (out)
-			update(inhalt, false);
-		return listOfFiles;
-	}
-
-	public static void Schreiben(String text, String wo, boolean rela, boolean newl) {
-		String path;
-		String[] split = text.split("\\s+");
-		if (rela)
-			path = "iridium/Dateien/" + wo + ".txt";
-		else
-			path = wo;
-		File file = new File(path);
-		try {
-			FileWriter fw = new FileWriter(file);
-			if (!newl)
-				for (String a : split)
-					fw.write(" " + a);
-			else
-				for (String a : split)
-					fw.write(a + System.lineSeparator());
-
-			fw.close();
-		} catch (IOException e3) {
-			e3.printStackTrace();
-		}
-	}
-
-	public static ArrayList<String> Lesen(String wo, boolean rela) {
-		String P;
-		ArrayList<String> Lesen = new ArrayList<>();
-		if (rela)
-			P = "iridium/Dateien/" + wo + ".txt";
-		else
-			P = wo;
-		File f = new File(P);
-
-		try {
-			Scanner sc = new Scanner(f);
-			while (sc.hasNext()) {
-				Lesen.add(sc.next());
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		return Lesen;
-	}
-
 	public static void AusgabeFeld(ArrayList<String> a, String title, boolean be, boolean html) {
 		AusgabeFeld(a, title, be, true, "", html);
 	}
@@ -559,7 +194,7 @@ public class methods extends Iridium {
 		Ausgabe.setResizable(false);
 		Ausgabe.setLocationRelativeTo(null);
 		Ausgabe.setLayout(new BorderLayout());
-		Ausgabe.setIconImage(icon.getImage());
+		Ausgabe.setIconImage(Iridium.icon.getImage());
 
 		if (be) {
 			Ausgabe.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -604,26 +239,23 @@ public class methods extends Iridium {
 
 		Speichern.addActionListener(e -> {
 				if (rela)
-					Schreiben(text.getText(), title, true, false);
+					Filehandeling.Schreiben(text.getText(), title, true, false);
 				else
-					Schreiben(text.getText(), Path, false, false);
+					Filehandeling.Schreiben(text.getText(), Path, false, false);
 				Ausgabe.dispose();
-			Inhalt += "Gespeichert";
-			Aus.setContentType("text/html");
-			Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
+				Presentation.update("Saved", true);
 		});
 
 	}
 
 	public static void AusgabeFeld(String a, String title, boolean be, boolean rela, String Path, boolean html) {
-		String in = "";
 		JFrame Ausgabe = new JFrame(title);
 		Ausgabe.setVisible(true);
 		Ausgabe.setSize(450, 600);
 		Ausgabe.setResizable(false);
 		Ausgabe.setLocationRelativeTo(null);
 		Ausgabe.setLayout(new BorderLayout());
-		Ausgabe.setIconImage(icon.getImage());
+		Ausgabe.setIconImage(Iridium.icon.getImage());
 
 		if (be) {
 			Ausgabe.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -666,13 +298,11 @@ public class methods extends Iridium {
 		Speichern.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (rela)
-					Schreiben(text.getText(), title, true, false);
+					Filehandeling.Schreiben(text.getText(), title, true, false);
 				else
-					Schreiben(text.getText(), Path, false, false);
+					Filehandeling.Schreiben(text.getText(), Path, false, false);
 				Ausgabe.dispose();
-				Inhalt += "Gespeichert";
-				Aus.setContentType("text/html");
-				Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
+				Presentation.update("saved", true);
 			}
 		});
 
@@ -704,15 +334,10 @@ public class methods extends Iridium {
 		AusgabeFeld(Commands, "Hilfe", false, true);
 	}
 
-	public static void clear() {
-		Inhalt = "";
-		Aus.setText("");
-	}
-
 	public static void Short() {
 		String cut = "";
 		int index;
-		ArrayList<String> a = Lesen("iridium/Iridiumconfig.txt", false);
+		ArrayList<String> a = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
 		index = a.indexOf("Shortcut");
 		for (int i = index + 1; i < a.size(); i++)
 			cut += a.get(i) + " ";
@@ -725,7 +350,7 @@ public class methods extends Iridium {
 		if (call.checkCommands(a[1]))
 		{
 			String ab = "";
-			ArrayList<String> aa = Lesen("iridium/Iridiumconfig.txt", false);
+			ArrayList<String> aa = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
 
 			int index = aa.indexOf("Shortcut");
 
@@ -737,144 +362,30 @@ public class methods extends Iridium {
 			for (int i = 1;i < a.length;i++)
 				ab += a[i] + " ";
 			System.out.println(ab);
-			Schreiben(ab, "iridium/Iridiumconfig.txt", false, true);
+			Filehandeling.Schreiben(ab, "iridium/Iridiumconfig.txt", false, true);
 		}
 		else
-			update("Fehler!!", false);
+			Presentation.update("Fehler!!", false);
 
 	}
 
 	public static void getShortcut() {
-		ArrayList<String> a = Lesen("iridium/Iridiumconfig.txt", false);
+		ArrayList<String> a = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
 		int index;
 		String aa = "Momentaner Shortcut : ";
 		index = a.indexOf("Shortcut");
 		for (int i = index + 1; i < a.size(); i++)
 			aa += a.get(i) + " ";
-		update(aa, false);
+		Presentation.update(aa, false);
 
-	}
-
-	public static void SchriftF(String farbeh, String farbes) {
-		String a;
-		methods.Farbe = Farbeschrift(farbes);
-		a = NameB + " " + farbeh + " " + farbes + " ";
-		for (String b : methods.Lesen("iridium/Iridiumconfig.txt", false))
-			a += b + " ";
-		Schreiben(a, "iridium/Iridiumconfig.txt", false, true);
-	}
-
-	public static void HintergrundF(String farbeh, String farbes) {
-		String a;
-		Color col = FarbeHintergrund(farbeh);
-		a = NameB + " " + farbeh + " " + farbes + " ";
-		for (String b : methods.Lesen("iridium/Iridiumconfig.txt", false))
-			a += b + " ";
-		Schreiben(a, "iridium/Iridiumconfig.txt", false, true);
-		meinFrame.setBackground(col);
-		Jp1.setBackground(col);
-		Aus.setBackground(col);
-		Jp3.setBackground(col);
-	}
-
-	private static void ProgrammStart(String Programm) {
-		String b = "";
-		ArrayList<String> a = Lesen("iridium/Programmeconfig.txt", false);
-		int pos = a.indexOf(Programm);
-		for (int i = pos + 1; i < a.size(); i++) {
-			if (!a.get(i).equals("ende"))
-				b += a.get(i) + " ";
-			else
-				break;
-		}
-		try {
-			new ProcessBuilder(b).start();
-		} catch (Exception ignore) {
-
-		}
-
-	}
-
-	public static void addProgramm(String[] a) {
-		String b = "";
-		ArrayList<String> c = Lesen("iridium/Programmeconfig.txt", false);
-		if (!c.contains(a[3]) || !c.contains(a[2])) {
-			for (int i = 0; i < c.size(); i++)
-				b += c.get(i) + " ";
-
-			for (int i = 1; i < a.length; i++)
-				b += a[i] + " ";
-			b += "ende";
-			SchreibenP(b);
-		}
-	}
-
-	public static void addProgramm(String a) {
-		boolean weiter = true;
-		if (a.contains(":/")) {
-			String b = "";
-			ArrayList<String> c = Lesen("iridium/Programmeconfig.txt", false);
-			ArrayList<String> d = getProgramm();
-			for (String e : d)
-				if (a.contains(e)) {
-					weiter = false;
-				}
-			if (weiter) {
-				for (String e : c)
-					b += e + " ";
-
-				b += a + " ";
-				b += "ende";
-				SchreibenP(b);
-			}
-		}
-	}
-
-	public static void SchreibenP(String b) {
-		File file = new File("iridium/Programmeconfig.txt");
-		try {
-			FileWriter fw = new FileWriter(file);
-			fw.write(b + System.lineSeparator());
-			fw.close();
-		} catch (IOException e3) {
-			e3.printStackTrace();
-		}
-	}
-
-	public static ArrayList<String> getProgramm() {
-		ArrayList<String> a = new ArrayList<>();
-		String b = "";
-		File f = new File("iridium/Programmeconfig.txt");
-		try {
-			Scanner sc = new Scanner(f);
-			a.add(sc.next());
-			while (sc.hasNext()) {
-				if (!sc.hasNext("ende"))
-					b += sc.next();
-				else {
-					a.add(b);
-					sc.next();
-					if (sc.hasNext())
-						a.add(sc.next());
-					b = "";
-				}
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		return a;
 	}
 
 	public static void runCommand(String f) {
 		splited = f.split("\\s+");
-		String input = Feld.getText();
+		String input = Iridium.Feld.getText();
 
-		update(input, true);
-		Feld.setText("");
+		Presentation.update(input, true);
+		Iridium.Feld.setText("");
 		call.runCommand(splited);
 	}
 }
-
-
-	
-

@@ -8,8 +8,15 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="filedrop" level="project" />
-    <orderEntry type="library" name="tika-app-1.14" level="project" />
     <orderEntry type="library" name="Voice" level="project" />
     <orderEntry type="library" name="jl1.0" level="project" />
+    <orderEntry type="library" name="core-3.3.0" level="project" />
+    <orderEntry type="library" name="httpcore-4.4.6" level="project" />
+    <orderEntry type="library" name="httpclient-4.5.3" level="project" />
+    <orderEntry type="library" name="sphinx4-core-5prealpha-20160628.232526-10" level="project" />
+    <orderEntry type="library" name="poi-3.17" level="project" />
+    <orderEntry type="library" name="ooxml-lib" level="project" />
+    <orderEntry type="library" name="poi-ooxml-schemas-3.17" level="project" />
+    <orderEntry type="library" name="poi-ooxml-3.17" level="project" />
   </component>
 </module>

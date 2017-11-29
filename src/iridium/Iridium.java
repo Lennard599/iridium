@@ -5,11 +5,11 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.*;
-import javax.swing.text.DefaultEditorKit;
+
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 
 import net.iharder.dnd.FileDrop;
-import org.apache.tika.parser.AutoDetectParser;
-import org.apache.tika.sax.BodyContentHandler;
 
 public class Iridium {
 	public static String FarbeH2, FarbeS2;
@@ -19,10 +19,9 @@ public class Iridium {
 	private static String[] FarbListeS = {"Schwarz", "Grün", "Weiß", "Blau", "Rot"};
 	private static int indexein = 0;
 	private static boolean dontShow = false;
-	
-	public static JFrame meinFrame = new JFrame("Iridium");
-	public static JPanel Jp1 = new JPanel ();
-	public static JPanel Jp3 = new JPanel ();
+	public static String version ="0.0.3";
+
+	public static JFrame meinFrame = new JFrame("Iridium "+version);
 	private static JComboBox FarbeH = new JComboBox(FarbListe);
 	private static JComboBox FarbeS = new JComboBox(FarbListeS);
 	private static JButton anwenden = new JButton("Anwenden");
@@ -38,12 +37,29 @@ public class Iridium {
 	private static JScrollPane scrol = new JScrollPane(Aus);
 	private static File file = new File("iridium/Iridiumconfig.txt");
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
+		if(args.length > 0){
+			String a = "";
+			Updater.delet(args[0]);
+			for (int i = 1; i < args.length; i++)
+				a += args[i]+" ";
+			Presentation.update(a,false);
+		}
+
 		new methods();
 		if (System.getProperty("os.name").contains("Mac"))
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
 
+		File g = javax.swing.filechooser.FileSystemView.getFileSystemView().getHomeDirectory();
+
+		try {
+			File h = new File(g.getPath() + "new.txt");
+			h.createNewFile();
+		}catch (Exception e){
+			System.out.println("Error: " + e);
+		}
+
+		//Menu
 		MenuBar menue = new MenuBar();
 		Menu shortcut = new Menu("shortcut");
 		Menu clear = new Menu("clear");
@@ -64,40 +80,12 @@ public class Iridium {
 		menue.add(Hilfe);
 		menue.add(Optionen);
 
-		Aus.setEditable(false);
-
+		//File chacking
 		File folder = new File("iridium");
 		File Dateien = new File("iridium/Dateien");
 		File Musik = new File("iridium/Musik");
 		File Programmeinfo = new File("iridium/Programmeconfig.txt");
 
-		try {
-			Scanner sc = new Scanner(file);
-			if (sc.hasNext())
-			{
-				NameB = sc.nextLine();
-
-				FarbeH2 = sc.nextLine();
-			
-				FarbeS2 = sc.nextLine();
-
-				if (sc.nextLine().equals("J"))
-				dontShow = true;
-
-			}
-			else
-			{
-				String a = "";
-				for(int i = 3;i < methods.Lesen("iridium/Iridiumconfig.txt", false).size(); i++)
-					a += methods.Lesen("iridium/Iridiumconfig.txt", false).get(i) + " ";
-				methods.Schreiben(NameB + " " + "0 " + "0 " + "N " + " Shortcut " ,"iridium/Iridiumconfig.txt" ,false ,true);
-				FarbeH2 = "0";
-				FarbeS2 = "0";
-				System.out.println("!!");
-			}
-		} catch (FileNotFoundException e2) {
-			e2.printStackTrace();
-		}
 		if (!folder.exists())
 			folder.mkdir();
 		if (!Dateien.exists())
@@ -120,6 +108,33 @@ public class Iridium {
 				e1.printStackTrace();
 			}
 		}
+		try {
+		Scanner sc = new Scanner(file);
+		if (sc.hasNext())
+		{
+			NameB = sc.nextLine();
+
+			FarbeH2 = sc.nextLine();
+
+			FarbeS2 = sc.nextLine();
+
+			if (sc.nextLine().equals("J"))
+				dontShow = true;
+
+		}
+		else
+		{
+			String a = "";
+			for(int i = 3;i < Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).size(); i++)
+				a += Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).get(i) + " ";
+			Filehandeling.Schreiben(NameB + " " + "0 " + "0 " + "N " + " Shortcut " ,"iridium/Iridiumconfig.txt" ,false ,true);
+			FarbeH2 = "0";
+			FarbeS2 = "0";
+			System.out.println("no config found");
+		}
+	} catch (FileNotFoundException e2) {
+		e2.printStackTrace();
+	}
 
 		//Fenster main
 		meinFrame.setSize(600,400);
@@ -128,6 +143,9 @@ public class Iridium {
 			meinFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		else
 			meinFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		scrol.setViewportBorder(null);
+		scrol.setBorder(null);
+		Aus.addStyle("Menlo", null);
 		meinFrame.setVisible(true);
 		meinFrame.setMenuBar(menue);
 		meinFrame.add(scrol);
@@ -135,22 +153,24 @@ public class Iridium {
 		meinFrame.setMinimumSize(new Dimension(600, 400));
 		meinFrame.setSize(601, 401);
 		meinFrame.setSize(600, 400);
+        Aus.setEditable(false);
 
+        //Filedrop
 		new FileDrop(scrol, files -> {
 				for (File a : files) {
 					if (a.getName().contains(".mp3"))
-						methods.Spiele(a.getAbsolutePath());
+						Player.Spiele(a.getAbsolutePath());
 					else {
-						try {
-							BodyContentHandler handler = new BodyContentHandler();
-							AutoDetectParser parser = new AutoDetectParser();
-							org.apache.tika.metadata.Metadata metadata = new org.apache.tika.metadata.Metadata();
-							InputStream stream = new FileInputStream(a);
-							parser.parse(stream, handler, metadata);
-							methods.AusgabeFeld(handler.toString(), a.getName(), true, false, a.getAbsolutePath(),false);
-						} catch (Exception e) {
-							methods.update("Ein Fehler ist aufgetreten oder der Dateityp wird nich unterstützt! unterschtützt .txt und .mp3", false);
-						}
+							try {
+								XWPFDocument docx = new XWPFDocument(new FileInputStream(a.getAbsolutePath()));
+								XWPFWordExtractor we = new XWPFWordExtractor(docx);
+
+								methods.AusgabeFeld(we.getText(), a.getName(), false, false, "", true);
+
+								System.out.println(we.getText());
+							} catch (Exception e) {
+								Presentation.update("Error", false);
+							}
 					}
 				}
 		});
@@ -166,7 +186,7 @@ public class Iridium {
 					dontShow = checkbox.isSelected();
 
 					if (dontShow)
-						methods.Schreiben(methods.ALzuSt(methods.Lesen("iridium/Iridiumconfig.txt", false),3,"J"),"iridium/Iridiumconfig.txt", false, true);
+						Filehandeling.Schreiben(methods.ALzuSt(Filehandeling.Lesen("iridium/Iridiumconfig.txt", false),3,"J"),"iridium/Iridiumconfig.txt", false, true);
 
 					if (n == 0)
 						System.exit(3);
@@ -177,18 +197,16 @@ public class Iridium {
 		}
 	
 		//events
-		Color col = methods.FarbeHintergrund(FarbeH2);
+		Color col = Presentation.FarbeHintergrund(FarbeH2);
 		meinFrame.setBackground(col);
-	    //Jp1.setBackground(col);
 	    Aus.setBackground(col);
-	    //Jp3.setBackground(col);
 
-	    methods.Farbe = methods.Farbeschrift(FarbeS2);
+	    Presentation.Farbe = Presentation.Farbeschrift(FarbeS2);
 
-		methods.update("Wilkommen " + NameB, false);
-		methods.firstup();
-		methods.updatek();
-		methods.Mouse();
+		Presentation.update("Wilkommen " + NameB, false);
+		Presentation.firstup();
+		Presentation.updatek();
+		Presentation.Mouse();
 
 
 		//eingabe
@@ -235,12 +253,12 @@ public class Iridium {
 
 		getshort.addActionListener(e -> {
 			methods.getShortcut();
-			methods.posi = 0;
-			methods.p = 0;
-			methods.firstup();});
+			Presentation.posi = 0;
+			Presentation.p = 0;
+			Presentation.firstup();});
 
 		Programme.addActionListener(e -> {
-				ArrayList<String> a = methods.getProgramm();
+				ArrayList<String> a = Programmstart.getProgramm();
 				JFrame links = new JFrame("Iridium");
 				JTextField[] Pname = new JTextField[10];
 				JTextField[] Plink = new JTextField[10];
@@ -301,7 +319,7 @@ public class Iridium {
 						{
 							ad += Pname[i].getText() + " ";
 							ad += Plink[i].getText() + " ";
-								methods.addProgramm(ad);
+								Programmstart.addProgramm(ad);
 								ad = "";
 						}
 				});
@@ -310,10 +328,10 @@ public class Iridium {
 		Hilfei.addActionListener(e -> methods.Hilfe());
 
 		cleari.addActionListener(e -> {
-			methods.clear();
-			methods.posi = 0;
-			methods.p = 0;
-			methods.firstup();});
+			Presentation.clear();
+			Presentation.posi = 0;
+			Presentation.p = 0;
+			Presentation.firstup();});
 
 		shortcuti.addActionListener(e -> methods.Short());
 		
@@ -321,22 +339,22 @@ public class Iridium {
 		FarbeH.addActionListener(e -> {
 				FarbeH1 = FarbeH.getSelectedIndex();
 				FarbeH2 = Integer.toString(FarbeH1);
-				methods.HintergrundF(FarbeH2,FarbeS2);
+				Presentation.HintergrundF(FarbeH2,FarbeS2);
 		});
 		
 		FarbeS.addActionListener(e -> {
 				FarbeS1 = FarbeS.getSelectedIndex();
 				FarbeS2 = Integer.toString(FarbeS1);
-				methods.SchriftF(FarbeH2, FarbeS2);
+				Presentation.SchriftF(FarbeH2, FarbeS2);
     	});
 
 		anwenden.addActionListener(e -> {
 				String B;
 				NameB =	Name.getText();
 				B = NameB + " " + FarbeH2 + " " + FarbeS2 + " ";
-				for(int i = 3;i < methods.Lesen("iridium/Iridiumconfig.txt", false).size(); i++)
-					B += methods.Lesen("iridium/Iridiumconfig.txt", false).get(i) + " ";
-				methods.Schreiben(B, "iridium/Iridiumconfig.txt", false ,true);
+				for(int i = 3;i < Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).size(); i++)
+					B += Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).get(i) + " ";
+				Filehandeling.Schreiben(B, "iridium/Iridiumconfig.txt", false ,true);
 		});
 
 		Feld.addKeyListener(new KeyListener()  {

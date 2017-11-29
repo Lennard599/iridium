@@ -12,12 +12,11 @@ public class Call
         Commands.put(Command, method);
     }
 
-    public void runCommand(String[] input)
-    {
+    public void runCommand(String[] input) {
         if (Commands.containsKey(input[0]))
             Commands.get(input[0]).run();
         else
-            iridium.methods.update("Fehler!!",false);
+            Presentation.update("Fehler!!",false);
     }
 
     public boolean checkCommands(String Command)
