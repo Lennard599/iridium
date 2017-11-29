@@ -34,7 +34,7 @@ public class Iridium {
 	public static ImageIcon icon = new ImageIcon("iridium\\icon.png");
 	private static ArrayList<String> Histo = new ArrayList<>();
 	public static JTextPane Aus = new JTextPane();
-	private static JScrollPane scrol = new JScrollPane(Aus);
+	private static JScrollPane scroll = new JScrollPane(Aus);
 	private static File file = new File("iridium/Iridiumconfig.txt");
 
 	public static void main(String[] args) {
@@ -143,12 +143,12 @@ public class Iridium {
 			meinFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		else
 			meinFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		scrol.setViewportBorder(null);
-		scrol.setBorder(null);
+		scroll.setViewportBorder(null);
+		scroll.setBorder(null);
 		Aus.addStyle("Menlo", null);
 		meinFrame.setVisible(true);
 		meinFrame.setMenuBar(menue);
-		meinFrame.add(scrol);
+		meinFrame.add(scroll);
 		meinFrame.setIconImage(icon.getImage());
 		meinFrame.setMinimumSize(new Dimension(600, 400));
 		meinFrame.setSize(601, 401);
@@ -156,7 +156,7 @@ public class Iridium {
         Aus.setEditable(false);
 
         //Filedrop
-		new FileDrop(scrol, files -> {
+		new FileDrop(scroll, files -> {
 				for (File a : files) {
 					if (a.getName().contains(".mp3"))
 						Player.Spiele(a.getAbsolutePath());
@@ -169,7 +169,7 @@ public class Iridium {
 
 								System.out.println(we.getText());
 							} catch (Exception e) {
-								Presentation.update("Error", false);
+								Presentation.update("Error filetype not supported", true);
 							}
 					}
 				}
@@ -182,7 +182,7 @@ public class Iridium {
 					JCheckBox checkbox = new JCheckBox("Nicht mehr anzeigen");
 					String message = "Sind sie sicher das sie Iridium Beenden wollen?";
 					Object[] params = {message, checkbox};
-					int n = JOptionPane.showConfirmDialog(scrol, params, "Beenden?", JOptionPane.YES_NO_OPTION);
+					int n = JOptionPane.showConfirmDialog(scroll, params, "Beenden?", JOptionPane.YES_NO_OPTION);
 					dontShow = checkbox.isSelected();
 
 					if (dontShow)

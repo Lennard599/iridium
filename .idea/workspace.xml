@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="iridium:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9069890b-a7f8-484c-b517-e737dbca727f" name="Default" comment="" />
+    <list default="true" id="d074df0d-60a2-4f8b-b778-41b83a58a17f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/tika_app_1_14.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/iridium_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/iridium_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/httpcore_4_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/httpcore_4_4_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Iridium.java" afterPath="$PROJECT_DIR$/src/iridium/Iridium.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Presentation.java" afterPath="$PROJECT_DIR$/src/iridium/Presentation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/methods.java" afterPath="$PROJECT_DIR$/src/iridium/methods.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -10,91 +28,92 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/iridium$Iridium.coverage" NAME="Iridium Coverage Results" MODIFIED="1496489567926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>iridium.*</FILTER>
-    </SUITE>
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="iridium" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="methods.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="methods.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="283" column="48" lean-forward="false" selection-start-line="283" selection-start-column="48" selection-end-line="283" selection-end-column="48" />
+            <state relative-caret-position="-591">
+              <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding>
-                <element signature="class#1319:1869" expanded="false" />
-                <element signature="e#1510#1745#0" expanded="true" />
-                <element signature="e#1744#1745#0" expanded="true" />
-                <element signature="e#2116#2181#0" expanded="false" />
-                <element signature="e#2210#2325#0" expanded="false" />
-                <element signature="e#2361#2730#0" expanded="false" />
-                <element signature="e#3246#3379#0" expanded="false" />
-                <element signature="e#3414#3699#0" expanded="false" />
-                <element signature="e#3728#4009#0" expanded="false" />
-                <element signature="e#4108#4224#0" expanded="false" />
-                <element signature="method#open#0;class#methods#0" expanded="false" />
-                <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-                <element signature="method#update#0;class#methods#0" expanded="false" />
-                <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-                <element signature="e#6749#9361#0" expanded="true" />
-                <element signature="e#9360#9361#0" expanded="true" />
-                <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-                <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-                <element signature="e#10864#11014#0" expanded="true" />
-                <element signature="e#11013#11014#0" expanded="true" />
-                <element signature="method#sagen#0;class#methods#0" expanded="false" />
-                <element signature="method#rechner#0;class#methods#0" expanded="false" />
-                <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-                <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-                <element signature="method#Stop#0;class#methods#0" expanded="false" />
-                <element signature="method#Datei#0;class#methods#0" expanded="false" />
-                <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-                <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-                <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-                <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-                <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-                <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-                <element signature="e#14651#14957#0" expanded="true" />
-                <element signature="e#14956#14957#0" expanded="true" />
-                <element signature="e#15511#15704#0" expanded="false" />
-                <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-                <element signature="e#16201#16507#0" expanded="true" />
-                <element signature="e#16506#16507#0" expanded="true" />
-                <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-                <element signature="method#clear#0;class#methods#0" expanded="false" />
-                <element signature="method#Short#0;class#methods#0" expanded="false" />
-                <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-                <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-                <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-                <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-                <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-                <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-                <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-                <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-                <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-                <element signature="method#runCommand#0;class#methods#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3295#4307#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Iridium.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Programmstart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iridium/Programmstart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#ProgrammStart#0;class#Programmstart#0" expanded="false" />
+                <element signature="method#addProgramm#0;class#Programmstart#0" expanded="false" />
+                <element signature="method#addProgramm#1;class#Programmstart#0" expanded="false" />
+                <element signature="method#SchreibenP#0;class#Programmstart#0" expanded="false" />
+                <element signature="method#getProgramm#0;class#Programmstart#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Presentation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iridium/Presentation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#copyToClipboard#0;class#Presentation#0" expanded="false" />
+                <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
+                <element signature="method#firstup#0;class#Presentation#0" expanded="false" />
+                <element signature="method#updatek#0;class#Presentation#0" expanded="false" />
+                <element signature="method#FarbeHintergrund#0;class#Presentation#0" expanded="false" />
+                <element signature="method#Farbeschrift#0;class#Presentation#0" expanded="false" />
+                <element signature="method#HintergrundF#0;class#Presentation#0" expanded="false" />
+                <element signature="method#SchriftF#0;class#Presentation#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyQRCode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iridium/MyQRCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Iridium.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2730">
-              <caret line="192" column="24" lean-forward="false" selection-start-line="192" selection-start-column="24" selection-end-line="192" selection-end-column="24" />
+            <state relative-caret-position="254">
+              <caret line="171" column="68" lean-forward="false" selection-start-line="171" selection-start-column="68" selection-end-line="171" selection-end-column="68" />
               <folding>
-                <element signature="e#6207#6317#0" expanded="false" />
-                <element signature="e#6383#7327#0" expanded="false" />
-                <element signature="e#7420#9586#0" expanded="false" />
-                <element signature="e#9789#9924#0" expanded="false" />
-                <element signature="e#10125#10457#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6391#6501#0" expanded="false" />
+                <element signature="e#7687#9865#0" expanded="false" />
+                <element signature="e#10156#10296#0" expanded="false" />
+                <element signature="e#10329#10469#0" expanded="false" />
+                <element signature="e#10502#10852#0" expanded="false" />
+                <element signature="class#10882:11495" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Updater.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,18 +121,8 @@
       <file leaf-file-name="Call.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Iridiumconfig.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+            <state relative-caret-position="250">
+              <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -121,14 +130,18 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>checkComands</find>
-      <find>f</find>
-      <find>mave</find>
-      <find>maven</find>
-      <find>input</find>
-      <find>Clipboard</find>
+      <find>clea</find>
+      <find>scr</find>
+      <find>split</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,19 +155,31 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/iridium/fenster.java" />
+        <option value="$PROJECT_DIR$/../lib/lib/Voice/cmu_time_awb.jar!/com/sun/speech/freetts/en/us/cmu_time_awb/AlanVoiceDirectory.class" />
+        <option value="$PROJECT_DIR$/src/iridium/Voice.java" />
+        <option value="$PROJECT_DIR$/.idea/artifacts/iridium_jar.xml" />
+        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/src/iridium/Updater.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Player.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Filehandeling.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Programmstart.java" />
         <option value="$PROJECT_DIR$/src/iridium/Call.java" />
-        <option value="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
-        <option value="$PROJECT_DIR$/src/iridium/Iridium.java" />
         <option value="$PROJECT_DIR$/src/iridium/methods.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Presentation.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Iridium.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -171,63 +196,44 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iridium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="iridium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iridium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iridium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iridium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.14453125" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -242,47 +248,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Iridium">
-    <configuration default="false" name="methods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="iridium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="iridium.methods" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="iridium" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="fenster" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="iridium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="iridium.fenster" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="iridium" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Iridium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Iridium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="iridium.*" />
@@ -300,69 +266,25 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="iridium" />
       <envs />
-      <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    <configuration name="Voice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="iridium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="iridium.Voice" />
+      <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <method />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="iridium" />
+      <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -370,7 +292,6 @@
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-      <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -385,32 +306,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -431,53 +326,12 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="iridium" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -485,7 +339,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -513,753 +366,357 @@
       <envs />
       <properties />
       <listeners />
-      <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.methods" />
-      <item index="1" class="java.lang.String" itemvalue="Application.fenster" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Iridium" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Iridium" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Voice" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Application.Iridium" />
-        <item index="1" class="java.lang.String" itemvalue="Application.fenster" />
-        <item index="2" class="java.lang.String" itemvalue="Application.methods" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Voice" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_PROPERTIES,SHOW_INTERFACES" />
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9069890b-a7f8-484c-b517-e737dbca727f" name="Default" comment="" />
-      <created>1494759081369</created>
+      <changelist id="d074df0d-60a2-4f8b-b778-41b83a58a17f" name="Default" comment="" />
+      <created>1506028672599</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1494759081369</updated>
+      <updated>1506028672599</updated>
+      <workItem from="1506028674212" duration="375000" />
+      <workItem from="1508403579378" duration="5538000" />
+      <workItem from="1508438076541" duration="8683000" />
+      <workItem from="1508966892504" duration="8873000" />
+      <workItem from="1509889109333" duration="555000" />
+      <workItem from="1510179354105" duration="308000" />
+      <workItem from="1510781354453" duration="3276000" />
+      <workItem from="1511277095191" duration="1793000" />
+      <workItem from="1511717535837" duration="17620000" />
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="47021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14246576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22709164" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24246575" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.004109589" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23344104" sideWeight="0.49183673" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2657512" sideWeight="0.49449036" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18046875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2815405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5055096" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
-          <caret line="400" column="17" lean-forward="false" selection-start-line="400" selection-start-column="17" selection-end-line="400" selection-end-column="17" />
-          <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="147" column="47" lean-forward="false" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
-          <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="147" column="47" lean-forward="false" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
-          <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2205">
-          <caret line="147" column="47" lean-forward="false" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
-          <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10155">
-          <caret line="677" column="44" lean-forward="false" selection-start-line="677" selection-start-column="44" selection-end-line="677" selection-end-column="44" />
-          <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
+    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6391#6501#0" expanded="false" />
+            <element signature="e#7687#9865#0" expanded="false" />
+            <element signature="e#10156#10296#0" expanded="false" />
+            <element signature="e#10329#10469#0" expanded="false" />
+            <element signature="e#10502#10852#0" expanded="false" />
+            <element signature="class#10882:11495" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
+    <entry file="file://$PROJECT_DIR$/src/iridium/Voice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_time_awb.jar!/com/sun/speech/freetts/en/us/cmu_time_awb/AlanVoiceDirectory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_us_kal.jar!/com/sun/speech/freetts/en/us/cmu_us_kal/KevinVoiceDirectory.class" />
+    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/MyQRCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="6600">
+          <caret line="440" column="13" lean-forward="false" selection-start-line="440" selection-start-column="13" selection-end-line="440" selection-end-column="13" />
           <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3295#4307#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
+    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6391#6501#0" expanded="false" />
+            <element signature="e#7687#9865#0" expanded="false" />
+            <element signature="e#10156#10296#0" expanded="false" />
+            <element signature="e#10329#10469#0" expanded="false" />
+            <element signature="e#10502#10852#0" expanded="false" />
+            <element signature="class#10882:11495" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_time_awb.jar!/com/sun/speech/freetts/en/us/cmu_time_awb/AlanVoiceDirectory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_us_kal.jar!/com/sun/speech/freetts/en/us/cmu_us_kal/KevinVoiceDirectory.class" />
+    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/MyQRCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="6600">
+          <caret line="440" column="13" lean-forward="false" selection-start-line="440" selection-start-column="13" selection-end-line="440" selection-end-column="13" />
           <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3295#4307#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../lib/tika-1.14/tika-app/src/main/java/org/apache/tika/batch/DigestingAutoDetectParserFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster Kopie.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/filedrop.xml">
+    <entry file="file://$PROJECT_DIR$/src/iridium/Voice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6391#6501#0" expanded="false" />
+            <element signature="e#7687#9865#0" expanded="false" />
+            <element signature="e#10156#10296#0" expanded="false" />
+            <element signature="e#10329#10469#0" expanded="false" />
+            <element signature="e#10502#10852#0" expanded="false" />
+            <element signature="class#10882:11495" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="51" column="34" lean-forward="false" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/MyQRCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="170" column="31" lean-forward="false" selection-start-line="170" selection-start-column="31" selection-end-line="170" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3295#4307#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6391#6501#0" expanded="false" />
+            <element signature="e#7687#9865#0" expanded="false" />
+            <element signature="e#10156#10296#0" expanded="false" />
+            <element signature="e#10329#10469#0" expanded="false" />
+            <element signature="e#10502#10852#0" expanded="false" />
+            <element signature="class#10882:11495" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/MyQRCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3295#4307#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6391#6501#0" expanded="false" />
+            <element signature="e#7687#9865#0" expanded="false" />
+            <element signature="e#10156#10296#0" expanded="false" />
+            <element signature="e#10329#10469#0" expanded="false" />
+            <element signature="e#10502#10852#0" expanded="false" />
+            <element signature="class#10882:11495" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_time_awb.jar!/com/sun/speech/freetts/en/us/cmu_time_awb/AlanVoiceDirectory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_us_kal.jar!/com/sun/speech/freetts/en/us/cmu_us_kal/KevinVoiceDirectory.class" />
+    <entry file="file://$PROJECT_DIR$/en-us.lm.bin">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-48">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/palladium-ring.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/Button-help-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
+    <entry file="file://$PROJECT_DIR$/cmudict-en-us.dict">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-179793">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,167 +724,190 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/Programmeconfig.txt">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iridium.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/fenster.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/kotlinc.xml">
+    <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/iridium_jar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/poi_3_17.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/poi_ooxml_3_17.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/poi_ooxml_schemas_3_17.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/core_3_3_0.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/awt/event/ActionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        <state relative-caret-position="114">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/scene/input/ClipboardContent.java">
+    <entry file="file://$PROJECT_DIR$/src/iridium/Filehandeling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="171">
+          <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#Datei#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#Löschen#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#getFiles#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#Schreiben#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#Lesen#0;class#Filehandeling#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/scene/input/Clipboard.java">
+    <entry file="file://$PROJECT_DIR$/src/iridium/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="120" column="13" lean-forward="false" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+        <state relative-caret-position="-1510">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#811#1178#0" expanded="false" />
+            <element signature="e#1177#1178#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Voice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/MyQRCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="250">
+          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="192" column="24" lean-forward="false" selection-start-line="192" selection-start-column="24" selection-end-line="192" selection-end-column="24" />
-          <folding>
-            <element signature="e#6207#6317#0" expanded="false" />
-            <element signature="e#6383#7327#0" expanded="false" />
-            <element signature="e#7420#9586#0" expanded="false" />
-            <element signature="e#9789#9924#0" expanded="false" />
-            <element signature="e#10125#10457#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="283" column="48" lean-forward="false" selection-start-line="283" selection-start-column="48" selection-end-line="283" selection-end-column="48" />
+        <state relative-caret-position="-591">
+          <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
-            <element signature="class#1319:1869" expanded="false" />
-            <element signature="e#1510#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#2116#2181#0" expanded="false" />
-            <element signature="e#2210#2325#0" expanded="false" />
-            <element signature="e#2361#2730#0" expanded="false" />
-            <element signature="e#3246#3379#0" expanded="false" />
-            <element signature="e#3414#3699#0" expanded="false" />
-            <element signature="e#3728#4009#0" expanded="false" />
-            <element signature="e#4108#4224#0" expanded="false" />
-            <element signature="method#open#0;class#methods#0" expanded="false" />
-            <element signature="method#ALzuSt#0;class#methods#0" expanded="false" />
-            <element signature="method#update#0;class#methods#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#methods#0" expanded="false" />
-            <element signature="e#6749#9361#0" expanded="true" />
-            <element signature="e#9360#9361#0" expanded="true" />
-            <element signature="method#FarbeHintergrund#0;class#methods#0" expanded="false" />
-            <element signature="method#Farbeschrift#0;class#methods#0" expanded="false" />
-            <element signature="e#10864#11014#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="method#sagen#0;class#methods#0" expanded="false" />
-            <element signature="method#rechner#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#0;class#methods#0" expanded="false" />
-            <element signature="method#Spiele#1;class#methods#0" expanded="false" />
-            <element signature="method#Stop#0;class#methods#0" expanded="false" />
-            <element signature="method#Datei#0;class#methods#0" expanded="false" />
-            <element signature="method#Löschen#0;class#methods#0" expanded="false" />
-            <element signature="method#getFiles#0;class#methods#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#methods#0" expanded="false" />
-            <element signature="method#Lesen#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
-            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
-            <element signature="e#14651#14957#0" expanded="true" />
-            <element signature="e#14956#14957#0" expanded="true" />
-            <element signature="e#15511#15704#0" expanded="false" />
-            <element signature="method#AusgabeFeld#2;class#methods#0" expanded="false" />
-            <element signature="e#16201#16507#0" expanded="true" />
-            <element signature="e#16506#16507#0" expanded="true" />
-            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
-            <element signature="method#clear#0;class#methods#0" expanded="false" />
-            <element signature="method#Short#0;class#methods#0" expanded="false" />
-            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
-            <element signature="method#getShortcut#0;class#methods#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#methods#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#methods#0" expanded="false" />
-            <element signature="method#ProgrammStart#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#methods#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#methods#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#methods#0" expanded="false" />
-            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3295#4307#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
+    <entry file="file://$PROJECT_DIR$/src/iridium/Programmstart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="213">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ProgrammStart#0;class#Programmstart#0" expanded="false" />
+            <element signature="method#addProgramm#0;class#Programmstart#0" expanded="false" />
+            <element signature="method#addProgramm#1;class#Programmstart#0" expanded="false" />
+            <element signature="method#SchreibenP#0;class#Programmstart#0" expanded="false" />
+            <element signature="method#getProgramm#0;class#Programmstart#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Presentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#copyToClipboard#0;class#Presentation#0" expanded="false" />
+            <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
+            <element signature="method#firstup#0;class#Presentation#0" expanded="false" />
+            <element signature="method#updatek#0;class#Presentation#0" expanded="false" />
+            <element signature="method#FarbeHintergrund#0;class#Presentation#0" expanded="false" />
+            <element signature="method#Farbeschrift#0;class#Presentation#0" expanded="false" />
+            <element signature="method#HintergrundF#0;class#Presentation#0" expanded="false" />
+            <element signature="method#SchriftF#0;class#Presentation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="171" column="68" lean-forward="false" selection-start-line="171" selection-start-column="68" selection-end-line="171" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6391#6501#0" expanded="false" />
+            <element signature="e#7687#9865#0" expanded="false" />
+            <element signature="e#10156#10296#0" expanded="false" />
+            <element signature="e#10329#10469#0" expanded="false" />
+            <element signature="e#10502#10852#0" expanded="false" />
+            <element signature="class#10882:11495" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1437,10 +917,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>iridium:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1508,7 +990,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>filedrop</last-edited>
+          <last-edited>poi-ooxml-3.17</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

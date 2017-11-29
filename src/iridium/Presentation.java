@@ -21,15 +21,15 @@ public class Presentation {
     private static ArrayList<String> history = new ArrayList<>();
 
 
-    public static void update(String in, boolean prefix) {
+    public static void update(String in, boolean prefixb) {
 
-		if (prefix) {
+		if (prefixb) {
             Presentation.Inhalt += in;
 			Iridium.Aus.setContentType("text/html");
             Iridium.Aus.setText(Inhalt + prefix + Presentation.Farbe + out_l + cursor + out_r);
 		}
 
-        if (!prefix) {
+        if (!prefixb) {
             Inhalt += Farbe + in + "<br>";
             Iridium.Aus.setContentType("text/html");
             Iridium.Aus.setText(Inhalt);

@@ -2,6 +2,7 @@
   <library name="httpcore-4.4.6">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../lib/httpcore-4.4.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib/apache/commons-logging-1.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

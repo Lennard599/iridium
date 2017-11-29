@@ -15,73 +15,73 @@ import com.sun.speech.freetts.Voice;
 public class methods {
 	private static Call call = new Call();
 	private static int sec = 0;
-	private static String[] splited ;
+	private static String[] splitted ;
 
 	public methods() {
 		call.setCommand("clear", () -> Presentation.clear());
 		call.setCommand("ping", () -> Presentation.update("pong", false));
 		call.setCommand("hi",  () -> Presentation.update("Hi", false));
 		call.setCommand("timer", () -> {
-			int a = Integer.parseInt(splited[1]);
+			int a = Integer.parseInt(splitted[1]);
 			timer(a);
 		});
 		call.setCommand("say",  () -> {
 				String a1 = " ";
-				for (int i = 1; i < splited.length; i++)
-					a1 += splited[i];
+				for (int i = 1; i < splitted.length; i++)
+					a1 += splitted[i];
 				sagen(a1);
 		});
 		call.setCommand("calculator",  () -> {
 				double z1, z2 = 0;
 
 				try {
-					z1 = Double.parseDouble(splited[1]);
-					z2 = Double.parseDouble(splited[3]);
+					z1 = Double.parseDouble(splitted[1]);
+					z2 = Double.parseDouble(splitted[3]);
 
 					if (z1 * z2 < Integer.MAX_VALUE)
-						Presentation.update(String.valueOf(rechner(z1, splited[2], z2)), false);
+						Presentation.update(String.valueOf(rechner(z1, splitted[2], z2)), false);
 					else
 						Presentation.update("0,0", false);
 				} catch (java.lang.NumberFormatException e) {
 					Presentation.update("Falsche Parameter", false);
 				}
 		});
-		call.setCommand("play",  () ->  Player.Spiele(splited));
+		call.setCommand("play",  () ->  Player.Spiele(splitted));
 		call.setCommand("stop",  () -> Player.Stop());
 		call.setCommand("weiter",  () -> Player.stop = false);
-		call.setCommand("create",  () -> Filehandeling.Datei(splited[1]));
-		call.setCommand("delete",  () -> Filehandeling.Löschen(splited[1]));
+		call.setCommand("create",  () -> Filehandeling.Datei(splitted[1]));
+		call.setCommand("delete",  () -> Filehandeling.Löschen(splitted[1]));
 		call.setCommand("list",  () -> Filehandeling.getFiles("iridium/Dateien", true));
-		call.setCommand("open",  () -> AusgabeFeld(Filehandeling.Lesen(splited[1], true), splited[1], true, true));
-		call.setCommand("setshort",  () -> SetShort(splited));
+		call.setCommand("open",  () -> AusgabeFeld(Filehandeling.Lesen(splitted[1], true), splitted[1], true, true));
+		call.setCommand("setshort",  () -> SetShort(splitted));
 		call.setCommand("short", () -> {
-				if (splited.length > 1) {
-					if (splited[1].equals("-o"))
+				if (splitted.length > 1) {
+					if (splitted[1].equals("-o"))
 						getShortcut();
 				}
 				else
 					methods.Short();
 		});
 		call.setCommand("background", () -> {
-		if (splited[1].equals("rot") || splited[1].equals("blau") || splited[1].equals("grün") || splited[1].equals("weiß") || splited[1].equals("schwarz") || splited[1].equals("gelb"))
-			Presentation.HintergrundF(splited[1], Iridium.FarbeS2);
+		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
+			Presentation.HintergrundF(splitted[1], Iridium.FarbeS2);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
 		call.setCommand("font", () -> {
-		if (splited[1].equals("rot") || splited[1].equals("blau") || splited[1].equals("grün") || splited[1].equals("weiß") || splited[1].equals("schwarz") || splited[1].equals("gelb"))
-			Presentation.SchriftF(Iridium.FarbeH2, splited[1]);
+		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
+			Presentation.SchriftF(Iridium.FarbeH2, splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
 		call.setCommand("spotify", () -> open("https://open.spotify.com"));
 		call.setCommand("link", () -> {
-		if (!splited[1].contains("https://"))
-					splited[1] = "https://" + splited[1];
-				open(splited[1]);
+		if (!splitted[1].contains("https://"))
+					splitted[1] = "https://" + splitted[1];
+				open(splitted[1]);
 		});
-		call.setCommand("start", () -> Programmstart.ProgrammStart(splited[1]));
-		call.setCommand("addprogramm", () -> Programmstart.addProgramm(splited));
+		call.setCommand("start", () -> Programmstart.ProgrammStart(splitted[1]));
+		call.setCommand("addprogramm", () -> Programmstart.addProgramm(splitted));
 		call.setCommand("help",  () -> Presentation.update(call.getCommands(),false));
 				//methods.Hilfe();
 		call.setCommand("quit", () -> System.exit(0));
@@ -99,8 +99,8 @@ public class methods {
 			b.put("black", Color.BLACK);
 			b.put("yellow", Color.YELLOW);
 			b.put("green", Color.GREEN);
-			for (int i = 0;i < splited.length;i++)
-				a.add(splited[i]);
+			for (int i = 0;i < splitted.length;i++)
+				a.add(splitted[i]);
 
 			if(a.contains("-size") && !a.contains("\\-size"))
 				size = Integer.parseInt(a.get(a.indexOf("-size") + 1));
@@ -110,15 +110,15 @@ public class methods {
 
 				level = ErrorCorrectionLevel.valueOf(a.get(a.indexOf("-level") + 1));
 
-			name = splited[splited.length-2];
-			text = splited[splited.length-1];
+			name = splitted[splitted.length-2];
+			text = splitted[splitted.length-1];
 
 			System.out.println(text +" "+ size + " " + name +" "+ col);
 			try {
 				MyQRCode.createQRImage(text, size, name, col, level, "png");
 			} catch (Exception ignore){}
 		});
-		call.setCommand("update",  () ->  {if(splited.length>1&&splited[1].equals("-keep"))Updater.update(true);
+		call.setCommand("update",  () ->  {if(splitted.length>1&&splitted[1].equals("-keep"))Updater.update(true);
 		else Updater.update(false);});
 
 	}
@@ -187,65 +187,12 @@ public class methods {
 	}
 
 	public static void AusgabeFeld(ArrayList<String> a, String title, boolean be, boolean rela, String Path, boolean html) {
-		String in = "";
-		JFrame Ausgabe = new JFrame(title);
-		Ausgabe.setVisible(true);
-		Ausgabe.setSize(450, 600);
-		Ausgabe.setResizable(false);
-		Ausgabe.setLocationRelativeTo(null);
-		Ausgabe.setLayout(new BorderLayout());
-		Ausgabe.setIconImage(Iridium.icon.getImage());
+	    String in = "";
 
-		if (be) {
-			Ausgabe.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-			WindowListener close = new WindowAdapter() {
+	    for (int i = 0;i<a.size();i++)
+	        in += a.get(i) + " ";
 
-				public void windowClosing(WindowEvent e) {
-					int confirm = JOptionPane.showConfirmDialog(Ausgabe,
-							"Ohne Speichern Beenden?",
-							"Beenden?", JOptionPane.YES_NO_OPTION,
-							JOptionPane.QUESTION_MESSAGE);
-
-					if (confirm == 0)
-						Ausgabe.dispose();
-
-				}
-			};
-			Ausgabe.addWindowListener(close);
-
-		} else
-			Ausgabe.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-
-		JButton Speichern = new JButton("Speichern und Beenden");
-
-		if (be)
-			Ausgabe.add(Speichern, BorderLayout.SOUTH);
-
-		JTextPane text = new JTextPane();
-		JScrollPane scroll = new JScrollPane(text);
-
-
-		Ausgabe.add(scroll, BorderLayout.CENTER);
-
-		if (!be)
-			text.setEditable(false);
-
-		for (String d : a) {
-			in += " " + d;
-		}
-		if (html)
-			text.setContentType("text/html");
-		text.setText(in);
-
-		Speichern.addActionListener(e -> {
-				if (rela)
-					Filehandeling.Schreiben(text.getText(), title, true, false);
-				else
-					Filehandeling.Schreiben(text.getText(), Path, false, false);
-				Ausgabe.dispose();
-				Presentation.update("Saved", true);
-		});
-
+        AusgabeFeld(in, title, be, rela, Path, html);
 	}
 
 	public static void AusgabeFeld(String a, String title, boolean be, boolean rela, String Path, boolean html) {
@@ -263,8 +210,8 @@ public class methods {
 
 				public void windowClosing(WindowEvent e) {
 					int confirm = JOptionPane.showConfirmDialog(Ausgabe,
-							"Ohne Speichern Beenden?",
-							"Beenden?", JOptionPane.YES_NO_OPTION,
+							"quit without saving?",
+							"quit?", JOptionPane.YES_NO_OPTION,
 							JOptionPane.QUESTION_MESSAGE);
 
 					if (confirm == 0)
@@ -277,7 +224,7 @@ public class methods {
 		} else
 			Ausgabe.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
-		JButton Speichern = new JButton("Speichern und Beenden");
+		JButton Speichern = new JButton("save and quit");
 
 		if (be)
 			Ausgabe.add(Speichern, BorderLayout.SOUTH);
@@ -381,11 +328,11 @@ public class methods {
 	}
 
 	public static void runCommand(String f) {
-		splited = f.split("\\s+");
+		splitted = f.split("\\s+");
 		String input = Iridium.Feld.getText();
 
 		Presentation.update(input, true);
 		Iridium.Feld.setText("");
-		call.runCommand(splited);
+		call.runCommand(splitted);
 	}
 }
