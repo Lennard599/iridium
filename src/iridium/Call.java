@@ -3,8 +3,7 @@ package iridium;
 import java.util.HashMap;
 import java.util.Set;
 
-public class Call
-{
+public class Call {
     private static HashMap<String, Runnable> Commands = new HashMap<>();
 
     public void setCommand(String Command ,Runnable method)

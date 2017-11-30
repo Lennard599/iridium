@@ -64,13 +64,13 @@ public class methods {
 		});
 		call.setCommand("background", () -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.HintergrundF(splitted[1], Iridium.FarbeS2);
+			Presentation.HintergrundF(splitted[1], ConfHandler.FarbeS2);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
 		call.setCommand("font", () -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.SchriftF(Iridium.FarbeH2, splitted[1]);
+			Presentation.SchriftF(ConfHandler.FarbeH2, splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
@@ -329,10 +329,6 @@ public class methods {
 
 	public static void runCommand(String f) {
 		splitted = f.split("\\s+");
-		String input = Iridium.Feld.getText();
-
-		Presentation.update(input, true);
-		Iridium.Feld.setText("");
-		call.runCommand(splitted);
+        call.runCommand(splitted);
 	}
 }

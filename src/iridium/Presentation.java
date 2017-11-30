@@ -97,7 +97,7 @@ public class Presentation {
     }
 
     public static void firstup(){
-        prefix = "<html><font color=yellow>" + Iridium.NameB + "@" + System.getProperty("os.name") + ": " + "</font>";
+        prefix = "<html><font color=yellow>" + ConfHandler.NameB + "@" + System.getProperty("os.name") + ": " + "</font>";
         out_l = "";
         Iridium.Aus.setContentType("text/html");
         Iridium.Aus.setText(Inhalt + prefix + Farbe + cursor);
@@ -195,27 +195,27 @@ public class Presentation {
 
         if (farbe.equals("2") || farbe.equals("blau")) {
             output = Color.BLUE;
-            Iridium.FarbeH2 = "2";
+            ConfHandler.FarbeH2 = "2";
         }
         if (farbe.equals("1") || farbe.equals("grün")) {
             output = Color.GREEN;
-            Iridium.FarbeH2 = "1";
+            ConfHandler.FarbeH2 = "1";
         }
         if (farbe.equals("0") || farbe.equals("weiß")) {
             output = Color.WHITE;
-            Iridium.FarbeH2 = "0";
+            ConfHandler.FarbeH2 = "0";
         }
         if (farbe.equals("3") || farbe.equals("schwarz")) {
             output = Color.BLACK;
-            Iridium.FarbeH2 = "3";
+            ConfHandler.FarbeH2 = "3";
         }
         if (farbe.equals("4") || farbe.equals("rot")) {
             output = Color.RED;
-            Iridium.FarbeH2 = "4";
+            ConfHandler.FarbeH2 = "4";
         }
         if (farbe.equals("5") || farbe.equals("gelb")) {
             output = Color.YELLOW;
-            Iridium.FarbeH2 = "5";
+            ConfHandler.FarbeH2 = "5";
         }
 
         return output;
@@ -223,27 +223,27 @@ public class Presentation {
 
     public static String Farbeschrift(String farbe) {
         if (farbe.equals("3") || farbe.equals("blau")) {
-            Iridium.FarbeS2 = "3";
+            ConfHandler.FarbeS2 = "3";
             return "<font color=blue>";
         }
         if (farbe.equals("1") || farbe.equals("grün")) {
-            Iridium.FarbeS2 = "1";
+            ConfHandler.FarbeS2 = "1";
             return "<font color=green>";
         }
         if (farbe.equals("2") || farbe.equals("weiß")) {
-            Iridium.FarbeS2 = "2";
+            ConfHandler.FarbeS2 = "2";
             return "<font color=white>";
         }
         if (farbe.equals("0") || farbe.equals("schwarz")) {
-            Iridium.FarbeS2 = "0";
+            ConfHandler.FarbeS2 = "0";
             return "<font color=black>";
         }
         if (farbe.equals("4") || farbe.equals("rot")) {
-            Iridium.FarbeS2 = "4";
+            ConfHandler.FarbeS2 = "4";
             return "<font color=red>";
         }
         if (farbe.equals("5") || farbe.equals("gelb")) {
-            Iridium.FarbeS2 = "5";
+            ConfHandler.FarbeS2 = "5";
             return "<font color=yellow>";
         }
         return "";
@@ -252,7 +252,7 @@ public class Presentation {
     public static void HintergrundF(String farbeh, String farbes) {
         String a;
         Color col = FarbeHintergrund(farbeh);
-        a = Iridium.NameB + " " + farbeh + " " + farbes + " ";
+        a = ConfHandler.NameB + " " + farbeh + " " + farbes + " ";
         ArrayList<String> b = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
         for (int i = 3;i < b.size();i++)
             a += b.get(i) + " ";
@@ -265,7 +265,7 @@ public class Presentation {
     public static void SchriftF(String farbeh, String farbes) {
         String a;
         Farbe = Farbeschrift(farbes);
-        a = Iridium.NameB + " " + farbeh + " " + farbes + " ";
+        a = ConfHandler.NameB + " " + farbeh + " " + farbes + " ";
         ArrayList<String> b = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
         for (int i = 3;i < b.size();i++)
             a += b.get(i) + " ";
