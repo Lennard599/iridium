@@ -64,13 +64,13 @@ public class methods {
 		});
 		call.setCommand("background", () -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.HintergrundF(splitted[1], ConfHandler.FarbeS2);
+			Presentation.HintergrundF(splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
 		call.setCommand("font", () -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.SchriftF(ConfHandler.FarbeH2, splitted[1]);
+			Presentation.SchriftF(splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
@@ -240,7 +240,9 @@ public class methods {
 
 		if (html)
 			text.setContentType("text/html");
-		text.setText(a);
+		a = "<html><body style=\"font-family: " + Presentation.fontfamily + "\">" + a;
+
+        text.setText(a);
 
 		Speichern.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

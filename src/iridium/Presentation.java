@@ -12,19 +12,32 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 public class Presentation {
-    private static String Inhalt = "";
+    public static String fontfamily = "'Menlo'";
+    private static String ptext = ConfHandler.NameB + "@" + System.getProperty("os.name") + ": ";
+    private static String Inhalt = "<html><body style=\"font-family: " + fontfamily + "\">";
     public static String Farbe = "";
-    private static String prefix = "<html><font color=yellow>#-# </font>";
+    private static String prefix = "<font color=yellow>#-# </font>";
     private static String cursor =  "<font color=yellow>&#9611</font>";
     private static String out_l,out_r = "";
     public static int posi,p = 0;
     private static ArrayList<String> history = new ArrayList<>();
 
+    public Presentation(){
+        prefix = FarbePrefix(ConfHandler.FarbeP2) + ConfHandler.NameB + "@" + System.getProperty("os.name") + ": " + "</font>";
+        Farbe = Farbeschrift(ConfHandler.FarbeS2);
+        Color col = FarbeHintergrund(ConfHandler.FarbeH2);
+        Iridium.Aus.setBackground(col);
+        Inhalt += Farbe + "Wilkommen " + ConfHandler.NameB + "<br>";
+
+        Presentation.firstup();
+        Presentation.updatek();
+        Presentation.Mouse();
+    }
 
     public static void update(String in, boolean prefixb) {
 
 		if (prefixb) {
-            Presentation.Inhalt += in;
+            Presentation.Inhalt += in + "<br>";
 			Iridium.Aus.setContentType("text/html");
             Iridium.Aus.setText(Inhalt + prefix + Presentation.Farbe + out_l + cursor + out_r);
 		}
@@ -37,7 +50,7 @@ public class Presentation {
     }
 
     public static void clear() {
-        Presentation.Inhalt = "";
+        Presentation.Inhalt = "<Html><body>";
         Iridium.Aus.setText("");
     }
 
@@ -97,9 +110,9 @@ public class Presentation {
     }
 
     public static void firstup(){
-        prefix = "<html><font color=yellow>" + ConfHandler.NameB + "@" + System.getProperty("os.name") + ": " + "</font>";
         out_l = "";
         Iridium.Aus.setContentType("text/html");
+        prefix = FarbePrefix(ConfHandler.FarbeP2) + ptext + "</font>";
         Iridium.Aus.setText(Inhalt + prefix + Farbe + cursor);
     }
 
@@ -190,7 +203,7 @@ public class Presentation {
         });
     }
 
-    public static Color FarbeHintergrund(String farbe) {
+    private static Color FarbeHintergrund(String farbe) {
         Color output = null;
 
         if (farbe.equals("2") || farbe.equals("blau")) {
@@ -221,7 +234,7 @@ public class Presentation {
         return output;
     }
 
-    public static String Farbeschrift(String farbe) {
+    private static String Farbeschrift(String farbe) {
         if (farbe.equals("3") || farbe.equals("blau")) {
             ConfHandler.FarbeS2 = "3";
             return "<font color=blue>";
@@ -249,27 +262,63 @@ public class Presentation {
         return "";
     }
 
-    public static void HintergrundF(String farbeh, String farbes) {
+    private static String FarbePrefix(String farbe) {
+        if (farbe.equals("3") || farbe.equals("blau")) {
+            ConfHandler.FarbeP2 = "3";
+            return "<font color=blue>";
+        }
+        if (farbe.equals("1") || farbe.equals("grün")) {
+            ConfHandler.FarbeP2 = "1";
+            return "<font color=green>";
+        }
+        if (farbe.equals("2") || farbe.equals("weiß")) {
+            ConfHandler.FarbeP2 = "2";
+            return "<font color=white>";
+        }
+        if (farbe.equals("0") || farbe.equals("schwarz")) {
+            ConfHandler.FarbeP2 = "0";
+            return "<font color=black>";
+        }
+        if (farbe.equals("4") || farbe.equals("rot")) {
+            ConfHandler.FarbeP2 = "4";
+            return "<font color=red>";
+        }
+        if (farbe.equals("5") || farbe.equals("gelb")) {
+            ConfHandler.FarbeP2 = "5";
+            return "<font color=yellow>";
+        }
+        return "";
+    }
+
+    public static void PrefixF(String farbep) {
         String a;
-        Color col = FarbeHintergrund(farbeh);
-        a = ConfHandler.NameB + " " + farbeh + " " + farbes + " ";
+        prefix = FarbePrefix(farbep) + ConfHandler.NameB + "@" + System.getProperty("os.name") + ": " + "</font>";
+        a = ConfHandler.NameB + " " + ConfHandler.FarbeH2 + " " + ConfHandler.FarbeS2 + " " + farbep + " ";
         ArrayList<String> b = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
-        for (int i = 3;i < b.size();i++)
+        for (int i = 4;i < b.size();i++)
             a += b.get(i) + " ";
         Filehandeling.Schreiben(a, "iridium/Iridiumconfig.txt", false, true);
-        System.out.println(a);
+    }
+
+    public static void HintergrundF(String farbeh) {
+        String a;
+        Color col = FarbeHintergrund(farbeh);
+        a = ConfHandler.NameB + " " + farbeh + " " + ConfHandler.FarbeS2 + " " + ConfHandler.FarbeP2 + " ";
+        ArrayList<String> b = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
+        for (int i = 4;i < b.size();i++)
+            a += b.get(i) + " ";
+        Filehandeling.Schreiben(a, "iridium/Iridiumconfig.txt", false, true);
         Iridium.meinFrame.setBackground(col);
         Iridium.Aus.setBackground(col);
     }
 
-    public static void SchriftF(String farbeh, String farbes) {
+    public static void SchriftF(String farbes) {
         String a;
         Farbe = Farbeschrift(farbes);
-        a = ConfHandler.NameB + " " + farbeh + " " + farbes + " ";
+        a = ConfHandler.NameB + " " + ConfHandler.FarbeH2 + " " + farbes + " " + ConfHandler.FarbeP2 + " ";
         ArrayList<String> b = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
-        for (int i = 3;i < b.size();i++)
+        for (int i = 4;i < b.size();i++)
             a += b.get(i) + " ";
-        System.out.println(a);
         Filehandeling.Schreiben(a, "iridium/Iridiumconfig.txt", false, true);
     }
 }

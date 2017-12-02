@@ -1,13 +1,36 @@
 package iridium;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import net.iharder.dnd.FileDrop;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Filehandeling {
+
+    public static void enableFiledrop(){
+        new FileDrop(Iridium.scroll, files -> {
+            for (File a : files) {
+                if (a.getName().contains(".mp3"))
+                    Player.Spiele(a.getAbsolutePath());
+                else {
+                    try {
+                        XWPFDocument docx = new XWPFDocument(new FileInputStream(a.getAbsolutePath()));
+                        XWPFWordExtractor we = new XWPFWordExtractor(docx);
+
+                        methods.AusgabeFeld(we.getText(), a.getName(), false, false, "", true);
+
+                        System.out.println(we.getText());
+                    } catch (Exception e) {
+                        Presentation.update("Error filetype not supported", true);
+                    }
+                }
+            }
+        });
+    }
+
     public static void Datei(String Name) {
         File folder = new File("iridium/Dateien");
         File file = new File("iridium/Dateien/" + Name + ".txt");
@@ -79,15 +102,14 @@ public class Filehandeling {
             P = "iridium/Dateien/" + wo + ".txt";
         else
             P = wo;
-        File f = new File(P);
-
         try {
+            File f = new File(P);
             Scanner sc = new Scanner(f);
             while (sc.hasNext()) {
                 Lesen.add(sc.next());
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            Presentation.update("The File will be created with Save and quit", false);
         }
         return Lesen;
     }
