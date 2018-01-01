@@ -1,8 +1,9 @@
-Lennard
-3
-2
-3
-N
-Shortcut
-timer
-6
+shortcut: timer 2
+stdprefix: Y
+fontstyle: 'Menlo'
+name: Lennard
+backgroundcolor: 0
+fontcolor: 3
+prefixcolor: 3
+prefixtext: aa_aaaa
+dontshow: N

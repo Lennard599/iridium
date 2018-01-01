@@ -42,10 +42,10 @@ public class Iridium {
 		MenuItem Hilfei = new MenuItem("open");
 		Hilfe.add(Hilfei);
 		MenuItem Genaeral = new MenuItem("General");
-        MenuItem Key = new MenuItem("Key");
+        MenuItem visuals = new MenuItem("Visuals");
         MenuItem Programs = new MenuItem("Programs");
 		Optionen.add(Genaeral);
-        Optionen.add(Key);
+        Optionen.add(visuals);
         Optionen.add(Programs);
 		menue.add(shortcut);
 		menue.add(clear);
@@ -55,22 +55,22 @@ public class Iridium {
 		//Fenster main
 		meinFrame.setSize(600,400);
 		meinFrame.setLocationRelativeTo(null);
-		if (!ConfHandler.dontShow)
+		if (ConfHandler.getConf("dontshow:").trim().equals("N"))
 			meinFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		else
 			meinFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		scroll.setViewportBorder(null);
 		scroll.setBorder(null);
-		meinFrame.setVisible(true);
 		meinFrame.setMenuBar(menue);
 		meinFrame.add(scroll);
 		meinFrame.setIconImage(icon.getImage());
+        meinFrame.setVisible(true);
 		meinFrame.setMinimumSize(new Dimension(600, 400));
 		meinFrame.setSize(601, 401);
 		meinFrame.setSize(600, 400);
         Aus.setEditable(false);
 
-        if (!ConfHandler.dontShow) {
+        if (ConfHandler.getConf("dontshow:").trim().equals("N")) {
 			WindowListener close = new WindowAdapter() {
 
 				public void windowClosing(WindowEvent e) {
@@ -78,13 +78,14 @@ public class Iridium {
 					String message = "are you sure you want to quit?";
 					Object[] params = {message, checkbox};
 					int n = JOptionPane.showConfirmDialog(scroll, params, "Quit?", JOptionPane.YES_NO_OPTION);
-					ConfHandler.dontShow = checkbox.isSelected();
+					if (checkbox.isSelected())
+						ConfHandler.setConf("dontshow:", "Y");
 
-					if (ConfHandler.dontShow)
-						Filehandeling.Schreiben(methods.ALzuSt(Filehandeling.Lesen("iridium/Iridiumconfig.txt", false),3,"J"),"iridium/Iridiumconfig.txt", false, true);
+					if (!ConfHandler.getConf("dontshow:").trim().equals("N"))
+                        ConfHandler.writeConf();
 
 					if (n == 0)
-						System.exit(3);
+						System.exit(0);
 
 				}
 			};
@@ -94,9 +95,8 @@ public class Iridium {
 		new Presentation();
 
 		Genaeral.addActionListener(e -> Options.Option(0));
-        Key.addActionListener(e -> Options.Option(1));
+        visuals.addActionListener(e -> Options.Option(1));
         Programs.addActionListener(e -> Options.Option(2));
-
 
         getshort.addActionListener(e -> {
 			methods.getShortcut();

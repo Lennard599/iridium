@@ -52,7 +52,7 @@ public class methods {
 		call.setCommand("create",  () -> Filehandeling.Datei(splitted[1]));
 		call.setCommand("delete",  () -> Filehandeling.Löschen(splitted[1]));
 		call.setCommand("list",  () -> Filehandeling.getFiles("iridium/Dateien", true));
-		call.setCommand("open",  () -> AusgabeFeld(Filehandeling.Lesen(splitted[1], true), splitted[1], true, true));
+		call.setCommand("open",  () -> {if(splitted.length > 1) AusgabeFeld(Filehandeling.Lesen(splitted[1], true), splitted[1], true, true); else Presentation.update("Argument requiert", false);});
 		call.setCommand("setshort",  () -> SetShort(splitted));
 		call.setCommand("short", () -> {
 				if (splitted.length > 1) {
@@ -64,13 +64,13 @@ public class methods {
 		});
 		call.setCommand("background", () -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.HintergrundF(splitted[1]);
+			Presentation.FarbeHintergrund(splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
 		call.setCommand("font", () -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.SchriftF(splitted[1]);
+			Presentation.Farbeschrift(splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
 		});
@@ -108,6 +108,7 @@ public class methods {
 			if(a.contains("-color") && !a.contains("\\-color"))
 				col = b.get(a.get(a.indexOf("-color")+1));
 
+			if(a.contains("-level") && !a.contains("\\-level"))
 				level = ErrorCorrectionLevel.valueOf(a.get(a.indexOf("-level") + 1));
 
 			name = splitted[splitted.length-2];
@@ -131,19 +132,8 @@ public class methods {
 		}
 	}
 
-	public static String ALzuSt(ArrayList<String> a, int stelle, String wert) {
-		while (a.size() <= stelle)
-			a.add("");
-
-		String b = "";
-		a.set(stelle, wert);
-		for (String c : a)
-			b += c + " ";
-		return b;
-	}
-
 	private static void timer(int time) {
-		Presentation.update("Start <br>", true);
+		Presentation.update("Started", true);
 		Timer t = new Timer();
 		TimerTask tt = new TimerTask() {
 			public void run() {
@@ -240,7 +230,7 @@ public class methods {
 
 		if (html)
 			text.setContentType("text/html");
-		a = "<html><body style=\"font-family: " + Presentation.fontfamily + "\">" + a;
+		a = "<html><body style=\"font-family: " + ConfHandler.getConf("fontstyle:") + "\">" + a;
 
         text.setText(a);
 
@@ -284,49 +274,24 @@ public class methods {
 	}
 
 	public static void Short() {
-		String cut = "";
-		int index;
-		ArrayList<String> a = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
-		index = a.indexOf("Shortcut");
-		for (int i = index + 1; i < a.size(); i++)
-			cut += a.get(i) + " ";
-
-		methods.runCommand(cut);
-
+		methods.runCommand(ConfHandler.getConf("shortcut:"));
 	}
 
 	private static void SetShort(String[] a) {
 		if (call.checkCommands(a[1]))
 		{
 			String ab = "";
-			ArrayList<String> aa = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
-
-			int index = aa.indexOf("Shortcut");
-
-			for (int i = 0;i < aa.size();i++) {
-				if (index+1 > i)
-					ab += aa.get(i) + " ";
-			}
-
 			for (int i = 1;i < a.length;i++)
 				ab += a[i] + " ";
 			System.out.println(ab);
-			Filehandeling.Schreiben(ab, "iridium/Iridiumconfig.txt", false, true);
+			ConfHandler.setConf("shortcut:", ab);
 		}
 		else
-			Presentation.update("Fehler!!", false);
-
+			Presentation.update("Command not found", false);
 	}
 
 	public static void getShortcut() {
-		ArrayList<String> a = Filehandeling.Lesen("iridium/Iridiumconfig.txt", false);
-		int index;
-		String aa = "Momentaner Shortcut : ";
-		index = a.indexOf("Shortcut");
-		for (int i = index + 1; i < a.size(); i++)
-			aa += a.get(i) + " ";
-		Presentation.update(aa, false);
-
+		Presentation.update(ConfHandler.getConf("shortcut:"), false);
 	}
 
 	public static void runCommand(String f) {

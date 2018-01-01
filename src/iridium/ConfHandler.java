@@ -2,18 +2,57 @@ package iridium;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class ConfHandler {
-    public static String FarbeH2, FarbeS2, FarbeP2;
-    public static String NameB = "Iridium";
-    public static boolean dontShow = false;
+    private static HashMap<String,String> conf = new HashMap<>();
 
     public ConfHandler(){
+        conf.put("shortcut:","ping");
+        conf.put("stdprefix:", "Y");
+        conf.put("fontstyle:", "'Menlo'");
+        conf.put("name:", "Iridium");
+        conf.put("backgroundcolor:", "0");
+        conf.put("fontcolor:", "0");
+        conf.put("prefixcolor:", "0");
+        conf.put("prefixtext:", "");
+        conf.put("dontshow:", "N");
         ReadConf();
     }
-    public void ReadConf(){
+
+    public static void setConf(String key, String value){
+        conf.put(key, value);
+    }
+
+    public static String getConf(String key){
+            return conf.get(key);
+    }
+
+    public static void writeConf(){
+        File file = new File("iridium/Iridiumconfig.txt");
+        try {
+            FileWriter fw = new FileWriter(file);
+            Iterator<String> it = conf.keySet().iterator();
+            while (it.hasNext()) {
+                String c = it.next();
+                fw.write(c + " " + conf.get(c) + System.lineSeparator());
+            }
+            fw.close();
+        } catch (IOException e3) {
+            e3.printStackTrace();
+        }
+    }
+
+    public static void writeConf(String key, String value){
+        conf.put(key, value);
+        writeConf();
+    }
+
+    private void ReadConf(){
         File folder = new File("iridium");
         File Dateien = new File("iridium/Dateien");
         File Musik = new File("iridium/Musik");
@@ -44,30 +83,15 @@ public class ConfHandler {
         }
         try {
             Scanner sc = new Scanner(file);
-            if (sc.hasNext())
+            while (sc.hasNextLine())
             {
-                NameB = sc.nextLine();
+                String[] a = sc.nextLine().split("\\s+");
+                String b = "";
+                if (a.length > 1)
+                    for (int i = 1;i < a.length;i++)
+                        b += a[i] + " ";
 
-                FarbeH2 = sc.nextLine();
-
-                FarbeS2 = sc.nextLine();
-
-                FarbeP2 = sc.nextLine();
-
-                if (sc.nextLine().equals("J"))
-                    dontShow = true;
-
-            }
-            else
-            {
-                String a = "";
-                for(int i = 3;i < Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).size(); i++)
-                    a += Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).get(i) + " ";
-                Filehandeling.Schreiben(NameB + " " + "0 " + "0 " + " 0" + "N " + " Shortcut " ,"iridium/Iridiumconfig.txt" ,false ,true);
-                FarbeH2 = "0";
-                FarbeS2 = "0";
-                FarbeP2 = "0";
-                System.out.println("no config found");
+                conf.put(a[0],b);
             }
         } catch (FileNotFoundException e2) {
             e2.printStackTrace();

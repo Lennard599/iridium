@@ -7,13 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d074df0d-60a2-4f8b-b778-41b83a58a17f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iridium/Options.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/Dateien/Test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/Dateien/abc.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iridium/Dateien/todolist.txt" afterPath="$PROJECT_DIR$/iridium/Dateien/todolist.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iridium/Iridiumconfig.txt" afterPath="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/ConfHandler.java" afterPath="$PROJECT_DIR$/src/iridium/ConfHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Filehandeling.java" afterPath="$PROJECT_DIR$/src/iridium/Filehandeling.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Iridium.java" afterPath="$PROJECT_DIR$/src/iridium/Iridium.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Options.java" afterPath="$PROJECT_DIR$/src/iridium/Options.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Presentation.java" afterPath="$PROJECT_DIR$/src/iridium/Presentation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/methods.java" afterPath="$PROJECT_DIR$/src/iridium/methods.java" />
     </list>
@@ -30,68 +31,25 @@
       <FILTER>iridium.*</FILTER>
     </SUITE>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="iridium" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="methods.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4305">
-              <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3261#4273#0" expanded="false" />
+                <element signature="method#sagen#0;class#methods#0" expanded="false" />
+                <element signature="method#rechner#0;class#methods#0" expanded="false" />
+                <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
+                <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
+                <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
+                <element signature="method#SetShort#0;class#methods#0" expanded="false" />
+                <element signature="method#runCommand#0;class#methods#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Programmstart.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iridium/Programmstart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#ProgrammStart#0;class#Programmstart#0" expanded="false" />
-                <element signature="method#addProgramm#0;class#Programmstart#0" expanded="false" />
-                <element signature="method#addProgramm#1;class#Programmstart#0" expanded="false" />
-                <element signature="method#SchreibenP#0;class#Programmstart#0" expanded="false" />
-                <element signature="method#getProgramm#0;class#Programmstart#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Presentation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iridium/Presentation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#update#0;class#Presentation#0" expanded="false" />
-                <element signature="method#clear#0;class#Presentation#0" expanded="false" />
-                <element signature="method#copyToClipboard#0;class#Presentation#0" expanded="false" />
-                <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
-                <element signature="method#firstup#0;class#Presentation#0" expanded="false" />
-                <element signature="method#updatek#0;class#Presentation#0" expanded="false" />
-                <element signature="method#FarbeHintergrund#0;class#Presentation#0" expanded="false" />
-                <element signature="method#Farbeschrift#0;class#Presentation#0" expanded="false" />
-                <element signature="method#FarbePrefix#0;class#Presentation#0" expanded="false" />
-                <element signature="method#PrefixF#0;class#Presentation#0" expanded="false" />
-                <element signature="method#HintergrundF#0;class#Presentation#0" expanded="false" />
-                <element signature="method#SchriftF#0;class#Presentation#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iridium/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -99,48 +57,10 @@
       <file leaf-file-name="Iridium.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="108">
+              <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Options.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iridium/Options.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="140" column="35" lean-forward="false" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Iridiumconfig.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Filehandeling.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iridium/Filehandeling.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="111" column="76" lean-forward="false" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
-              <folding>
-                <element signature="method#enableFiledrop#0;class#Filehandeling#0" expanded="false" />
-                <element signature="method#Datei#0;class#Filehandeling#0" expanded="false" />
-                <element signature="method#Löschen#0;class#Filehandeling#0" expanded="false" />
-                <element signature="method#getFiles#0;class#Filehandeling#0" expanded="false" />
-                <element signature="method#Schreiben#0;class#Filehandeling#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -149,20 +69,51 @@
       <file leaf-file-name="ConfHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iridium/ConfHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
+            <state relative-caret-position="59">
+              <caret line="83" column="13" lean-forward="true" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Call.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
+      <file leaf-file-name="Iridiumconfig.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Presentation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iridium/Presentation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1365">
+              <caret line="313" column="5" lean-forward="false" selection-start-line="313" selection-start-column="5" selection-end-line="313" selection-end-column="5" />
+              <folding>
+                <element signature="method#update#0;class#Presentation#0" expanded="false" />
+                <element signature="method#clear#0;class#Presentation#0" expanded="false" />
+                <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
+                <element signature="method#updatek#0;class#Presentation#0" expanded="false" />
+                <element signature="method#FarbeHintergrund#0;class#Presentation#0" expanded="false" />
+                <element signature="method#Farbeschrift#0;class#Presentation#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Options.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iridium/Options.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,6 +138,12 @@
       <find>first</find>
       <find>Wil</find>
       <find>Optioneni</find>
+      <find>KE</find>
+      <find>Ke</find>
+      <find>set</find>
+      <find>Farbe</find>
+      <find>fontcolor:</find>
+      <find>getConf</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,12 +165,13 @@
         <option value="$PROJECT_DIR$/src/iridium/Player.java" />
         <option value="$PROJECT_DIR$/src/iridium/Programmstart.java" />
         <option value="$PROJECT_DIR$/src/iridium/Call.java" />
-        <option value="$PROJECT_DIR$/src/iridium/methods.java" />
-        <option value="$PROJECT_DIR$/src/iridium/ConfHandler.java" />
-        <option value="$PROJECT_DIR$/src/iridium/Presentation.java" />
-        <option value="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
-        <option value="$PROJECT_DIR$/src/iridium/Options.java" />
         <option value="$PROJECT_DIR$/src/iridium/Filehandeling.java" />
+        <option value="$PROJECT_DIR$/src/iridium/methods.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Presentation.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Options.java" />
+        <option value="$PROJECT_DIR$/src/iridium/Confobject.java" />
+        <option value="$PROJECT_DIR$/src/iridium/ConfHandler.java" />
+        <option value="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
         <option value="$PROJECT_DIR$/src/iridium/Iridium.java" />
       </list>
     </option>
@@ -243,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,6 +212,12 @@
               <item name="iridium" type="b2602c69:ProjectViewProjectNode" />
               <item name="iridium" type="462c0819:PsiDirectoryNode" />
               <item name="iridium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iridium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+              <item name="Dateien" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iridium" type="b2602c69:ProjectViewProjectNode" />
@@ -275,6 +238,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="Scope" />
@@ -434,6 +398,13 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,VISIBILITY_SORTER,SHOW_PROPERTIES" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d074df0d-60a2-4f8b-b778-41b83a58a17f" name="Default" comment="" />
@@ -455,7 +426,16 @@
       <workItem from="1512112934047" duration="3622000" />
       <workItem from="1512162688907" duration="327000" />
       <workItem from="1512167777771" duration="341000" />
-      <workItem from="1512169622549" duration="5108000" />
+      <workItem from="1512169622549" duration="11686000" />
+      <workItem from="1512653085872" duration="348000" />
+      <workItem from="1512684473945" duration="8746000" />
+      <workItem from="1513084866062" duration="270000" />
+      <workItem from="1513089761087" duration="56000" />
+      <workItem from="1513090807245" duration="394000" />
+      <workItem from="1513108311209" duration="290000" />
+      <workItem from="1513109196085" duration="95000" />
+      <workItem from="1513109406140" duration="18755000" />
+      <workItem from="1514818202423" duration="2345000" />
     </task>
     <task id="LOCAL-00001" summary="Code cleaning 1">
       <created>1511991667717</created>
@@ -471,37 +451,53 @@
       <option name="project" value="LOCAL" />
       <updated>1512034849990</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Code cleaning 3&#10;Tabs in Options">
+      <created>1512222470683</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512222470684</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67476000" />
+    <option name="totallyTimeSpent" value="105353000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15333334" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15333334" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18046875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18046875" sideWeight="0.47466666" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.46266666" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18046875" sideWeight="0.52533334" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -509,6 +505,35 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.46266666" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18046875" sideWeight="0.49448818" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5373333" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -519,23 +544,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code cleaning 1" />
     <MESSAGE value="Code cleaning 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code cleaning 2" />
+    <MESSAGE value="Code cleaning 3&#10;Tabs in Options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code cleaning 3&#10;Tabs in Options" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_us_kal.jar!/com/sun/speech/freetts/en/us/cmu_us_kal/KevinVoiceDirectory.class" />
-    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -556,59 +574,13 @@
         <state relative-caret-position="6600">
           <caret line="440" column="13" lean-forward="false" selection-start-line="440" selection-start-column="13" selection-end-line="440" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3261#4273#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_time_awb.jar!/com/sun/speech/freetts/en/us/cmu_time_awb/AlanVoiceDirectory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lib/lib/Voice/cmu_us_kal.jar!/com/sun/speech/freetts/en/us/cmu_us_kal/KevinVoiceDirectory.class" />
-    <entry file="file://$PROJECT_DIR$/src/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/MyQRCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6600">
-          <caret line="440" column="13" lean-forward="false" selection-start-line="440" selection-start-column="13" selection-end-line="440" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3261#4273#0" expanded="false" />
+            <element signature="method#sagen#0;class#methods#0" expanded="false" />
+            <element signature="method#rechner#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
+            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
+            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
+            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -657,8 +629,13 @@
         <state relative-caret-position="2550">
           <caret line="170" column="31" lean-forward="false" selection-start-line="170" selection-start-column="31" selection-end-line="170" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3261#4273#0" expanded="false" />
+            <element signature="method#sagen#0;class#methods#0" expanded="false" />
+            <element signature="method#rechner#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
+            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
+            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
+            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -692,8 +669,13 @@
         <state relative-caret-position="330">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3261#4273#0" expanded="false" />
+            <element signature="method#sagen#0;class#methods#0" expanded="false" />
+            <element signature="method#rechner#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
+            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
+            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
+            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -812,7 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,30 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Programmstart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ProgrammStart#0;class#Programmstart#0" expanded="false" />
-            <element signature="method#addProgramm#0;class#Programmstart#0" expanded="false" />
-            <element signature="method#addProgramm#1;class#Programmstart#0" expanded="false" />
-            <element signature="method#SchreibenP#0;class#Programmstart#0" expanded="false" />
-            <element signature="method#getProgramm#0;class#Programmstart#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,9 +808,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iridium/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iridium/palladium-ring.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iridium/Dateien/tp.txt" />
+    <entry file="file://$PROJECT_DIR$/iridium/Button-help-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iridium/Dateien/Test.txt" />
+    <entry file="file://$PROJECT_DIR$/iridium/Dateien/abc.txt" />
+    <entry file="file://$PROJECT_DIR$/iridium/Programmeconfig.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iridium/Dateien/todolist.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Programmstart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -865,85 +866,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
+    <entry file="file://$PROJECT_DIR$/src/iridium/Filehandeling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4305">
-          <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="81" column="33" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3261#4273#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/ConfHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#enableFiledrop#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#Datei#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#Löschen#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#getFiles#0;class#Filehandeling#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iridium/Presentation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="1365">
+          <caret line="313" column="5" lean-forward="false" selection-start-line="313" selection-start-column="5" selection-end-line="313" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#update#0;class#Presentation#0" expanded="false" />
             <element signature="method#clear#0;class#Presentation#0" expanded="false" />
-            <element signature="method#copyToClipboard#0;class#Presentation#0" expanded="false" />
             <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
-            <element signature="method#firstup#0;class#Presentation#0" expanded="false" />
             <element signature="method#updatek#0;class#Presentation#0" expanded="false" />
             <element signature="method#FarbeHintergrund#0;class#Presentation#0" expanded="false" />
             <element signature="method#Farbeschrift#0;class#Presentation#0" expanded="false" />
-            <element signature="method#FarbePrefix#0;class#Presentation#0" expanded="false" />
-            <element signature="method#PrefixF#0;class#Presentation#0" expanded="false" />
-            <element signature="method#HintergrundF#0;class#Presentation#0" expanded="false" />
-            <element signature="method#SchriftF#0;class#Presentation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Options.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/Confobject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iridium/ConfHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="83" column="13" lean-forward="true" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="216">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Options.java">
+    <entry file="file://$PROJECT_DIR$/src/iridium/methods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="140" column="35" lean-forward="false" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+        <state relative-caret-position="120">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Filehandeling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="111" column="76" lean-forward="false" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
-          <folding>
-            <element signature="method#enableFiledrop#0;class#Filehandeling#0" expanded="false" />
-            <element signature="method#Datei#0;class#Filehandeling#0" expanded="false" />
-            <element signature="method#Löschen#0;class#Filehandeling#0" expanded="false" />
-            <element signature="method#getFiles#0;class#Filehandeling#0" expanded="false" />
-            <element signature="method#Schreiben#0;class#Filehandeling#0" expanded="false" />
+            <element signature="method#sagen#0;class#methods#0" expanded="false" />
+            <element signature="method#rechner#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#0;class#methods#0" expanded="false" />
+            <element signature="method#AusgabeFeld#1;class#methods#0" expanded="false" />
+            <element signature="method#Hilfe#0;class#methods#0" expanded="false" />
+            <element signature="method#SetShort#0;class#methods#0" expanded="false" />
+            <element signature="method#runCommand#0;class#methods#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iridium/Iridium.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="108">
+          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

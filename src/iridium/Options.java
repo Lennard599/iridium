@@ -6,29 +6,49 @@ import java.util.ArrayList;
 
 public class Options {
 
+    static JTextField Name = new JTextField(10);
+    static JTextField Font = new JTextField(10);
+    static JTextField Prefix = new JTextField(10);
+
+
+    private static void save() {
+        ConfHandler.setConf("name:", Name.getText());
+        ConfHandler.setConf("fontstyle:", Font.getText());
+        ConfHandler.setConf("prefixtext:", Prefix.getText());
+        ConfHandler.writeConf();
+    }
+
     public static void Option(int index) {
         JTabbedPane pane = new JTabbedPane();
         JLabel OptionName = new JLabel("Your Name");
-        String[] FarbListe = {"Weiß", "Grün", "Blau", "Schwarz", "Rot"};
-        String[] FarbListeS = {"Schwarz", "Grün", "Weiß", "Blau", "Rot"};
-        String[] FarbListeP = {"Schwarz", "Grün", "Weiß", "Blau", "Rot"};
+        String[] FarbListe = {"White", "Green", "Blue", "Black", "Rot", "Yellow"};
+        String[] FarbListeS = {"Black", "Green", "White", "Blue", "Rot", "Yellow"};
+        String[] FarbListeP = {"Black", "Green", "White", "Blue", "Rot", "Yellow"};
         JComboBox FarbeH = new JComboBox(FarbListe);
         JComboBox FarbeS = new JComboBox(FarbListeS);
         JComboBox FarbeP = new JComboBox(FarbListeP);
         JButton anwenden = new JButton("apply");
+        JButton anwenden2 = new JButton("apply");
         JLabel OptionFarbeH = new JLabel("backgroundcolor");
         JLabel OptionFarbeS = new JLabel("fontcolor");
         JLabel OptionFarbeP = new JLabel("Prefix color");
-        JTextField Name = new JTextField(10);
+        JLabel OptionFont = new JLabel("Enter Fontstyle");
+        JLabel OptionPrefix = new JLabel("Prefix Text");
+        JLabel stdpl = new JLabel("Use Custom Prefix");
+        JCheckBox stdp = new JCheckBox();
 
         JPanel Generl = new JPanel();
-        JPanel Key = new JPanel();
+        JPanel visuals = new JPanel();
 
         JPanel Jp4 = new JPanel();
         JPanel Jp5 = new JPanel();
         JPanel Jp6 = new JPanel();
         JPanel Jp7 = new JPanel();
         JPanel Jp9 = new JPanel();
+        JPanel Jp10 = new JPanel();
+        JPanel Jp11 = new JPanel();
+        JPanel Jp72 = new JPanel();
+        JPanel Jp12 = new JPanel();
 
         JFrame OptionenF = new JFrame("Iridium");
         OptionenF.setSize(300,400);
@@ -37,7 +57,16 @@ public class Options {
         OptionenF.setVisible(true);
         OptionenF.setIconImage(Iridium.icon.getImage());
         OptionenF.setLocation(Iridium.meinFrame.getLocation());
-        Name.setText(ConfHandler.NameB);
+
+        Name.setText(ConfHandler.getConf("name:"));
+        Font.setText(ConfHandler.getConf("fontstyle:"));
+        Prefix.setText(ConfHandler.getConf("prefixtext:"));
+
+        if (ConfHandler.getConf("stdprefix:").trim().equals("N"))
+            stdp.setSelected(true);
+
+        if (!stdp.isSelected())
+            Prefix.setFocusable(false);
 
         Jp4.add(OptionFarbeH);
         Jp4.add(FarbeH);
@@ -48,47 +77,62 @@ public class Options {
         Jp6.add(OptionName);
         Jp6.add(Name);
         Jp7.add(anwenden);
+        Jp10.add(OptionFont);
+        Jp10.add(Font);
+        Jp11.add(OptionPrefix);
+        Jp11.add(Prefix);
+        Jp72.add(anwenden2);
+        Jp12.add(stdpl);
+        Jp12.add(stdp);
 
         Generl.add(Jp6);
         Generl.add(Jp7);
-        Key.add(Jp4);
-        Key.add(Jp5);
-        Key.add(Jp9);
+        visuals.add(Jp4);
+        visuals.add(Jp5);
+        visuals.add(Jp9);
+        visuals.add(Jp10);
+        visuals.add(Jp12);
+        visuals.add(Jp11);
+        visuals.add(Jp72);
 
         pane.add(Generl, "General", 0);
-        pane.add(Key, "Key", 1);
+        pane.add(visuals, "Visuals", 1);
 
-        FarbeH.setSelectedIndex(Integer.parseInt(ConfHandler.FarbeH2));
-        FarbeS.setSelectedIndex(Integer.parseInt(ConfHandler.FarbeS2));
-        FarbeP.setSelectedIndex(Integer.parseInt(ConfHandler.FarbeP2));
+        FarbeH.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("backgroundcolor:")));
+        FarbeS.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("fontcolor:")));
+        FarbeP.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("prefixcolor:")));
         OptionenF.add(pane);
 
+        stdp.addActionListener(ee ->{
+            if (!stdp.isSelected()) {
+                ConfHandler.writeConf("stdprefix:", "Y");
+                Presentation.FarbePrefix(ConfHandler.getConf("prefixcolor:"));
+                Prefix.setFocusable(false);
+            }
+            else{
+                ConfHandler.writeConf("stdprefix:", "N");
+                Presentation.FarbePrefix(ConfHandler.getConf("prefixcolor:"));
+                Prefix.setFocusable(true);
+            }
+        });
+
         FarbeH.addActionListener(ee -> {
-            int FarbeH1 = FarbeH.getSelectedIndex();
-            ConfHandler.FarbeH2 = Integer.toString(FarbeH1);
-            Presentation.HintergrundF(ConfHandler.FarbeH2);
+            ConfHandler.setConf("backgroundcolor:", Integer.toString(FarbeH.getSelectedIndex()));
+            Presentation.FarbeHintergrund(ConfHandler.getConf("backgroundcolor:"));
         });
 
         FarbeS.addActionListener(ee -> {
-            int FarbeS1 = FarbeS.getSelectedIndex();
-            ConfHandler.FarbeS2 = Integer.toString(FarbeS1);
-            Presentation.SchriftF(ConfHandler.FarbeS2);
+            ConfHandler.setConf("fontcolor:", Integer.toString(FarbeS.getSelectedIndex()));
+            Presentation.Farbeschrift(ConfHandler.getConf("fontcolor:"));
         });
 
         FarbeP.addActionListener(ee -> {
-            int FarbeP1 = FarbeP.getSelectedIndex();
-            ConfHandler.FarbeP2 = Integer.toString(FarbeP1);
-            Presentation.PrefixF(ConfHandler.FarbeP2);
+            ConfHandler.setConf("prefixcolor:", Integer.toString(FarbeP.getSelectedIndex()));
+            Presentation.FarbePrefix(ConfHandler.getConf("prefixcolor:"));
         });
 
-        anwenden.addActionListener(ee -> {
-            String B;
-            ConfHandler.NameB =	Name.getText();
-            B = ConfHandler.NameB + " " + ConfHandler.FarbeH2 + " " + ConfHandler.FarbeS2 + " " + ConfHandler.FarbeP2 + " ";
-            for(int i = 3;i < Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).size(); i++)
-                B += Filehandeling.Lesen("iridium/Iridiumconfig.txt", false).get(i) + " ";
-            Filehandeling.Schreiben(B, "iridium/Iridiumconfig.txt", false ,true);
-        });
+        anwenden.addActionListener(ee -> save());
+        anwenden2.addActionListener(ee -> save());
 
         ArrayList<String> a = Programmstart.getProgramm();
         JPanel links = new JPanel();
