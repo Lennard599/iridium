@@ -1,0 +1,1 @@
+pass a name of an .txt file to delete it

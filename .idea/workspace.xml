@@ -7,24 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d074df0d-60a2-4f8b-b778-41b83a58a17f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iridium/Clock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iridium/OutputField.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/Dateien/todolist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/Musik/Make a Move.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/Musik/zehn.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/palladium-ring.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/iridium/methods.java" afterPath="$PROJECT_DIR$/src/iridium/Methods.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/Music/Make a Move.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/Music/zehn.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/Docs/abc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/Docs/tdlist.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/QR.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/addprogramm.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/background.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/calculator.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/clear.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/commands.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/create.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/delete.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/font.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/help.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/hi.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/link.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/list.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/next.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/open.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/ping.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/play.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/quit.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/say.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/setshort.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/short.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/spotify.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/start.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/stop.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/timer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/update.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iridium/help/updatehelp.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iridium/Iridiumconfig.txt" afterPath="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Call.java" afterPath="$PROJECT_DIR$/src/iridium/Call.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/ConfHandler.java" afterPath="$PROJECT_DIR$/src/iridium/ConfHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Filehandeling.java" afterPath="$PROJECT_DIR$/src/iridium/Filehandeling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Iridium.java" afterPath="$PROJECT_DIR$/src/iridium/Iridium.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Options.java" afterPath="$PROJECT_DIR$/src/iridium/Options.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Presentation.java" afterPath="$PROJECT_DIR$/src/iridium/Presentation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Updater.java" afterPath="$PROJECT_DIR$/src/iridium/Updater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iridium/Voice.java" afterPath="$PROJECT_DIR$/src/iridium/Voice.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/iridium/Presentation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-152">
-              <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+              <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
               <folding>
                 <element signature="method#update#0;class#Presentation#0" expanded="false" />
                 <element signature="method#update#1;class#Presentation#0" expanded="false" />
@@ -502,7 +516,7 @@
       <workItem from="1514818202423" duration="2657000" />
       <workItem from="1514844419305" duration="36882000" />
       <workItem from="1515683782896" duration="1799000" />
-      <workItem from="1515695932282" duration="16212000" />
+      <workItem from="1515695932282" duration="16734000" />
     </task>
     <task id="LOCAL-00001" summary="Code cleaning 1">
       <created>1511991667717</created>
@@ -536,7 +550,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160558000" />
+    <option name="totallyTimeSpent" value="161080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,9 +571,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15333334" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20533334" sideWeight="0.509375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20533334" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20533334" sideWeight="0.490625" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -620,7 +634,8 @@
     <MESSAGE value="Code cleaning 2" />
     <MESSAGE value="Code cleaning 3&#10;Tabs in Options" />
     <MESSAGE value="new Config file" />
-    <option name="LAST_COMMIT_MESSAGE" value="new Config file" />
+    <MESSAGE value="display current path , date and time" />
+    <option name="LAST_COMMIT_MESSAGE" value="display current path , date and time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -939,7 +954,7 @@
     <entry file="file://$PROJECT_DIR$/src/iridium/Presentation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-152">
-          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
           <folding>
             <element signature="method#update#0;class#Presentation#0" expanded="false" />
             <element signature="method#update#1;class#Presentation#0" expanded="false" />

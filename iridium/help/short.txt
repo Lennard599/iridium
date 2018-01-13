@@ -1,0 +1,2 @@
+executes the current shortcut
+use the flag -o to return the current shortcut

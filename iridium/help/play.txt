@@ -1,0 +1,1 @@
+pass the name of an .mp3 file in the music directory to play it

@@ -1,0 +1,17 @@
+Starten von Dateien
+STT
+Player verbessern
+Pfad umbenennen Bewegen files
+   
+calculator
+Folder drop
+better cursor
+prefix (vieleicht verbessern)
+help nachricht
+drag and drop
+commands bearbeiten sprache funktion
+short ohne parameter und dann einen angeben
+alias nutzung von hash map ls,call.command(list)oder so
+short flags kein set short
+   
+menüpunkt ändern idee neues Fenster mit eingabe feld für commands oder liste und zugehöriegen helpfile ausgeben
