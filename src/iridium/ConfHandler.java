@@ -54,8 +54,8 @@ public class ConfHandler {
 
     private void ReadConf(){
         File folder = new File("iridium");
-        File Dateien = new File("iridium/Dateien");
-        File Musik = new File("iridium/Musik");
+        File Dateien = new File("iridium/Docs");
+        File Musik = new File("iridium/Music");
         File Programmeinfo = new File("iridium/Programmeconfig.txt");
         File file = new File("iridium/Iridiumconfig.txt");
 

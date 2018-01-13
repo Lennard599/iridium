@@ -4,12 +4,14 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Iridium {
-	public static final String version ="0.1.1";
+	public static final String version ="0.1.3";
+	public static final String helpversion = "0.1.2";
 
 	public static JFrame meinFrame = new JFrame("Iridium "+version);
 	public static ImageIcon icon = new ImageIcon("iridium\\icon.png");
 	public static JTextPane Aus = new JTextPane();
 	public static JScrollPane scroll = new JScrollPane(Aus);
+	public static JPanel status = new JPanel();
 
 	public static void main(String[] args) {
 		if(args.length > 0){
@@ -20,7 +22,7 @@ public class Iridium {
 			Presentation.update(a,false);
 		}
 
-		new methods();
+		new Methods();
 		if (System.getProperty("os.name").contains("Mac"))
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
 
@@ -62,13 +64,42 @@ public class Iridium {
 		scroll.setViewportBorder(null);
 		scroll.setBorder(null);
 		meinFrame.setMenuBar(menue);
-		meinFrame.add(scroll);
+		meinFrame.add(scroll, BorderLayout.CENTER);
 		meinFrame.setIconImage(icon.getImage());
         meinFrame.setVisible(true);
 		meinFrame.setMinimumSize(new Dimension(600, 400));
 		meinFrame.setSize(601, 401);
-		meinFrame.setSize(600, 400);
         Aus.setEditable(false);
+
+		FlowLayout layout = new FlowLayout();
+        meinFrame.add(status, BorderLayout.SOUTH);
+        status.setBackground(Color.BLACK);
+        layout.setVgap(0);
+        JPanel date = new JPanel(layout);
+        JPanel path = new JPanel(layout);
+		status.setLayout(new BoxLayout(status, BoxLayout.LINE_AXIS));
+		status.add(path);
+		status.add(Box.createHorizontalGlue());
+		status.add(date);
+		JLabel path_L = new JLabel("/Docs*");
+		path_L.setForeground(Color.WHITE);
+		path_L.setFont(new Font("Sans-serif", Font.PLAIN, 12));
+		path.add(path_L);
+		path.setBackground(new Color(209,58,130));
+		path.setPreferredSize(new Dimension(120,18));
+		path.setMaximumSize(path.getPreferredSize());
+
+		JLabel date_L = new JLabel("Placeholder");
+		Clock clock = new Clock(date_L);
+		Thread t = new Thread(clock);
+		t.start();
+		date_L.setForeground(Color.WHITE);
+		date_L.setFont(new Font("Sans-serif", Font.PLAIN, 12));
+		date.add(date_L);
+		date.setBackground(new Color(46,140,207));
+		date.setPreferredSize(new Dimension(120,18));
+		date.setMaximumSize(date.getPreferredSize());
+		meinFrame.setSize(600, 400);
 
         if (ConfHandler.getConf("dontshow:").trim().equals("N")) {
 			WindowListener close = new WindowAdapter() {
@@ -99,12 +130,10 @@ public class Iridium {
         Programs.addActionListener(e -> Options.Option(2));
 
         getshort.addActionListener(e -> {
-			methods.getShortcut();
+			Methods.getShortcut();
 			Presentation.posi = 0;
 			Presentation.p = 0;
 			Presentation.firstup();});
-
-		Hilfei.addActionListener(e -> methods.Hilfe());
 
 		cleari.addActionListener(e -> {
 			Presentation.clear();
@@ -112,7 +141,7 @@ public class Iridium {
 			Presentation.p = 0;
 			Presentation.firstup();});
 
-		shortcuti.addActionListener(e -> methods.Short());
+		shortcuti.addActionListener(e -> Methods.Short());
 		
     }
 }

@@ -20,7 +20,7 @@ public class Filehandeling {
                         XWPFDocument docx = new XWPFDocument(new FileInputStream(a.getAbsolutePath()));
                         XWPFWordExtractor we = new XWPFWordExtractor(docx);
 
-                        methods.AusgabeFeld(we.getText(), a.getName(), false, false, "", true);
+                        new OutputField(we.getText(), a.getName(), false, false, "");
 
                         System.out.println(we.getText());
                     } catch (Exception e) {
@@ -32,8 +32,8 @@ public class Filehandeling {
     }
 
     public static void Datei(String Name) {
-        File folder = new File("iridium/Dateien");
-        File file = new File("iridium/Dateien/" + Name + ".txt");
+        File folder = new File("iridium/Docs");
+        File file = new File("iridium/Docs/" + Name + ".txt");
         if (!folder.exists()) {
             folder.mkdir();
         }
@@ -44,16 +44,16 @@ public class Filehandeling {
                 e1.printStackTrace();
             }
         }
-        Presentation.update("Erfolgreich", false);
+        Presentation.update("succesful", false);
     }
 
     public static void Löschen(String Name) {
-        File file = new File("iridium/Dateien/" + Name);
+        File file = new File("iridium/Docs/" + Name+".txt");
 
         if (file.delete())
-            Presentation.update("Erfolgreich", false);
+            Presentation.update("Successful", false);
         else
-            Presentation.update("Fehler!!", false);
+            Presentation.update("error!!", false);
 
     }
 
@@ -76,15 +76,14 @@ public class Filehandeling {
         String path;
         String[] split = text.split("\\s+");
         if (rela)
-            path = "iridium/Dateien/" + wo + ".txt";
+            path = "iridium/Docs/" + wo + ".txt";
         else
             path = wo;
         File file = new File(path);
         try {
             FileWriter fw = new FileWriter(file);
             if (!newl)
-                for (String a : split)
-                    fw.write(" " + a);
+                fw.write(text);
             else
                 for (String a : split)
                     fw.write(a + System.lineSeparator());
@@ -99,14 +98,14 @@ public class Filehandeling {
         String P;
         ArrayList<String> Lesen = new ArrayList<>();
         if (rela)
-            P = "iridium/Dateien/" + wo + ".txt";
+            P = "iridium/Docs/" + wo + ".txt";
         else
             P = wo;
         try {
             File f = new File(P);
             Scanner sc = new Scanner(f);
-            while (sc.hasNext()) {
-                Lesen.add(sc.next());
+            while (sc.hasNextLine()) {
+                Lesen.add(sc.nextLine()+"\n");
             }
         } catch (FileNotFoundException e) {
             Presentation.update("The File will be created with Save and quit", false);

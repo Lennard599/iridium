@@ -2,6 +2,8 @@ package iridium;
 
 import java.io.*;
 import java.net.URL;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -12,7 +14,7 @@ import org.apache.http.util.EntityUtils;
 public class Updater {
 
     //version check
-    public static String httpResponse(String url) {
+    private static String httpResponse(String url) {
         try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
             HttpGet request = new HttpGet(url);
             request.addHeader("content-type", "text/plain");
@@ -26,13 +28,13 @@ public class Updater {
     }
 
     //loading bit stream  and saving it
-    public static void download(String URL) {
+    private static void download(String URL,String des) {
         try {
             URL url = new URL(URL);
             java.io.InputStream inStream = url.openStream();
             BufferedInputStream bufIn = new BufferedInputStream(inStream);
 
-            File fileWrite = new File("iridium"+httpResponse("http://jannik.ddns.net/iridium.version.txt").trim()+".jar");
+            File fileWrite = new File(des);
             OutputStream out = new FileOutputStream(fileWrite);
             BufferedOutputStream bufOut = new BufferedOutputStream(out);
             byte buffer[] = new byte[1000000000];
@@ -47,6 +49,7 @@ public class Updater {
             out.close();
             inStream.close();
         } catch (Exception ex){
+            System.out.println("download "+ex);
             Presentation.update("Something went wrong :(",false);
         }
     }
@@ -71,7 +74,7 @@ public class Updater {
             Thread t = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    download("http://jannik.ddns.net/iridium.jar");
+                    download("http://jannik.ddns.net/iridium.jar","iridium"+httpResponse("http://jannik.ddns.net/iridium.version.txt").trim()+".jar");
                     Presentation.update("finished",false);
                     try {
                         File f = new File(Iridium.class.getProtectionDomain().getCodeSource().getLocation().toURI());
@@ -91,6 +94,54 @@ public class Updater {
             t.start();
         } else {
             Presentation.update("Latest version already installed",false);
+        }
+    }
+
+    public static void unzip(String path, String des){
+        try {
+            String fileZip = path;
+            byte[] buffer = new byte[1024];
+            ZipInputStream zis = new ZipInputStream(new FileInputStream(fileZip));
+            ZipEntry zipEntry = zis.getNextEntry();
+            while(zipEntry != null){
+                String fileName = zipEntry.getName();
+                File newFile = new File(des + fileName);
+                FileOutputStream fos = new FileOutputStream(newFile);
+                int len;
+                while ((len = zis.read(buffer)) > 0) {
+                    fos.write(buffer, 0, len);
+                }
+                fos.close();
+                zipEntry = zis.getNextEntry();
+            }
+            zis.closeEntry();
+            zis.close();
+        } catch (Exception e) {
+            System.out.println("unzip "+e);
+        }
+    }
+
+    public static void updateHelp() {
+        if (!httpResponse("http://jannik.ddns.net/iridium.help.version.txt").trim().equals(Iridium.helpversion)) {
+            Presentation.update("installing...", false);
+            download("http://jannik.ddns.net/iridium.help.zip", "iridium.help.zip");
+            File help = new File("iridium/_help/");
+            if (!help.exists())
+                help.mkdir();
+            unzip("iridium.help.zip", "iridium/_help/");
+            File h = new File("iridium/help/");
+            if (!h.exists())
+                h.mkdir();
+            else
+                for (String s : h.list()) {
+                    File currentFile = new File(h.getPath(), s);
+                    currentFile.delete();
+                }
+            h.delete();
+            help.renameTo(h);
+            File ar = new File("iridium.help.zip");
+            ar.delete();
+            Presentation.update("update finished", false);
         }
     }
 }

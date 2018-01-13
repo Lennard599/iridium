@@ -35,7 +35,7 @@ public class Voice {
             while ((result = recognizer.getResult()) != null) {
                 System.out.format("Hypothesis: %s\n", result.getHypothesis());
                 if (result.getHypothesis().equals("quit"))
-                    System.exit(2);
+                    System.exit(0);
             }
         }
         //recognizer.stopRecognition();

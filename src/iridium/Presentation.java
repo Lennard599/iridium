@@ -12,7 +12,6 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 public class Presentation {
-    private static String ptext = ConfHandler.getConf("name:") + "@" + System.getProperty("os.name") + ": ";
     private static String Inhalt = "<html><body style=\"font-family: " + ConfHandler.getConf("fontcolor:") + "\">";
     public static String Farbe = "";
     private static String prefix;
@@ -24,7 +23,6 @@ public class Presentation {
     public Presentation(){
         FarbePrefix(ConfHandler.getConf("prefixcolor:"));
         Farbeschrift(ConfHandler.getConf("fontcolor:"));
-        System.out.println(ConfHandler.getConf("fontcolor:")+"|  "+ Farbe);
         Inhalt = "<html><body style=\"font-family: " + ConfHandler.getConf("fontstyle:") + "\">";
         FarbeHintergrund(ConfHandler.getConf("backgroundcolor:"));
         Inhalt += Farbe + "Wilkommen " + ConfHandler.getConf("name:") + "<br>";
@@ -47,6 +45,13 @@ public class Presentation {
             Iridium.Aus.setContentType("text/html");
             Iridium.Aus.setText(Inhalt);
         }
+    }
+
+    public static void update(ArrayList<String> a,boolean prefb){
+        String b = "";
+        for (String c:a)
+            b += c + "<br>";
+        update(b,prefb);
     }
 
     public static void clear() {
@@ -193,7 +198,7 @@ public class Presentation {
                     Inhalt += prefix + Farbe + out_l + out_r + "<br>";
                     Iridium.Aus.setContentType("text/html");
                     Iridium.Aus.setText(Inhalt);
-                    methods.runCommand(out_l + out_r);
+                    Methods.runCommand(out_l + out_r);
                     history.add(0, out_l + out_r);
                     posi = 0;
                     p = 0;
@@ -204,41 +209,39 @@ public class Presentation {
     }
 
     public static void FarbeHintergrund(String _farbe) {
-        String farbe = _farbe.trim();
-        Color output = Color.WHITE;
 
-        if (farbe.equals("2") || farbe.equals("blau")) {
-            output = Color.BLUE;
-            ConfHandler.setConf("backgroundcolor:", "2");
-        }
-        else if (farbe.equals("1") || farbe.equals("grün")) {
-            output = Color.GREEN;
-            ConfHandler.setConf("backgroundcolor:", "1");
-        }
-        else if (farbe.equals("0") || farbe.equals("weiß")) {
-            output = Color.WHITE;
-            ConfHandler.setConf("backgroundcolor:", "0");
-        }
-        else if (farbe.equals("3") || farbe.equals("schwarz")) {
-            output = Color.BLACK;
-            ConfHandler.setConf("backgroundcolor:", "3");
-        }
-        else if (farbe.equals("4") || farbe.equals("rot")) {
-            output = Color.RED;
-            ConfHandler.setConf("backgroundcolor:", "4");
-        }
-        else if (farbe.equals("5") || farbe.equals("gelb")) {
-            output = Color.YELLOW;
-            ConfHandler.setConf("backgroundcolor:", "5");
-        }
-        else
-            farbe = "0";
+        ColorConfig colorConfig;
 
-        Iridium.meinFrame.setBackground(output);
-        Iridium.Aus.setBackground(output);
+        switch(_farbe.trim()) {
+            case "0":
+            case "weiß":
+                colorConfig = new ColorConfig(Color.WHITE, "0"); break;
+            case "1":
+            case "grün":
+                colorConfig = new ColorConfig(Color.GREEN, "1"); break;
+            case "2":
+            case "blau":
+                colorConfig = new ColorConfig(Color.BLUE, "2"); break;
+            case "3":
+            case "schwarz":
+                colorConfig = new ColorConfig(Color.BLACK, "3"); break;
+            case "4":
+            case "rot":
+                colorConfig = new ColorConfig(Color.RED, "4"); break;
+            case "5":
+            case "gelb":
+                colorConfig = new ColorConfig(Color.YELLOW, "5"); break;
+            default:
+                colorConfig = new ColorConfig();
+        }
 
-        ConfHandler.writeConf("backgroundcolor:",farbe);
+        ConfHandler.setConf("backgroundcolor:", colorConfig.conf_color);
 
+        Iridium.meinFrame.setBackground(colorConfig.bg_color);
+        Iridium.Aus.setBackground(colorConfig.bg_color);
+        Iridium.status.setBackground(colorConfig.bg_color);
+
+        ConfHandler.writeConf("backgroundcolor:", colorConfig.conf_color);
     }
 
     public static void Farbeschrift(String _farbe) {
@@ -311,5 +314,19 @@ public class Presentation {
             prefix = a + ConfHandler.getConf("prefixtext:");
         cursor = a + "&#9611</font>";
         ConfHandler.writeConf("prefixcolor:" , farbe);
+    }
+}
+
+class ColorConfig {
+    public Color bg_color = Color.WHITE;
+    public String conf_color = "0";
+
+    ColorConfig(){
+
+    }
+
+    ColorConfig(Color bg_color, String conf_color) {
+        this.bg_color = bg_color;
+        this.bg_color = bg_color;
     }
 }

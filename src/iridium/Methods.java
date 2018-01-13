@@ -12,12 +12,13 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.sun.speech.freetts.*;
 import com.sun.speech.freetts.Voice;
 
-public class methods {
+public class Methods {
 	private static Call call = new Call();
 	private static int sec = 0;
 	private static String[] splitted ;
 
-	public methods() {
+	public Methods() {
+	    call.setCommand("updatehelp", () -> Updater.updateHelp());
 		call.setCommand("clear", () -> Presentation.clear());
 		call.setCommand("ping", () -> Presentation.update("pong", false));
 		call.setCommand("hi",  () -> Presentation.update("Hi", false));
@@ -48,11 +49,11 @@ public class methods {
 		});
 		call.setCommand("play",  () ->  Player.Spiele(splitted));
 		call.setCommand("stop",  () -> Player.Stop());
-		call.setCommand("weiter",  () -> Player.stop = false);
+		call.setCommand("next",  () -> Player.stop = false);
 		call.setCommand("create",  () -> Filehandeling.Datei(splitted[1]));
 		call.setCommand("delete",  () -> Filehandeling.Löschen(splitted[1]));
-		call.setCommand("list",  () -> Filehandeling.getFiles("iridium/Dateien", true));
-		call.setCommand("open",  () -> {if(splitted.length > 1) AusgabeFeld(Filehandeling.Lesen(splitted[1], true), splitted[1], true, true); else Presentation.update("Argument requiert", false);});
+		call.setCommand("list",  () -> Filehandeling.getFiles("iridium/Docs", true));
+		call.setCommand("open",  () -> {if(splitted.length > 1) new OutputField(Filehandeling.Lesen(splitted[1], true), splitted[1], true, true,""); else Presentation.update("Argument requiert", false);});
 		call.setCommand("setshort",  () -> SetShort(splitted));
 		call.setCommand("short", () -> {
 				if (splitted.length > 1) {
@@ -60,7 +61,7 @@ public class methods {
 						getShortcut();
 				}
 				else
-					methods.Short();
+					Methods.Short();
 		});
 		call.setCommand("background", () -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
@@ -76,14 +77,22 @@ public class methods {
 		});
 		call.setCommand("spotify", () -> open("https://open.spotify.com"));
 		call.setCommand("link", () -> {
-		if (!splitted[1].contains("https://"))
+			if (!splitted[1].contains("https://"))
 					splitted[1] = "https://" + splitted[1];
 				open(splitted[1]);
 		});
 		call.setCommand("start", () -> Programmstart.ProgrammStart(splitted[1]));
 		call.setCommand("addprogramm", () -> Programmstart.addProgramm(splitted));
-		call.setCommand("help",  () -> Presentation.update(call.getCommands(),false));
-				//methods.Hilfe();
+		call.setCommand("help",  () -> {
+		    if (splitted.length > 1)
+			    if (call.checkCommands(splitted[1]))
+				    Presentation.update(Filehandeling.Lesen("iridium/help/"+splitted[1].trim()+".txt",false),false);
+		        else
+		        Presentation.update("command not found",false);
+            else
+                Presentation.update("enter help and the command you want help for",false);
+		});
+		call.setCommand("commands", () -> Presentation.update(call.getCommands(),false));
 		call.setCommand("quit", () -> System.exit(0));
 		call.setCommand("QR", () -> {
 			String text = "";
@@ -172,109 +181,8 @@ public class methods {
 		}
 	}
 
-	public static void AusgabeFeld(ArrayList<String> a, String title, boolean be, boolean html) {
-		AusgabeFeld(a, title, be, true, "", html);
-	}
-
-	public static void AusgabeFeld(ArrayList<String> a, String title, boolean be, boolean rela, String Path, boolean html) {
-	    String in = "";
-
-	    for (int i = 0;i<a.size();i++)
-	        in += a.get(i) + " ";
-
-        AusgabeFeld(in, title, be, rela, Path, html);
-	}
-
-	public static void AusgabeFeld(String a, String title, boolean be, boolean rela, String Path, boolean html) {
-		JFrame Ausgabe = new JFrame(title);
-		Ausgabe.setVisible(true);
-		Ausgabe.setSize(450, 600);
-		Ausgabe.setResizable(false);
-		Ausgabe.setLocationRelativeTo(null);
-		Ausgabe.setLayout(new BorderLayout());
-		Ausgabe.setIconImage(Iridium.icon.getImage());
-
-		if (be) {
-			Ausgabe.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-			WindowListener close = new WindowAdapter() {
-
-				public void windowClosing(WindowEvent e) {
-					int confirm = JOptionPane.showConfirmDialog(Ausgabe,
-							"quit without saving?",
-							"quit?", JOptionPane.YES_NO_OPTION,
-							JOptionPane.QUESTION_MESSAGE);
-
-					if (confirm == 0)
-						Ausgabe.dispose();
-
-				}
-			};
-			Ausgabe.addWindowListener(close);
-
-		} else
-			Ausgabe.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-
-		JButton Speichern = new JButton("save and quit");
-
-		if (be)
-			Ausgabe.add(Speichern, BorderLayout.SOUTH);
-
-		JTextPane text = new JTextPane();
-		JScrollPane scroll = new JScrollPane(text);
-
-
-		Ausgabe.add(scroll, BorderLayout.CENTER);
-
-		if (!be)
-			text.setEditable(false);
-
-		if (html)
-			text.setContentType("text/html");
-		a = "<html><body style=\"font-family: " + ConfHandler.getConf("fontstyle:") + "\">" + a;
-
-        text.setText(a);
-
-		Speichern.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (rela)
-					Filehandeling.Schreiben(text.getText(), title, true, false);
-				else
-					Filehandeling.Schreiben(text.getText(), Path, false, false);
-				Ausgabe.dispose();
-				Presentation.update("saved", true);
-			}
-		});
-
-	}
-
-	public static void Hilfe() {
-		ArrayList<String> Commands = new ArrayList<>();
-		Commands.add("Ping..................ausgabe:pong <br>");
-		Commands.add("Hi....................ausgabe:Hi <br>");
-		Commands.add("Timer -Zeit in s-    <br>");
-		Commands.add("Sagen -Text-...............TTS <br>");
-		Commands.add("stelle dich vor	");
-		Commands.add("Rechner -Z1 Operator Z2- <br>");
-		Commands.add("Erstellen -Dateiname-..... Ort:Iridiumverzeichniss <br>");
-		Commands.add("Löschen -Dateiname-<br>");
-		Commands.add("Liste //ls.................liest files aus Ort:Iridiumverzeichniss <br>");
-		Commands.add("Öffnen -Dateiname- <br>");
-		Commands.add("SetShortcut -Befehl-...... Shortcut anlegen <br>");
-		Commands.add("Shortcut // sc.............ausführen Shortcut <br>");
-		Commands.add("Shortcut -a................Momentaner Shortcut <br>");
-		Commands.add("Hintergrund -farbe- <br>");
-		Commands.add("Schrift -farbe- <br>");
-		Commands.add("Play -Liedtitel-..........ruft mp3 aus musik auf <br>");
-		Commands.add("Stop....................Stopt momentanes Lied <br>");
-		Commands.add("Weiter..................Startet gestopptes Lied wieder <br>");
-		Commands.add("Iridium Unterstützt Drag and Drop von .txt und .mp3 <br>");
-		Commands.add("Beenden.................Iridium wird Beendet <br>");
-
-		AusgabeFeld(Commands, "Hilfe", false, true);
-	}
-
 	public static void Short() {
-		methods.runCommand(ConfHandler.getConf("shortcut:"));
+		Methods.runCommand(ConfHandler.getConf("shortcut:"));
 	}
 
 	private static void SetShort(String[] a) {

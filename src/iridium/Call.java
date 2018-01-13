@@ -15,7 +15,7 @@ public class Call {
         if (Commands.containsKey(input[0]))
             Commands.get(input[0]).run();
         else
-            Presentation.update("Fehler!!",false);
+            Presentation.update("command not found!! try lower case or use commands or help",false);
     }
 
     public boolean checkCommands(String Command)

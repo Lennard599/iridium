@@ -60,6 +60,7 @@ public class Options {
 
         Name.setText(ConfHandler.getConf("name:"));
         Font.setText(ConfHandler.getConf("fontstyle:"));
+        Font.setToolTipText("you have to clear the console to apply Fontstyle");
         Prefix.setText(ConfHandler.getConf("prefixtext:"));
 
         if (ConfHandler.getConf("stdprefix:").trim().equals("N"))
@@ -177,7 +178,7 @@ public class Options {
         fr.addActionListener(eee -> {
             ArrayList<String> ac = new ArrayList<>();
             ac.add("Mit der Funktion Programme kann mann Commands erstellen um .exe dateien zu Öffnen Links wird der Command und rechts der Absoltue Pfad zur .exe eingetragen. Wenn mann mehr als zehn Commands erstellen will kann mann dies mitt Commands tun (siehe hilfe).Es können auch Commands mehrmals verwendet werden.");
-            methods.AusgabeFeld(ac, "Hilfe zu Programme", false, true);
+            new OutputField(ac, "Hilfe zu Programme", false, true,"");
         });
 
         pane.add(s, "Programs", 2);
