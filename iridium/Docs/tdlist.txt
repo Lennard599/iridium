@@ -10,7 +10,6 @@ prefix (vieleicht verbessern)
 help nachricht
 drag and drop
 commands bearbeiten sprache funktion
-short ohne parameter und dann einen angeben
 alias nutzung von hash map ls,call.command(list)oder so
    
 menüpunkt ändern idee neues Fenster mit eingabe feld für commands oder liste und zugehöriegen helpfile ausgeben

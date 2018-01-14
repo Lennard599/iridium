@@ -1,4 +1,4 @@
-shortcut: timer 
+shortcut: timer 3 
 stdprefix: Y 
 fontstyle: Menlo 
 name: Lennard 
