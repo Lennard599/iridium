@@ -1,1 +1,0 @@
-pass a command as Argument to set it as shortcut

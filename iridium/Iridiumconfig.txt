@@ -1,9 +1,9 @@
-shortcut: open tdlist 
+shortcut: timer 
 stdprefix: Y 
 fontstyle: Menlo 
 name: Lennard 
-backgroundcolor: 0
-fontcolor: 3
-prefixcolor: 3
+backgroundcolor: 3
+fontcolor: 2
+prefixcolor: 2
 prefixtext: aa_aaaa 
 dontshow: N 
