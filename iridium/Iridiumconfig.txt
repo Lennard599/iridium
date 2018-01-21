@@ -2,8 +2,8 @@ shortcut: timer 3
 stdprefix: Y 
 fontstyle: Menlo 
 name: Lennard 
-backgroundcolor: 3
-fontcolor: 2
-prefixcolor: 2
+backgroundcolor: 0
+fontcolor: 0
+prefixcolor: 0
 prefixtext: aa_aaaa 
 dontshow: N 

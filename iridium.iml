@@ -22,5 +22,10 @@
     <orderEntry type="library" name="ooxml-lib" level="project" />
     <orderEntry type="library" name="poi-ooxml-schemas-3.17" level="project" />
     <orderEntry type="library" name="poi-ooxml-3.17" level="project" />
+    <orderEntry type="library" name="Maven: com.github.oshi:oshi-core:3.4.0" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:4.2.2" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna:4.2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.6.4" level="project" />
   </component>
 </module>

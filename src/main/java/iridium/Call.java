@@ -18,12 +18,12 @@ public class Call {
             Presentation.update("command not found!! try lower case or use commands or help",false);
     }
 
-    public boolean checkCommands(String Command)
+    public static boolean checkCommands(String Command)
     {
             return Commands.containsKey(Command);
     }
 
-    public String getCommands(){
+    public static String getCommands(){
         Set<String> a = Commands.keySet();
         String b = "";
 

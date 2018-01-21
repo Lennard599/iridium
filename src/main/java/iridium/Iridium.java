@@ -1,10 +1,12 @@
 package iridium;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.lang.reflect.Method;
 import javax.swing.*;
 
 public class Iridium {
-	public static final String version ="0.1.3";
+	public static final String version ="0.2.0";
 	public static final String helpversion = "0.1.1";
 
 	public static JFrame meinFrame = new JFrame("Iridium "+version);
@@ -23,8 +25,21 @@ public class Iridium {
 		}
 
 		new Methods();
-		if (System.getProperty("os.name").contains("Mac"))
+		if (System.getProperty("os.name").contains("Mac")) {
+			String className = "com.apple.eawt.FullScreenUtilities";
+			String methodName = "setWindowCanFullScreen";
+
+			try {
+				Class<?> clazz = Class.forName(className);
+				Method method = clazz.getMethod(methodName, new Class<?>[] {
+						Window.class, boolean.class });
+				method.invoke(null, meinFrame, true);
+			} catch (Throwable t) {
+				System.err.println("Full screen mode is not supported");
+				t.printStackTrace();
+			}
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
+		}
 
 		new ConfHandler();
 		Filehandeling.enableFiledrop();
@@ -34,7 +49,7 @@ public class Iridium {
 		Menu shortcut = new Menu("shortcut");
 		Menu clear = new Menu("clear");
 		Menu Hilfe = new Menu("help");
-		Menu Optionen = new Menu("option");
+		Menu Optionen = new Menu("settings");
 		MenuItem shortcuti = new MenuItem("start");
 		shortcut.add(shortcuti);
 		MenuItem getshort = new MenuItem("get shortcut");
@@ -71,6 +86,37 @@ public class Iridium {
 		meinFrame.setSize(601, 401);
         Aus.setEditable(false);
 
+		LayoutManager overlay = new OverlayLayout(Aus);
+		Aus.setLayout(overlay);
+		Aus.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Aus.removeAll();
+				meinFrame.revalidate();
+				meinFrame.repaint();
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+
+			}
+		});
+
 		FlowLayout layout = new FlowLayout();
         meinFrame.add(status, BorderLayout.SOUTH);
         status.setBackground(Color.BLACK);
@@ -82,12 +128,15 @@ public class Iridium {
 		status.add(Box.createHorizontalGlue());
 		status.add(date);
 
-		JLabel path_L = new JLabel("/Docs*");
-		path_L.setForeground(Color.WHITE);
-		path_L.setFont(new Font("Sans-serif", Font.PLAIN, 12));
-		path.add(path_L);
+		JLabel Left = new JLabel("/Docs*");
+		Sensor sensor = new Sensor(Left);
+		Thread t1 = new Thread(sensor);
+		t1.start();
+		Left.setForeground(Color.WHITE);
+		Left.setFont(new Font("monospace", Font.PLAIN, 14));
+		path.add(Left);
 		path.setBackground(new Color(209,58,130));
-		path.setPreferredSize(new Dimension(120,18));
+		path.setPreferredSize(new Dimension(180,20));
 		path.setMaximumSize(path.getPreferredSize());
 
 		JLabel date_L = new JLabel("Placeholder");
@@ -95,10 +144,10 @@ public class Iridium {
 		Thread t = new Thread(clock);
 		t.start();
 		date_L.setForeground(Color.WHITE);
-		date_L.setFont(new Font("Sans-serif", Font.PLAIN, 12));
+		date_L.setFont(new Font("monospace", Font.PLAIN, 14));
 		date.add(date_L);
 		date.setBackground(new Color(46,140,207));
-		date.setPreferredSize(new Dimension(120,18));
+		date.setPreferredSize(new Dimension(160,20));
 		date.setMaximumSize(date.getPreferredSize());
 		meinFrame.setSize(600, 400);
 
@@ -126,9 +175,9 @@ public class Iridium {
 
 		new Presentation();
 
-		Genaeral.addActionListener(e -> Options.Option(0));
-        visuals.addActionListener(e -> Options.Option(1));
-        Programs.addActionListener(e -> Options.Option(2));
+		Genaeral.addActionListener(e -> Aus.add(new Options(0, Aus)));
+        visuals.addActionListener(e -> Aus.add(new Options(1, Aus)));
+        Programs.addActionListener(e -> Aus.add(new Options(2, Aus)));
 
         getshort.addActionListener(e -> {
 			Methods.getShortcut();
@@ -143,6 +192,13 @@ public class Iridium {
 			Presentation.firstup();});
 
 		shortcuti.addActionListener(e -> Methods.Short(new String[]{""}));
+
+		Hilfei.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Aus.add(new HelpPanel());
+			}
+		});
 		
     }
 }

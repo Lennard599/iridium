@@ -1,5 +1,6 @@
 package iridium;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
@@ -15,7 +16,7 @@ public class Presentation {
     private static String Inhalt = "<html><body style=\"font-family: " + ConfHandler.getConf("fontcolor:") + "\">";
     public static String Farbe = "";
     private static String prefix;
-    private static String cursor =  "<font color=yellow>&#9611</font>";
+    public static String cursor =  "<font color=yellow>&#9611</font>";
     private static String out_l,out_r = "";
     public static int posi,p = 0;
     private static ArrayList<String> history = new ArrayList<>();
@@ -30,6 +31,10 @@ public class Presentation {
         Presentation.firstup();
         Presentation.updatek();
         Presentation.Mouse();
+    }
+
+    public static Color getColro(JComponent from){
+        return from.getBackground();
     }
 
     public static void update(String in, boolean prefixb) {

@@ -1,10 +1,14 @@
 package iridium;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.util.ArrayList;
 
-public class Options {
+public class Options extends JPanel{
 
     static JTextField Name = new JTextField(10);
     static JTextField Font = new JTextField(10);
@@ -18,12 +22,12 @@ public class Options {
         ConfHandler.writeConf();
     }
 
-    public static void Option(int index) {
+    public Options(int index, JComponent parent) {
         JTabbedPane pane = new JTabbedPane();
         JLabel OptionName = new JLabel("Your Name");
-        String[] FarbListe = {"White", "Green", "Blue", "Black", "Rot", "Yellow"};
-        String[] FarbListeS = {"Black", "Green", "White", "Blue", "Rot", "Yellow"};
-        String[] FarbListeP = {"Black", "Green", "White", "Blue", "Rot", "Yellow"};
+        String[] FarbListe = {"White", "Green", "Blue", "Black", "Red", "Yellow"};
+        String[] FarbListeS = {"Black", "Green", "White", "Blue", "Red", "Yellow"};
+        String[] FarbListeP = {"Black", "Green", "White", "Blue", "Red", "Yellow"};
         JComboBox FarbeH = new JComboBox(FarbListe);
         JComboBox FarbeS = new JComboBox(FarbListeS);
         JComboBox FarbeP = new JComboBox(FarbListeP);
@@ -50,13 +54,10 @@ public class Options {
         JPanel Jp72 = new JPanel();
         JPanel Jp12 = new JPanel();
 
-        JFrame OptionenF = new JFrame("Iridium");
-        OptionenF.setSize(300,400);
-        OptionenF.setResizable(true);
-        OptionenF.setLocationRelativeTo(null);
-        OptionenF.setVisible(true);
-        OptionenF.setIconImage(Iridium.icon.getImage());
-        OptionenF.setLocation(Iridium.meinFrame.getLocation());
+        setPreferredSize(parent.getSize());
+        pane.setPreferredSize(getPreferredSize());
+        add(pane);
+        setBackground(Presentation.getColro(parent));
 
         Name.setText(ConfHandler.getConf("name:"));
         Font.setText(ConfHandler.getConf("fontstyle:"));
@@ -88,6 +89,7 @@ public class Options {
 
         Generl.add(Jp6);
         Generl.add(Jp7);
+        visuals.setLayout(new GridLayout(7,1));
         visuals.add(Jp4);
         visuals.add(Jp5);
         visuals.add(Jp9);
@@ -102,7 +104,7 @@ public class Options {
         FarbeH.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("backgroundcolor:")));
         FarbeS.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("fontcolor:")));
         FarbeP.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("prefixcolor:")));
-        OptionenF.add(pane);
+
 
         stdp.addActionListener(ee ->{
             if (!stdp.isSelected()) {
@@ -120,6 +122,7 @@ public class Options {
         FarbeH.addActionListener(ee -> {
             ConfHandler.setConf("backgroundcolor:", Integer.toString(FarbeH.getSelectedIndex()));
             Presentation.FarbeHintergrund(ConfHandler.getConf("backgroundcolor:"));
+            setBackground(Presentation.getColro(parent));
         });
 
         FarbeS.addActionListener(ee -> {
@@ -178,7 +181,9 @@ public class Options {
         fr.addActionListener(eee -> {
             ArrayList<String> ac = new ArrayList<>();
             ac.add("Mit der Funktion Programme kann mann Commands erstellen um .exe dateien zu Öffnen Links wird der Command und rechts der Absoltue Pfad zur .exe eingetragen. Wenn mann mehr als zehn Commands erstellen will kann mann dies mitt Commands tun (siehe hilfe).Es können auch Commands mehrmals verwendet werden.");
-            new OutputField(ac, "Hilfe zu Programme", false, true,"");
+            //new Editor(ac, "Hilfe zu Programme", true,"");
+            System.out.println("muss noch behoben werden");
+            //beheben
         });
 
         pane.add(s, "Programs", 2);
@@ -193,6 +198,26 @@ public class Options {
                 ad += Plink[i].getText() + " ";
                 Programmstart.addProgramm(ad);
                 ad = "";
+            }
+        });
+        pane.add(new JLabel("if u are able to read this something went wrong"),"X", 3);
+        pane.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                pane.setPreferredSize(getPreferredSize());
+                if (pane.getSelectedIndex() == 3) {
+                    parent.removeAll();
+                    parent.repaint();
+                    parent.revalidate();
+                }
+            }
+        });
+
+        parent.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                setPreferredSize(parent.getSize());
+                pane.setPreferredSize(getPreferredSize());
             }
         });
     }

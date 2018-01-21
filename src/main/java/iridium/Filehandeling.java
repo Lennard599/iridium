@@ -20,7 +20,7 @@ public class Filehandeling {
                         XWPFDocument docx = new XWPFDocument(new FileInputStream(a.getAbsolutePath()));
                         XWPFWordExtractor we = new XWPFWordExtractor(docx);
 
-                        new OutputField(we.getText(), a.getName(), false, false, "");
+                        Iridium.Aus.add(new Editor(we.getText(), a.getName(), false, "",Iridium.Aus));
 
                         System.out.println(we.getText());
                     } catch (Exception e) {

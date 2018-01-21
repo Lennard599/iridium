@@ -1,11 +1,9 @@
 package iridium;
 
 import java.awt.*;
-import java.awt.event.*;
 import java.net.URL;
 import java.util.*;
 
-import javax.swing.*;
 import java.util.Timer;
 
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
@@ -53,7 +51,7 @@ public class Methods {
 		call.setCommand("create",  () -> Filehandeling.Datei(splitted[1]));
 		call.setCommand("delete",  () -> Filehandeling.Löschen(splitted[1]));
 		call.setCommand("list",  () -> Filehandeling.getFiles("iridium/Docs", true));
-		call.setCommand("open",  () -> {if(splitted.length > 1) new OutputField(Filehandeling.Lesen(splitted[1], true), splitted[1], true, true,""); else Presentation.update("Argument requiert", false);});
+		call.setCommand("open",  () -> {if(splitted.length > 1) Iridium.Aus.add(new Editor(Filehandeling.Lesen(splitted[1], true), splitted[1], true,"",Iridium.Aus)); else Presentation.update("Argument requiert", false);});
 		call.setCommand("short", () -> {
 				if (splitted.length > 1) {
 					if (splitted[1].equals("-o")) {
@@ -134,7 +132,7 @@ public class Methods {
 		});
 		call.setCommand("update",  () ->  {if(splitted.length>1&&splitted[1].equals("-keep"))Updater.update(true);
 		else Updater.update(false);});
-
+		call.setCommand("settings", () -> Iridium.Aus.add(new Options(1,Iridium.Aus)));
 	}
 
 	private static void open(String urlString) {

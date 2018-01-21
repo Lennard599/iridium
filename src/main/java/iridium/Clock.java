@@ -32,7 +32,7 @@ public class Clock implements Runnable {
         int hrs = now.get(Calendar.HOUR_OF_DAY);
         int min = now.get(Calendar.MINUTE);
         int sec = now.get(Calendar.SECOND);
-        String time = zero(day) + "/" + zero(mth) + "  " + zero(hrs) + ":" + zero(min) + ":" + zero(sec);
+        String time = zero(day) + "/" + zero(mth) + "   " + zero(hrs) + ":" + zero(min) + ":" + zero(sec);
         return time;
     }
 
