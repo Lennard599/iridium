@@ -6,6 +6,8 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 public class Options extends JPanel{
@@ -25,14 +27,13 @@ public class Options extends JPanel{
     public Options(int index, JComponent parent) {
         JTabbedPane pane = new JTabbedPane();
         JLabel OptionName = new JLabel("Your Name");
-        String[] FarbListe = {"White", "Green", "Blue", "Black", "Red", "Yellow"};
-        String[] FarbListeS = {"Black", "Green", "White", "Blue", "Red", "Yellow"};
-        String[] FarbListeP = {"Black", "Green", "White", "Blue", "Red", "Yellow"};
+        String[] FarbListe = {"Black", "Green", "White", "Blue", "Red", "Yellow"};
         JComboBox FarbeH = new JComboBox(FarbListe);
-        JComboBox FarbeS = new JComboBox(FarbListeS);
-        JComboBox FarbeP = new JComboBox(FarbListeP);
+        JComboBox FarbeS = new JComboBox(FarbListe);
+        JComboBox FarbeP = new JComboBox(FarbListe);
         JButton anwenden = new JButton("apply");
         JButton anwenden2 = new JButton("apply");
+        JButton rgb = new JButton("advanced");
         JLabel OptionFarbeH = new JLabel("backgroundcolor");
         JLabel OptionFarbeS = new JLabel("fontcolor");
         JLabel OptionFarbeP = new JLabel("Prefix color");
@@ -49,6 +50,7 @@ public class Options extends JPanel{
         JPanel Jp6 = new JPanel();
         JPanel Jp7 = new JPanel();
         JPanel Jp9 = new JPanel();
+        JPanel Jp9_5 = new JPanel();
         JPanel Jp10 = new JPanel();
         JPanel Jp11 = new JPanel();
         JPanel Jp72 = new JPanel();
@@ -57,7 +59,7 @@ public class Options extends JPanel{
         setPreferredSize(parent.getSize());
         pane.setPreferredSize(getPreferredSize());
         add(pane);
-        setBackground(Presentation.getColro(parent));
+        setBackground(Presentation.getColor(parent));
 
         Name.setText(ConfHandler.getConf("name:"));
         Font.setText(ConfHandler.getConf("fontstyle:"));
@@ -79,6 +81,7 @@ public class Options extends JPanel{
         Jp6.add(OptionName);
         Jp6.add(Name);
         Jp7.add(anwenden);
+        Jp9_5.add(rgb);
         Jp10.add(OptionFont);
         Jp10.add(Font);
         Jp11.add(OptionPrefix);
@@ -89,10 +92,13 @@ public class Options extends JPanel{
 
         Generl.add(Jp6);
         Generl.add(Jp7);
-        visuals.setLayout(new GridLayout(7,1));
+        GridLayout g = new GridLayout(8,1);
+        g.setVgap(0);
+        visuals.setLayout(g);
         visuals.add(Jp4);
         visuals.add(Jp5);
         visuals.add(Jp9);
+        visuals.add(Jp9_5);
         visuals.add(Jp10);
         visuals.add(Jp12);
         visuals.add(Jp11);
@@ -101,10 +107,9 @@ public class Options extends JPanel{
         pane.add(Generl, "General", 0);
         pane.add(visuals, "Visuals", 1);
 
-        FarbeH.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("backgroundcolor:")));
-        FarbeS.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("fontcolor:")));
-        FarbeP.setSelectedIndex(Integer.parseInt(ConfHandler.getConf("prefixcolor:")));
-
+        FarbeH.setSelectedIndex(Presentation.getColor(ConfHandler.getConf("backgroundcolor:")));
+        FarbeS.setSelectedIndex(Presentation.getColor(ConfHandler.getConf("fontcolor:")));
+        FarbeP.setSelectedIndex(Presentation.getColor(ConfHandler.getConf("prefixcolor:")));
 
         stdp.addActionListener(ee ->{
             if (!stdp.isSelected()) {
@@ -120,19 +125,25 @@ public class Options extends JPanel{
         });
 
         FarbeH.addActionListener(ee -> {
-            ConfHandler.setConf("backgroundcolor:", Integer.toString(FarbeH.getSelectedIndex()));
-            Presentation.FarbeHintergrund(ConfHandler.getConf("backgroundcolor:"));
-            setBackground(Presentation.getColro(parent));
+            ConfHandler.setConf("backgroundcolor:", Presentation.getIndexRGB(FarbeH.getSelectedIndex()));
+            Presentation.getColor(ConfHandler.getConf("backgroundcolor:"));
+            setBackground(Presentation.getColor(parent));
         });
 
         FarbeS.addActionListener(ee -> {
-            ConfHandler.setConf("fontcolor:", Integer.toString(FarbeS.getSelectedIndex()));
-            Presentation.Farbeschrift(ConfHandler.getConf("fontcolor:"));
+            ConfHandler.setConf("fontcolor:", Presentation.getIndexRGB(FarbeS.getSelectedIndex()));
+            Presentation.getColor(ConfHandler.getConf("fontcolor:"));
         });
 
         FarbeP.addActionListener(ee -> {
-            ConfHandler.setConf("prefixcolor:", Integer.toString(FarbeP.getSelectedIndex()));
-            Presentation.FarbePrefix(ConfHandler.getConf("prefixcolor:"));
+            ConfHandler.setConf("prefixcolor:", Presentation.getIndexRGB(FarbeP.getSelectedIndex()));
+            Presentation.getColor(ConfHandler.getConf("prefixcolor:"));
+        });
+
+        rgb.addActionListener(ee ->{
+            pane.remove(visuals);
+            pane.add(new RGBmenue(pane, visuals, this), "Visuals", 1);
+            pane.setSelectedIndex(1);
         });
 
         anwenden.addActionListener(ee -> save());
@@ -152,7 +163,7 @@ public class Options extends JPanel{
         Jps[0].add(ab);
         JButton fr = new JButton();
         JButton anwendenp = new JButton("apply");
-        ImageIcon help = new ImageIcon("iridium/Button-help-icon.png");
+        ImageIcon help = new ImageIcon(Iridium.class.getClassLoader().getResource("Button-help-icon.png").getFile());
         fr.setIcon(help);
         Jps[0].add(fr);
         fr.setOpaque(false);
@@ -177,13 +188,40 @@ public class Options extends JPanel{
             links.add(Jps[i+1]);
         }
         links.add(anwendenp);
+        LayoutManager overlay = new OverlayLayout(this);
+        setLayout(overlay);
 
         fr.addActionListener(eee -> {
-            ArrayList<String> ac = new ArrayList<>();
-            ac.add("Mit der Funktion Programme kann mann Commands erstellen um .exe dateien zu Öffnen Links wird der Command und rechts der Absoltue Pfad zur .exe eingetragen. Wenn mann mehr als zehn Commands erstellen will kann mann dies mitt Commands tun (siehe hilfe).Es können auch Commands mehrmals verwendet werden.");
-            //new Editor(ac, "Hilfe zu Programme", true,"");
-            System.out.println("muss noch behoben werden");
-            //beheben
+            add(new OutputPanel("Help","with the function program is it possible to create a command witch executes an executable\nEnter the wished command left and the path to the .exe or .app to the left.\nIf you wish to add more programs then 10 feel free to use the command.\nIt is possible to use one command for more then one executable.",parent));
+            links.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    remove(getComponentCount()-1);
+                    repaint();
+                    revalidate();
+                    links.removeMouseListener(this);
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+
+                }
+            });
         });
 
         pane.add(s, "Programs", 2);

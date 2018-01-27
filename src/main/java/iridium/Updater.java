@@ -121,7 +121,7 @@ public class Updater {
         }
     }
 
-    public static void updateHelp() {
+    /*public static void updateHelp() {
         if (!httpResponse("http://jannik.ddns.net/iridium.help.version.txt").trim().equals(Iridium.helpversion)) {
             Presentation.update("installing...", false);
             download("http://jannik.ddns.net/iridium.help.zip", "iridium.help.zip");
@@ -143,5 +143,5 @@ public class Updater {
             ar.delete();
             Presentation.update("update finished", false);
         }
-    }
+    }*/
 }

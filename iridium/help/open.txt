@@ -1,1 +1,0 @@
-pass the name of an .txt file as argument to open it

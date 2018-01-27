@@ -1,17 +1,18 @@
 Starten von Dateien
 STT
 Player verbessern
-Pfad umbenennen Bewegen files
+Pfad umbenennen Bewegen
 
+P2P
+Backup files
+
+timer in panel
 calculator
-Folder drop
-better cursor
+
 prefix (vieleicht verbessern)
 help nachricht
-drag and drop
-commands bearbeiten sprache funktion
-alias nutzung von hash map ls,call.command(list)oder so
 
-vl auch status färben
-Settings auch als pane 
-out put pane für nachrichten
+commands bearbeiten sprache funktion
+
+Vorschläge
+schrift größe wir wollen ja bajerefrei sien ^^ 

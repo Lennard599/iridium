@@ -6,11 +6,10 @@ import java.lang.reflect.Method;
 import javax.swing.*;
 
 public class Iridium {
-	public static final String version ="0.2.0";
-	public static final String helpversion = "0.1.1";
+	public static final String version ="0.3.0";
 
 	public static JFrame meinFrame = new JFrame("Iridium "+version);
-	public static ImageIcon icon = new ImageIcon("iridium\\icon.png");
+	public static ImageIcon icon = new ImageIcon(Iridium.class.getClassLoader().getResource("icon.png").getFile());
 	public static JTextPane Aus = new JTextPane();
 	public static JScrollPane scroll = new JScrollPane(Aus);
 	public static JPanel status = new JPanel();
@@ -70,7 +69,7 @@ public class Iridium {
 		menue.add(Optionen);
 
 		//Fenster main
-		meinFrame.setSize(600,400);
+		meinFrame.setSize(620,400);
 		meinFrame.setLocationRelativeTo(null);
 		if (ConfHandler.getConf("dontshow:").trim().equals("N"))
 			meinFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -82,8 +81,8 @@ public class Iridium {
 		meinFrame.add(scroll, BorderLayout.CENTER);
 		meinFrame.setIconImage(icon.getImage());
         meinFrame.setVisible(true);
-		meinFrame.setMinimumSize(new Dimension(600, 400));
-		meinFrame.setSize(601, 401);
+		meinFrame.setMinimumSize(new Dimension(620, 400));
+		meinFrame.setSize(621, 401);
         Aus.setEditable(false);
 
 		LayoutManager overlay = new OverlayLayout(Aus);
@@ -196,7 +195,7 @@ public class Iridium {
 		Hilfei.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Aus.add(new HelpPanel());
+				Aus.add(new HelpPanel(Aus));
 			}
 		});
 		

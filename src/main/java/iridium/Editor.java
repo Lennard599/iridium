@@ -13,6 +13,7 @@ import static iridium.TextareaEngine.getOutput;
 
 public class Editor extends JPanel {
     static JTextArea text;
+    static JScrollPane scroll;
     static JTextPane controles;
     JTextPane titlearea;
     boolean saved = true;
@@ -61,7 +62,8 @@ public class Editor extends JPanel {
         controles.setEditable(false);
 
         text = new JTextArea();
-        add(text, BorderLayout.CENTER);
+        scroll = new JScrollPane(text);
+        add(scroll, BorderLayout.CENTER);
         text.setText(a);
         spezial = new TextareaEngine(controles, false, "save as: ", title, "|", () ->{
             text.addKeyListener(normal);
@@ -71,11 +73,27 @@ public class Editor extends JPanel {
             controles.setText("save: cmd + s / ctrl + s    quit: cmd + x / ctrl + x");
         });
         text.addKeyListener(normal);
-        titlearea.setForeground(Color.WHITE);
-        controles.setForeground(Color.WHITE);
-        titlearea.setBackground(Color.BLACK);
-        controles.setBackground(Color.BLACK);
+        text.setBackground(Presentation.getColor(parent));
+        String[] f = ConfHandler.getConf("fontcolor:").split("\\s+");
+        text.setForeground(new Color(Integer.parseInt(f[0]), Integer.parseInt(f[1]), Integer.parseInt(f[2])));
+        text.setCaretColor(Presentation.getColor(parent).equals(Color.BLACK) ? Color.WHITE : Color.BLACK);
+        scroll.setViewportBorder(null);
+        scroll.setBorder(null);
+        Color main = Presentation.getColor(parent).equals(Color.BLACK) ? Color.BLACK : Color.WHITE;
+        Color secondary = Presentation.getColor(parent).equals(Color.BLACK) ? Color.WHITE : Color.BLACK;
+        titlearea.setForeground(main);
+        controles.setForeground(main);
+        titlearea.setBackground(secondary);
+        controles.setBackground(secondary);
+        Presentation.setColor(Iridium.status,secondary);
 
+        try {
+            Robot r = new Robot();
+            r.keyPress(KeyEvent.VK_TAB);
+            r.keyRelease(KeyEvent.VK_TAB);
+            r.keyPress(KeyEvent.VK_TAB);
+            r.keyRelease(KeyEvent.VK_TAB);
+        } catch (Exception e){}
     }
 
     private static void save(boolean rela, String path, String title) {
@@ -110,6 +128,7 @@ public class Editor extends JPanel {
 
             if ((e.isControlDown() || e.isMetaDown()) && e.getKeyCode() == 88) {
                 if (saved) {
+                    Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
                     parent.removeAll();
                     parent.repaint();
                     parent.revalidate();
@@ -122,6 +141,7 @@ public class Editor extends JPanel {
             }
                 if (sure) {
                     if (e.getKeyChar() == 'N' || e.getKeyChar() == 'n') {
+                        Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
                         parent.removeAll();
                         parent.repaint();
                         parent.revalidate();
@@ -135,6 +155,7 @@ public class Editor extends JPanel {
                         text.addKeyListener(new TextareaEngine(controles, false, "save as: ", title, "|", () ->{
                             save(true, path, getOutput());
                             settitle(getOutput());
+                            Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
                             parent.removeAll();
                             parent.repaint();
                             parent.revalidate();

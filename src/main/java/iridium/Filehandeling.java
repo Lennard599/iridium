@@ -12,22 +12,23 @@ public class Filehandeling {
 
     public static void enableFiledrop(){
         new FileDrop(Iridium.scroll, files -> {
-            for (File a : files) {
-                if (a.getName().contains(".mp3"))
-                    Player.Spiele(a.getAbsolutePath());
+                if (files[0].getName().contains(".mp3"))
+                    Player.Spiele(files[0].getAbsolutePath());
+                else if (files[0].isDirectory())
+                    Presentation.update(files[0].getAbsolutePath(),false);
+                else if (files[0].getName().contains(".txt"))
+                    Iridium.Aus.add(new Editor(Lesen(files[0].getAbsolutePath(),false),files[0].getName(),false,files[0].getAbsolutePath(),Iridium.Aus));
                 else {
                     try {
-                        XWPFDocument docx = new XWPFDocument(new FileInputStream(a.getAbsolutePath()));
+                        XWPFDocument docx = new XWPFDocument(new FileInputStream(files[0].getAbsolutePath()));
                         XWPFWordExtractor we = new XWPFWordExtractor(docx);
 
-                        Iridium.Aus.add(new Editor(we.getText(), a.getName(), false, "",Iridium.Aus));
+                        Iridium.Aus.add(new Editor(we.getText(), files[0].getName(), false, files[0].getAbsolutePath(),Iridium.Aus));
 
-                        System.out.println(we.getText());
                     } catch (Exception e) {
-                        Presentation.update("Error filetype not supported", true);
+                        Presentation.update("Error file type not supported", true);
                     }
-                }
-            }
+                 }
         });
     }
 

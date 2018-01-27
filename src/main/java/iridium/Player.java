@@ -49,7 +49,7 @@ public class Player {
             for (int i = 1; i < name.length; i++)
                 aa += name[i] + " ";
             aa = aa.substring(0, aa.length() - 1);
-            aa = "iridium/Musik/" + aa + ".mp3";
+            aa = "iridium/Music/" + aa + ".mp3";
             Spiele(aa);
         }
     }

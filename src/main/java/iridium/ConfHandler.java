@@ -16,9 +16,9 @@ public class ConfHandler {
         conf.put("stdprefix:", "Y");
         conf.put("fontstyle:", "'Menlo'");
         conf.put("name:", "Iridium");
-        conf.put("backgroundcolor:", "0");
-        conf.put("fontcolor:", "0");
-        conf.put("prefixcolor:", "0");
+        conf.put("backgroundcolor:", "255 255 255");
+        conf.put("fontcolor:", "0 0 0");
+        conf.put("prefixcolor:", "0 0 0");
         conf.put("prefixtext:", "");
         conf.put("dontshow:", "N");
         ReadConf();

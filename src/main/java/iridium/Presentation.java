@@ -16,7 +16,7 @@ public class Presentation {
     private static String Inhalt = "<html><body style=\"font-family: " + ConfHandler.getConf("fontcolor:") + "\">";
     public static String Farbe = "";
     private static String prefix;
-    public static String cursor =  "<font color=yellow>&#9611</font>";
+    public static String cursor =  "<font color=rgb(255,255,0)>&#9611</font>";
     private static String out_l,out_r = "";
     public static int posi,p = 0;
     private static ArrayList<String> history = new ArrayList<>();
@@ -33,8 +33,36 @@ public class Presentation {
         Presentation.Mouse();
     }
 
-    public static Color getColro(JComponent from){
+    public static Color getColor(JComponent from){
         return from.getBackground();
+    }
+
+    public static String getIndexRGB(int index){
+        switch (index){
+            case 0: return "0 0 0";
+            case 1: return "0 255 0";
+            case 2: return "255 255 255";
+            case 3: return "0 0 255";
+            case 4: return "255 0 0";
+            case 5: return "255 255 0";
+            default: return "WTF";
+        }
+    }
+
+    public static int getColor(String farbe){
+        switch (farbe.trim()) {
+            case "0 0 0": return 0;
+            case "0 255 0": return 1;
+            case "255 255 255": return 2;
+            case "0 0 255": return 3;
+            case "255 0 0": return 4;
+            case "255 255 0": return 5;
+            default: return 0;
+        }
+    }
+
+    public static void setColor(JComponent at, Color col){
+        at.setBackground(col);
     }
 
     public static void update(String in, boolean prefixb) {
@@ -182,7 +210,7 @@ public class Presentation {
                 }
 
 
-                if ( e.getKeyCode() != 10 & e.getKeyCode() != 38 & e.getKeyCode() != 40 & e.getKeyCode() != 20 & e.getKeyCode() != 16 & e.getKeyCode() != 0 & e.getKeyCode() != 18 & e.getKeyCode() != 17 & e.getKeyCode() != 37 & e.getKeyCode() != 39 & e.getKeyCode() != 157 & e.getKeyCode() != 8) {
+                if ( e.getKeyCode() != 10 & e.getKeyCode() != 38 & e.getKeyCode() != 40 & e.getKeyCode() != 20 & e.getKeyCode() != 16 & e.getKeyCode() != 0 & e.getKeyCode() != 18 & e.getKeyCode() != 17 & e.getKeyCode() != 37 & e.getKeyCode() != 39 & e.getKeyCode() != 157 & e.getKeyCode() != 8 & !e.isMetaDown()) {
                     out_l += e.getKeyChar();
                     posi++;
 
@@ -215,123 +243,33 @@ public class Presentation {
 
     public static void FarbeHintergrund(String _farbe) {
 
-        ColorConfig colorConfig;
+        String[] rgb = _farbe.split("\\s+");
 
-        switch(_farbe.trim()) {
-            case "0":
-            case "weiß":
-                colorConfig = new ColorConfig(Color.WHITE, "0"); break;
-            case "1":
-            case "grün":
-                colorConfig = new ColorConfig(Color.GREEN, "1"); break;
-            case "2":
-            case "blau":
-                colorConfig = new ColorConfig(Color.BLUE, "2"); break;
-            case "3":
-            case "schwarz":
-                colorConfig = new ColorConfig(Color.BLACK, "3"); break;
-            case "4":
-            case "rot":
-                colorConfig = new ColorConfig(Color.RED, "4"); break;
-            case "5":
-            case "gelb":
-                colorConfig = new ColorConfig(Color.YELLOW, "5"); break;
-            default:
-                colorConfig = new ColorConfig();
-        }
+        ConfHandler.setConf("backgroundcolor:", _farbe);
 
-        ConfHandler.setConf("backgroundcolor:", colorConfig.conf_color);
-
-        Iridium.meinFrame.setBackground(colorConfig.bg_color);
-        Iridium.Aus.setBackground(colorConfig.bg_color);
-        Iridium.status.setBackground(colorConfig.bg_color);
-
-        ConfHandler.writeConf("backgroundcolor:", colorConfig.conf_color);
+        Iridium.meinFrame.setBackground(new Color(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2])));
+        Iridium.Aus.setBackground(new Color(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2])));
+        Iridium.status.setBackground(new Color(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2])));
     }
 
     public static void Farbeschrift(String _farbe) {
-        String farbe = _farbe.trim();
-        if (farbe.equals("3") || farbe.equals("blau")) {
-            ConfHandler.setConf("fontcolor:", "3");
-            Farbe = "<font color=blue>";
-        }
-        else if (farbe.equals("1") || farbe.equals("grün")) {
-            ConfHandler.setConf("fontcolor:", "1");
-            Farbe = "<font color=green>";
-        }
-        else if (farbe.equals("2") || farbe.equals("weiß")) {
-            ConfHandler.setConf("fontcolor:", "2");
-            Farbe = "<font color=white>";
-        }
-        else if (farbe.equals("0") || farbe.equals("schwarz")) {
-            ConfHandler.setConf("fontcolor:", "0");
-            Farbe = "<font color=black>";
-        }
-        else if (farbe.equals("4") || farbe.equals("rot")) {
-            ConfHandler.setConf("fontcolor:", "4");
-            Farbe = "<font color=red>";
-        }
-        else if (farbe.equals("5") || farbe.equals("gelb")) {
-            ConfHandler.setConf("fontcolor:", "5");
-            Farbe = "<font color=yellow>";
-        }
-        else {
-            System.out.println("err");
-            farbe = "0";
-            Farbe = "<font color=black>";
-        }
+        String[] rgb = _farbe.split("\\s+");
 
-        ConfHandler.writeConf("fontcolor:",farbe);
+        Farbe = "<font color=rgb("+rgb[0]+","+rgb[1]+","+rgb[2]+")>";
+
+        ConfHandler.writeConf("fontcolor:", _farbe);
     }
 
     public static void FarbePrefix(String _farbe) {
-        String farbe = _farbe.trim();
-        String a = "<font color=black>";
-        if (farbe.equals("3") || farbe.equals("blau")) {
-            ConfHandler.setConf("prefixcolor:","3");
-            a =  "<font color=blue>";
-        }
-        else if (farbe.equals("1") || farbe.equals("grün")) {
-            ConfHandler.setConf("prefixcolor:","1");
-            a =  "<font color=green>";
-        }
-        else if (farbe.equals("2") || farbe.equals("weiß")) {
-            ConfHandler.setConf("prefixcolor:","2");
-            a =  "<font color=white>";
-        }
-        else if (farbe.equals("0") || farbe.equals("schwarz")) {
-            ConfHandler.setConf("prefixcolor:","0");
-            a =  "<font color=black>";
-        }
-        else if (farbe.equals("4") || farbe.equals("rot")) {
-            ConfHandler.setConf("prefixcolor:","4");
-            a =  "<font color=red>";
-        }
-        else if (farbe.equals("5") || farbe.equals("gelb")) {
-            ConfHandler.setConf("prefixcolor:","5");
-            a =  "<font color=yellow>";
-        }
-        else
-            farbe = "0";
+        String[] rgb = _farbe.split("\\s+");
+
+        String a =  "<font color=rgb("+rgb[0]+","+rgb[1]+","+rgb[2]+")>";
+
         if (ConfHandler.getConf("stdprefix:").trim().equals("Y"))
             prefix = a + ConfHandler.getConf("name:") + "@" + System.getProperty("os.name") + ": " + "</font>";
         else
             prefix = a + ConfHandler.getConf("prefixtext:");
         cursor = a + "&#9611</font>";
-        ConfHandler.writeConf("prefixcolor:" , farbe);
-    }
-}
-
-class ColorConfig {
-    public Color bg_color = Color.WHITE;
-    public String conf_color = "0";
-
-    ColorConfig(){
-
-    }
-
-    ColorConfig(Color bg_color, String conf_color) {
-        this.bg_color = bg_color;
-        this.conf_color = conf_color;
+        ConfHandler.writeConf("prefixcolor:" , _farbe);
     }
 }

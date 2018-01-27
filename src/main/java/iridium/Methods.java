@@ -4,35 +4,30 @@ import java.awt.*;
 import java.net.URL;
 import java.util.*;
 
-import java.util.Timer;
-
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.sun.speech.freetts.*;
 import com.sun.speech.freetts.Voice;
 
 public class Methods {
 	private static Call call = new Call();
-	private static int sec = 0;
 	private static String[] splitted ;
 
 	public Methods() {
-	    call.setCommand("updatehelp", () -> Updater.updateHelp());
-		call.setCommand("clear", () -> Presentation.clear());
-		call.setCommand("ping", () -> Presentation.update("pong", false));
-		call.setCommand("hi",  () -> Presentation.update("Hi", false));
-		call.setCommand("timer", () -> {
+		call.setCommand("clear", new Command(() -> Presentation.clear(),0,""));
+		call.setCommand("ping", new Command(() -> Presentation.update("pong", false),0,""));
+		call.setCommand("hi",  new Command(() -> Presentation.update("Hi", false),0,""));
+		call.setCommand("timer", new Command(() -> {
 			int a = Integer.parseInt(splitted[1].trim());
 			timer(a);
-		});
-		call.setCommand("say",  () -> {
+		},1,""));
+		call.setCommand("say", new Command(() -> {
 				String a1 = " ";
 				for (int i = 1; i < splitted.length; i++)
 					a1 += splitted[i];
 				sagen(a1);
-		});
-		call.setCommand("calculator",  () -> {
+		},Integer.MAX_VALUE,":"));
+		call.setCommand("calculator",new Command(() -> {
 				double z1, z2 = 0;
-
 				try {
 					z1 = Double.parseDouble(splitted[1]);
 					z2 = Double.parseDouble(splitted[3]);
@@ -44,15 +39,15 @@ public class Methods {
 				} catch (java.lang.NumberFormatException e) {
 					Presentation.update("Falsche Parameter", false);
 				}
-		});
-		call.setCommand("play",  () ->  Player.Spiele(splitted));
-		call.setCommand("stop",  () -> Player.Stop());
-		call.setCommand("next",  () -> Player.stop = false);
-		call.setCommand("create",  () -> Filehandeling.Datei(splitted[1]));
-		call.setCommand("delete",  () -> Filehandeling.Löschen(splitted[1]));
-		call.setCommand("list",  () -> Filehandeling.getFiles("iridium/Docs", true));
-		call.setCommand("open",  () -> {if(splitted.length > 1) Iridium.Aus.add(new Editor(Filehandeling.Lesen(splitted[1], true), splitted[1], true,"",Iridium.Aus)); else Presentation.update("Argument requiert", false);});
-		call.setCommand("short", () -> {
+		},3,"cal"));
+		call.setCommand("play",new Command(() ->  Player.Spiele(splitted), Integer.MAX_VALUE,""));
+		call.setCommand("stop",new Command(() -> Player.Stop(),0,""));
+		call.setCommand("next",new Command(() -> Player.stop = false,0,""));
+		call.setCommand("create",new Command(() -> Filehandeling.Datei(splitted[1]),1,"touch"));
+		call.setCommand("delete",new Command(() -> Filehandeling.Löschen(splitted[1]),1,"rm"));
+		call.setCommand("list",new Command(() -> Filehandeling.getFiles("iridium/Docs", true),0,"ls"));
+		call.setCommand("open",new Command(() -> {if(splitted.length > 1) Iridium.Aus.add(new Editor(Filehandeling.Lesen(splitted[1], true), splitted[1], true,"",Iridium.Aus)); else Presentation.update("Argument requiert", false);},1,"edit"));
+		call.setCommand("short",new Command(() -> {
 				if (splitted.length > 1) {
 					if (splitted[1].equals("-o")) {
 						getShortcut();
@@ -64,39 +59,39 @@ public class Methods {
 					}
 				}
 				Methods.Short(splitted);
-		});
-		call.setCommand("background", () -> {
+		},Integer.MAX_VALUE,"sc"));
+		call.setCommand("background",new Command(() -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
 			Presentation.FarbeHintergrund(splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
-		});
-		call.setCommand("font", () -> {
+		},1,"bg"));
+		call.setCommand("font",new Command(() -> {
 		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
 			Presentation.Farbeschrift(splitted[1]);
 				else
 					Presentation.update("Farbe nicht Verfügbar", false);
-		});
-		call.setCommand("spotify", () -> open("https://open.spotify.com"));
-		call.setCommand("link", () -> {
+		},1,""));
+		call.setCommand("spotify",new Command(() -> open("https://open.spotify.com"),0,""));
+		call.setCommand("link",new Command(() -> {
 			if (!splitted[1].contains("https://"))
 					splitted[1] = "https://" + splitted[1];
 				open(splitted[1]);
-		});
-		call.setCommand("start", () -> Programmstart.ProgrammStart(splitted[1]));
-		call.setCommand("addprogramm", () -> Programmstart.addProgramm(splitted));
-		call.setCommand("help",  () -> {
+		},1,"web"));
+		call.setCommand("start",new Command(() -> Programmstart.ProgrammStart(splitted[1]),1,"launch"));
+		call.setCommand("addprogramm",new Command(() -> Programmstart.addProgramm(splitted),Integer.MAX_VALUE,"add"));
+		call.setCommand("help",new Command(() -> {
 		    if (splitted.length > 1)
 			    if (call.checkCommands(splitted[1]))
-				    Presentation.update(Filehandeling.Lesen("iridium/help/"+splitted[1].trim()+".txt",false),false);
+				    Presentation.update(Filehandeling.Lesen(Iridium.class.getClassLoader().getResource("help/"+splitted[1].trim()+".txt").getPath(),false),false);
 		        else
 		        Presentation.update("command not found",false);
             else
                 Presentation.update("enter help and the command you want help for",false);
-		});
-		call.setCommand("commands", () -> Presentation.update(call.getCommands(),false));
-		call.setCommand("quit", () -> System.exit(0));
-		call.setCommand("QR", () -> {
+		},1,"man"));
+		call.setCommand("commands",new Command(() -> Presentation.update(call.getCommands(),false),0,""));
+		call.setCommand("quit",new Command(() -> System.exit(0),0,"exit"));
+		call.setCommand("QR",new Command(() -> {
 			String text = "";
 			int size = 250;
 			String name = "";
@@ -129,10 +124,10 @@ public class Methods {
 			try {
 				MyQRCode.createQRImage(text, size, name, col, level, "png");
 			} catch (Exception ignore){}
-		});
-		call.setCommand("update",  () ->  {if(splitted.length>1&&splitted[1].equals("-keep"))Updater.update(true);
-		else Updater.update(false);});
-		call.setCommand("settings", () -> Iridium.Aus.add(new Options(1,Iridium.Aus)));
+		},Integer.MAX_VALUE,""));
+		call.setCommand("update",new Command(() ->  {if(splitted.length>1&&splitted[1].equals("-keep"))Updater.update(true);
+		else Updater.update(false);},1,""));
+		call.setCommand("settings",new Command(() -> Iridium.Aus.add(new Options(1,Iridium.Aus)),0,""));
 	}
 
 	private static void open(String urlString) {
@@ -145,18 +140,16 @@ public class Methods {
 
 	private static void timer(int time) {
 		Presentation.update("Started", true);
-		Timer t = new Timer();
-		TimerTask tt = new TimerTask() {
+		Thread t = new Thread(new Runnable() {
+			@Override
 			public void run() {
-				sec++;
-				if (sec == time) {
-					t.cancel();
-					sec = 0;
+				try {
+					Thread.sleep(time * 1000);
 					Presentation.update("Finished", true);
-				}
+				} catch (Exception e){}
 			}
-		};
-		t.scheduleAtFixedRate(tt, 1000, 1000);
+		});
+		t.start();
 	}
 
 	private static void sagen(String a1) {

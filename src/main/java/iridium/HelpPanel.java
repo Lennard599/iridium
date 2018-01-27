@@ -4,13 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 public class HelpPanel extends JPanel {
     JTextField search = new  JTextField();
     JTextArea message = new JTextArea();
 
-    public HelpPanel() {
+    public HelpPanel(JComponent parent) {
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
         setLayout(new BorderLayout());
         add(search, BorderLayout.NORTH);
@@ -22,13 +24,19 @@ public class HelpPanel extends JPanel {
         message.setEditable(false);
         message.setLineWrap(true);
         message.setWrapStyleWord(true);
+        try {
+            Robot r = new Robot();
+            r.keyPress(KeyEvent.VK_TAB);
+            r.keyRelease(KeyEvent.VK_TAB);
+        } catch (Exception e){}
+
 
         search.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String tx = "";
                 if (Call.checkCommands(search.getText().trim())) {
-                    ArrayList<String> a = Filehandeling.Lesen("iridium/help/" + search.getText() + ".txt", false);
+                    ArrayList<String> a = Filehandeling.Lesen(Iridium.class.getClassLoader().getResource("help/"+search.getText().trim()+".txt").getPath(), false);
                     for (int i = 0; i < a.size(); i++)
                         tx += a.get(i);
                     message.setText(tx);
@@ -37,8 +45,31 @@ public class HelpPanel extends JPanel {
                     message.setText("Type in a Command to get its description \nhere is a list of commands:\n"+Call.getCommands());
                 }
                 else
-                    message.setText("command not Found try one of these"+Call.getCommands());
+                    message.setText("command not Found try one of these "+Call.getCommands());
             }
         });
+
+        KeyListener kl = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                if (e.getExtendedKeyCode() == 27){
+                    parent.removeAll();
+                    parent.repaint();
+                    parent.revalidate();
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        };
+        search.addKeyListener(kl);
+        message.addKeyListener(kl);
     }
 }

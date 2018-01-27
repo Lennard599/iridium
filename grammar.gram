@@ -1,3 +1,0 @@
-grammar grammar;
-
-public <Orders> = (clear |open |close|quit);   

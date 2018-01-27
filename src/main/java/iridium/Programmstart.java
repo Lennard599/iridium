@@ -90,7 +90,7 @@ public class Programmstart {
                     b = "";
                 }
             }
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return a;
