@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Programmstart {
     public static void ProgrammStart(String Programm) {
         String b = "";
-        ArrayList<String> a = Filehandeling.Lesen("iridium/Programmeconfig.txt", false);
+        ArrayList<String> a = Filehandeling.Lesen(new File("iridium/Programmeconfig.txt"));
         int pos = a.indexOf(Programm);
         for (int i = pos + 1; i < a.size(); i++) {
             if (!a.get(i).equals("ende"))
@@ -28,7 +28,7 @@ public class Programmstart {
 
     public static void addProgramm(String[] a) {
         String b = "";
-        ArrayList<String> c = Filehandeling.Lesen("iridium/Programmeconfig.txt", false);
+        ArrayList<String> c = Filehandeling.Lesen(new File("iridium/Programmeconfig.txt"));
         if (!c.contains(a[3]) || !c.contains(a[2])) {
             for (int i = 0; i < c.size(); i++)
                 b += c.get(i) + " ";
@@ -44,7 +44,7 @@ public class Programmstart {
         boolean weiter = true;
         if (a.contains(":/")) {
             String b = "";
-            ArrayList<String> c = Filehandeling.Lesen("iridium/Programmeconfig.txt", false);
+            ArrayList<String> c = Filehandeling.Lesen(new File("iridium/Programmeconfig.txt"));
             ArrayList<String> d = getProgramm();
             for (String e : d)
                 if (a.contains(e)) {

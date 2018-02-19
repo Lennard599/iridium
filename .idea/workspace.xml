@@ -6,85 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d074df0d-60a2-4f8b-b778-41b83a58a17f" name="Default" comment="Editor and Settings are now no seperate Frame anymore">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iridium/Command.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iridium/OutputPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/iridium/RGBmenue.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/ooxml_lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/poi_3_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/poi_ooxml_3_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/poi_ooxml_schemas_3_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmudict-en-us.dict" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us.lm.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/feat.params" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/mdef" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/means" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/mixture_weights" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/noisedict" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/sendump" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/transition_matrices" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/en-us/variances" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grammar.gram" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/Button-help-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/QR.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/addprogramm.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/background.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/calculator.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/clear.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/commands.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/create.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/delete.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/font.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/help.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/hi.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/link.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/list.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/next.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/open.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/ping.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/play.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/quit.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/say.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/short.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/spotify.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/start.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/stop.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/timer.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/update.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/help/updatehelp.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/iridium/Voice.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iridium/ColorConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iridium/Options.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/iridium/Voice.class" afterPath="" />
+    <list default="true" id="d074df0d-60a2-4f8b-b778-41b83a58a17f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/iridium/Music/Make a Move.mp3" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Call.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Call.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/ConfHandler.class" afterPath="$PROJECT_DIR$/target/classes/iridium/ConfHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Filehandeling.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Filehandeling.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Iridium$1.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Iridium$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Iridium.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Iridium.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Methods$1.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Methods$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Methods.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Methods.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Player.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Options.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Options.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Presentation$1.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Presentation$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Presentation$2.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Presentation$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Presentation.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Presentation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Programmstart.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Programmstart.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/iridium/Updater.class" afterPath="$PROJECT_DIR$/target/classes/iridium/Updater.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iridium.iml" afterPath="$PROJECT_DIR$/iridium.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iridium/Docs/abc.txt" afterPath="$PROJECT_DIR$/iridium/Docs/abc.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iridium/Docs/tdlist.txt" afterPath="$PROJECT_DIR$/iridium/Docs/tdlist.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iridium/Iridiumconfig.txt" afterPath="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Call.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Call.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Command.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Command.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/ConfHandler.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/ConfHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Editor.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Editor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Filehandeling.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Filehandeling.java" />
@@ -95,7 +35,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Player.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Presentation.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Presentation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Programmstart.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Programmstart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/iridium/Updater.java" afterPath="$PROJECT_DIR$/src/main/java/iridium/Updater.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,7 +46,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Iridium$Iridium.coverage" NAME="Iridium Coverage Results" MODIFIED="1516827661485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Iridium$Iridium.coverage" NAME="Iridium Coverage Results" MODIFIED="1519044936821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iridium.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/iridium$Iridium.coverage" NAME="Iridium Coverage Results" MODIFIED="1512219362618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -119,37 +58,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Iridium.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Iridium.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Presentation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Presentation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="63" />
+            <state relative-caret-position="173">
+              <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2490#2491#0" expanded="true" />
+                <element signature="e#2573#2574#0" expanded="true" />
                 <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Options.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Options.java">
+      <file leaf-file-name="Methods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Methods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="-2111">
+              <caret line="61" column="82" lean-forward="false" selection-start-line="61" selection-start-column="82" selection-end-line="61" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2842#3087#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Programmstart.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Programmstart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2784">
-              <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,53 +99,63 @@
       <file leaf-file-name="Editor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Editor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="77" column="109" lean-forward="false" selection-start-line="77" selection-start-column="109" selection-end-line="77" selection-end-column="109" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Iridiumconfig.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Programmeconfig.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iridium/Programmeconfig.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/ConfHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2742">
-              <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RGBmenue.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/RGBmenue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="39" column="252" lean-forward="false" selection-start-line="39" selection-start-column="252" selection-end-line="39" selection-end-column="252" />
+            <state relative-caret-position="50">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8272#10018#0" expanded="true" />
-                <element signature="e#10017#10018#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyQRCode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/MyQRCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Programmstart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Programmstart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="46" column="93" lean-forward="false" selection-start-line="46" selection-start-column="93" selection-end-line="46" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Filehandeling.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Filehandeling.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/help/create.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="open.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/help/open.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,18 +163,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tdlist.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iridium/Docs/tdlist.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="-13">
+              <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -260,6 +202,9 @@
       <find>scroll</find>
       <find>vis</find>
       <find>visuals</find>
+      <find>font</find>
+      <find>fontstyl</find>
+      <find>Name</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -279,12 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../lib/lib/Voice/cmu_time_awb.jar!/com/sun/speech/freetts/en/us/cmu_time_awb/AlanVoiceDirectory.class" />
-        <option value="$PROJECT_DIR$/.idea/artifacts/iridium_jar.xml" />
-        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/iridium/Player.java" />
-        <option value="$PROJECT_DIR$/src/iridium/Programmstart.java" />
-        <option value="$PROJECT_DIR$/src/iridium/Confobject.java" />
         <option value="$PROJECT_DIR$/src/iridium/Voice.java" />
         <option value="$PROJECT_DIR$/iridium/Dateien/todolist.txt" />
         <option value="$PROJECT_DIR$/iridium/Dateien/abc.txt.txt" />
@@ -306,30 +245,36 @@
         <option value="$PROJECT_DIR$/src/iridium/Iridium.java" />
         <option value="$PROJECT_DIR$/src/iridium/Methods.java" />
         <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Sensor.java" />
         <option value="$PROJECT_DIR$/src/main/java/iridium/Clock.java" />
         <option value="$PROJECT_DIR$/src/main/java/iridium/CopyClick.java" />
         <option value="$PROJECT_DIR$/iridium/Docs/ab.txt" />
         <option value="$PROJECT_DIR$/src/main/java/iridium/TextareaEngine.java" />
         <option value="$PROJECT_DIR$/src/main/java/iridium/OutputField.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Programmstart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/iridium/Updater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/HelpPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Methods.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Call.java" />
         <option value="$PROJECT_DIR$/src/main/java/iridium/OutputPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Filehandeling.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Iridium.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/ConfHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Editor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Presentation.java" />
-        <option value="$PROJECT_DIR$/iridium/Docs/tdlist.txt" />
-        <option value="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/iridium/Options.java" />
         <option value="$PROJECT_DIR$/src/main/java/iridium/RGBmenue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/ConfHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Options.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/help/calculator.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Sensor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/help/background.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/help/font.txt" />
+        <option value="$PROJECT_DIR$/iridium/Iridiumconfig.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/help/move.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Call.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/HelpPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Programmstart.java" />
+        <option value="$PROJECT_DIR$/iridium/Docs/tdlist.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Presentation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Methods.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/help/create.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/help/open.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Filehandeling.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Editor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iridium/Iridium.java" />
       </list>
     </option>
   </component>
@@ -358,6 +303,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -404,22 +353,33 @@
             </path>
             <path>
               <item name="Iridium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Iridium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iridium" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="help" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Iridium" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.14453125" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -642,7 +602,13 @@
       <workItem from="1516220580512" duration="6859000" />
       <workItem from="1516229456167" duration="141000" />
       <workItem from="1516294271416" duration="58719000" />
-      <workItem from="1516653196620" duration="49623000" />
+      <workItem from="1516653196620" duration="61251000" />
+      <workItem from="1517225448454" duration="8299000" />
+      <workItem from="1517316527286" duration="7522000" />
+      <workItem from="1517678112958" duration="2027000" />
+      <workItem from="1518305363787" duration="37282000" />
+      <workItem from="1518994716242" duration="49000" />
+      <workItem from="1518995117792" duration="9565000" />
     </task>
     <task id="LOCAL-00001" summary="Code cleaning 1">
       <created>1511991667717</created>
@@ -686,11 +652,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516547008720</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="reducing jar size by 50%&#10;adding RGB support in Settings and Conffile">
+      <created>1517069746452</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1517069746452</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301697000" />
+    <option name="totallyTimeSpent" value="378069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -703,7 +676,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -713,8 +685,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20533334" sideWeight="0.509375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22266667" sideWeight="0.490625" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20533334" sideWeight="0.490625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -724,8 +697,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18046875" sideWeight="0.52533334" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18046875" sideWeight="0.52533334" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -777,80 +750,20 @@
     <MESSAGE value="display current path , date and time" />
     <MESSAGE value="maven" />
     <MESSAGE value="Editor and Settings are now no seperate Frame anymore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Editor and Settings are now no seperate Frame anymore" />
+    <MESSAGE value="reducing jar size by 50%&#10;adding RGB support in Settings and Conffile" />
+    <MESSAGE value="Auto complete path and commands with tab&#10;&#10;Biggest update" />
+    <MESSAGE value="One of The biggest Updates yet ver.0.4.0&#10;&#10;Auto complete path and commands with tab&#10;you can use the open command for docx and mp3 too&#10;&#10;Implementation of absolute paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="One of The biggest Updates yet ver.0.4.0&#10;&#10;Auto complete path and commands with tab&#10;you can use the open command for docx and mp3 too&#10;&#10;Implementation of absolute paths" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/iridium_jar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/poi_3_17.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/poi_ooxml_3_17.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/poi_ooxml_schemas_3_17.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/core_3_3_0.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/palladium-ring.jpg" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/tp.txt" />
-    <entry file="file://$PROJECT_DIR$/iridium/Button-help-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iridium/Confobject.java" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/abc.txt.txt" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/cd.txt" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/def.txt" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/todolist.txt" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/f.txt" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/test.txt" />
-    <entry file="file://$PROJECT_DIR$/iridium/Dateien/abc.txt" />
     <entry file="file://$PROJECT_DIR$/iridium/Dateien/abv.txt" />
     <entry file="file://$PROJECT_DIR$/iridium/Docs/todolist.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/MyQRCode.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -866,24 +779,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="111" lean-forward="false" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Clock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iridium/Docs/.txt" />
     <entry file="file://$PROJECT_DIR$/iridium/Docs/abc.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -893,66 +788,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iridium/Docs/ab.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/TextareaEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2714#2715#0" expanded="false" />
-            <element signature="e#2743#2744#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iridium/Docs/tdlist.pages" />
     <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Updater.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="145" column="7" lean-forward="false" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding>
-            <element signature="e#208#225#0" expanded="false" />
-            <element signature="e#2666#2674#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/HelpPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-831">
-          <caret line="48" column="242" lean-forward="false" selection-start-line="48" selection-start-column="242" selection-end-line="48" selection-end-column="242" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2126#2371#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Filehandeling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -964,22 +805,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Voice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Voice.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/iridium/OutputPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -988,64 +814,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Iridium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="83" column="50" lean-forward="false" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
-          <folding>
-            <element signature="e#5881#5882#0" expanded="true" />
-            <element signature="e#5919#5920#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="77" column="109" lean-forward="false" selection-start-line="77" selection-start-column="109" selection-end-line="77" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iridium/ConfHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2742">
-          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        <state relative-caret-position="-1239">
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Programmstart.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2784">
-          <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+        <state relative-caret-position="315">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Presentation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Options.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="63" />
+        <state relative-caret-position="-3400">
+          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/Docs/tdlist.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/RGBmenue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="375">
+          <caret line="165" column="48" lean-forward="true" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -1054,37 +852,262 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/addprogramm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/background.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/calculator.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/clear.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/commands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/delete.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/font.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="94" lean-forward="false" selection-start-line="0" selection-start-column="94" selection-end-line="0" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/help.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/hi.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/link.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/ping.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/nio/fs/UnixPath.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/next.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iridium/Iridiumconfig.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#768#769#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/move.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Clock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="105" column="33" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/HelpPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="164" lean-forward="false" selection-start-line="39" selection-start-column="164" selection-end-line="39" selection-end-column="164" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iridium/Docs/tdlist.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/TextareaEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Editor copy.java.bak.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/MyQRCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="-13">
+          <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Options.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/create.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help/open.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Presentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2490#2491#0" expanded="true" />
+            <element signature="e#2573#2574#0" expanded="true" />
+            <element signature="method#Mouse#0;class#Presentation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Programmstart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="46" column="93" lean-forward="false" selection-start-line="46" selection-start-column="93" selection-end-line="46" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Filehandeling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/RGBmenue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="39" column="252" lean-forward="false" selection-start-line="39" selection-start-column="252" selection-end-line="39" selection-end-column="252" />
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8272#10018#0" expanded="true" />
-            <element signature="e#10017#10018#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Methods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2111">
+          <caret line="61" column="82" lean-forward="false" selection-start-line="61" selection-start-column="82" selection-end-line="61" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2842#3087#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iridium/Iridium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

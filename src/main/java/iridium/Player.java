@@ -5,6 +5,10 @@ import javazoom.jl.player.advanced.PlaybackEvent;
 import javazoom.jl.player.advanced.PlaybackListener;
 
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.file.LinkOption;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Player {
     public static boolean stop = true;
@@ -55,9 +59,15 @@ public class Player {
     }
 
     //abspielen von mp3 mit gegebenem path
-    public static void Spiele(String Path) {
+    public static void Spiele(String path) {
         if (stop) {
-            aa = Path;
+            java.nio.file.Path p = Filehandeling.toPath(path);
+            try {
+                p = p.toRealPath(LinkOption.NOFOLLOW_LINKS);
+                aa = p.toAbsolutePath().toString();
+            } catch (IOException e){
+                Presentation.update("File not FOund", false);
+            }
             try {
                 f = new FileInputStream(aa);
                 play = new AdvancedPlayer(f);

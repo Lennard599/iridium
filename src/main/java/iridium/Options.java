@@ -15,12 +15,14 @@ public class Options extends JPanel{
     static JTextField Name = new JTextField(10);
     static JTextField Font = new JTextField(10);
     static JTextField Prefix = new JTextField(10);
-
+    static JTextField _fontsize = new JTextField(10);
 
     private static void save() {
         ConfHandler.setConf("name:", Name.getText());
         ConfHandler.setConf("fontstyle:", Font.getText());
         ConfHandler.setConf("prefixtext:", Prefix.getText());
+        ConfHandler.setConf("fontsize:", _fontsize.getText());
+        Presentation.updateProperties();
         ConfHandler.writeConf();
     }
 
@@ -37,7 +39,8 @@ public class Options extends JPanel{
         JLabel OptionFarbeH = new JLabel("backgroundcolor");
         JLabel OptionFarbeS = new JLabel("fontcolor");
         JLabel OptionFarbeP = new JLabel("Prefix color");
-        JLabel OptionFont = new JLabel("Enter Fontstyle");
+        JLabel OptionFont = new JLabel("Fontstyle");
+        JLabel fontsize = new JLabel("Fontsize");
         JLabel OptionPrefix = new JLabel("Prefix Text");
         JLabel stdpl = new JLabel("Use Custom Prefix");
         JCheckBox stdp = new JCheckBox();
@@ -45,6 +48,7 @@ public class Options extends JPanel{
         JPanel Generl = new JPanel();
         JPanel visuals = new JPanel();
 
+        JPanel Jp3 = new JPanel();
         JPanel Jp4 = new JPanel();
         JPanel Jp5 = new JPanel();
         JPanel Jp6 = new JPanel();
@@ -63,8 +67,8 @@ public class Options extends JPanel{
 
         Name.setText(ConfHandler.getConf("name:"));
         Font.setText(ConfHandler.getConf("fontstyle:"));
-        Font.setToolTipText("you have to clear the console to apply Fontstyle");
         Prefix.setText(ConfHandler.getConf("prefixtext:"));
+        _fontsize.setText(ConfHandler.getConf("fontsize:"));
 
         if (ConfHandler.getConf("stdprefix:").trim().equals("N"))
             stdp.setSelected(true);
@@ -72,6 +76,8 @@ public class Options extends JPanel{
         if (!stdp.isSelected())
             Prefix.setFocusable(false);
 
+        Jp3.add(fontsize);
+        Jp3.add(_fontsize);
         Jp4.add(OptionFarbeH);
         Jp4.add(FarbeH);
         Jp5.add(OptionFarbeS);
@@ -100,6 +106,7 @@ public class Options extends JPanel{
         visuals.add(Jp9);
         visuals.add(Jp9_5);
         visuals.add(Jp10);
+        visuals.add(Jp3);
         visuals.add(Jp12);
         visuals.add(Jp11);
         visuals.add(Jp72);

@@ -1,18 +1,22 @@
 Starten von Dateien
 STT
 Player verbessern
-Pfad umbenennen Bewegen
 
-P2P
+Editor anpassen auf path nicht string auch input ändern
+
 Backup files
 
-timer in panel
-calculator
+P2P
 
-prefix (vieleicht verbessern)
+timer in panel
+calculator verbessern
+
 help nachricht
 
 commands bearbeiten sprache funktion
 
-Vorschläge
-schrift größe wir wollen ja bajerefrei sien ^^ 
+!!Vorschläge
+
+transparent vl
+
+unix mode

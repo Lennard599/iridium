@@ -21,6 +21,7 @@ public class ConfHandler {
         conf.put("prefixcolor:", "0 0 0");
         conf.put("prefixtext:", "");
         conf.put("dontshow:", "N");
+        conf.put("fontsize:", "12");
         ReadConf();
     }
 

@@ -1,6 +1,7 @@
 package iridium;
 
 import java.awt.*;
+import java.io.File;
 import java.net.URL;
 import java.util.*;
 
@@ -19,7 +20,7 @@ public class Methods {
 		call.setCommand("timer", new Command(() -> {
 			int a = Integer.parseInt(splitted[1].trim());
 			timer(a);
-		},1,""));
+		},1, 1,""));
 		call.setCommand("say", new Command(() -> {
 				String a1 = " ";
 				for (int i = 1; i < splitted.length; i++)
@@ -27,26 +28,38 @@ public class Methods {
 				sagen(a1);
 		},Integer.MAX_VALUE,":"));
 		call.setCommand("calculator",new Command(() -> {
-				double z1, z2 = 0;
+				double z1, z2;
 				try {
-					z1 = Double.parseDouble(splitted[1]);
-					z2 = Double.parseDouble(splitted[3]);
+					String input = "";
+					for (int i = 1;i < splitted.length;i++)
+						input += splitted[i];
+					input.replaceAll("-", "|-").replaceAll("/+", "|+").replaceAll("//", "|//").replaceAll("/*", "|/*");
+					String[] values = splitted[1].split("|");
+					if (values.length >= 3) {
+                        z1 = Double.parseDouble(values[0]);
+                        z2 = Double.parseDouble(values[2]);
 
-					if (z1 * z2 < Integer.MAX_VALUE)
-						Presentation.update(String.valueOf(rechner(z1, splitted[2], z2)), false);
-					else
-						Presentation.update("0,0", false);
-				} catch (java.lang.NumberFormatException e) {
-					Presentation.update("Falsche Parameter", false);
+                        if (z1 + z2 < Integer.MAX_VALUE | z1 * z2 < Integer.MAX_VALUE)
+                            Presentation.update(String.valueOf(rechner(z1, values[1], z2)), false);
+                        else
+                            Presentation.update("overflow", false);
+                    }
+                    else
+                        Presentation.update("wrong parameter", false);
+                } catch (java.lang.NumberFormatException e) {
+					Presentation.update("wrong parameter", false);
 				}
-		},3,"cal"));
-		call.setCommand("play",new Command(() ->  Player.Spiele(splitted), Integer.MAX_VALUE,""));
+		},Integer.MAX_VALUE,"calc"));
+		call.setCommand("play",new Command(() ->  Player.Spiele(splitted),1, Integer.MAX_VALUE,""));
 		call.setCommand("stop",new Command(() -> Player.Stop(),0,""));
 		call.setCommand("next",new Command(() -> Player.stop = false,0,""));
-		call.setCommand("create",new Command(() -> Filehandeling.Datei(splitted[1]),1,"touch"));
-		call.setCommand("delete",new Command(() -> Filehandeling.Löschen(splitted[1]),1,"rm"));
-		call.setCommand("list",new Command(() -> Filehandeling.getFiles("iridium/Docs", true),0,"ls"));
-		call.setCommand("open",new Command(() -> {if(splitted.length > 1) Iridium.Aus.add(new Editor(Filehandeling.Lesen(splitted[1], true), splitted[1], true,"",Iridium.Aus)); else Presentation.update("Argument requiert", false);},1,"edit"));
+		call.setCommand("create",new Command(() -> Filehandeling.create(splitted[1]),1,1,"touch"));
+		call.setCommand("move", new Command(() -> Filehandeling.move(splitted[1], splitted[2]),2,2, "mv"));
+		call.setCommand("delete",new Command(() -> Filehandeling.Löschen(splitted[1]),1,1,"rm"));
+		call.setCommand("list",new Command(() -> Filehandeling.getFiles(true),0,"ls"));
+		call.setCommand("changeDiretory",new Command(() -> Filehandeling.changeDiretory(splitted[1]),1,1,"cd"));
+		call.setCommand("pwd", new Command(() -> Filehandeling.pwd(),0,""));
+		call.setCommand("open",new Command(() -> Filehandeling.open(splitted[1]),1,1,"edit"));
 		call.setCommand("short",new Command(() -> {
 				if (splitted.length > 1) {
 					if (splitted[1].equals("-o")) {
@@ -61,17 +74,32 @@ public class Methods {
 				Methods.Short(splitted);
 		},Integer.MAX_VALUE,"sc"));
 		call.setCommand("background",new Command(() -> {
-		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.FarbeHintergrund(splitted[1]);
+			if (splitted.length == 4) {
+				if (splitted[1].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b") && splitted[2].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b") && splitted[3].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b")) {
+					ConfHandler.setConf("background:", splitted[1] + " " + splitted[2] + " " + splitted[3]);
+					ConfHandler.writeConf();
+					Presentation.setColor(Iridium.Aus, new Color(Integer.valueOf(splitted[1]), Integer.valueOf(splitted[2]), Integer.valueOf(splitted[3])));
+					Presentation.setColor(Iridium.status, new Color(Integer.valueOf(splitted[1]), Integer.valueOf(splitted[2]), Integer.valueOf(splitted[3])));
+				}
 				else
-					Presentation.update("Farbe nicht Verfügbar", false);
-		},1,"bg"));
+					Presentation.update("the value has to be between 0 and 255", false);
+			}
+			else
+				Presentation.update("Please use space not , between values", false);
+		},3,3,"bg"));
 		call.setCommand("font",new Command(() -> {
-		if (splitted[1].equals("rot") || splitted[1].equals("blau") || splitted[1].equals("grün") || splitted[1].equals("weiß") || splitted[1].equals("schwarz") || splitted[1].equals("gelb"))
-			Presentation.Farbeschrift(splitted[1]);
+			if (splitted.length == 4) {
+				if (splitted[1].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b") && splitted[2].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b") && splitted[3].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b")) {
+					ConfHandler.setConf("fontcolor:", splitted[1] + " " + splitted[2] + " " + splitted[3]);
+					ConfHandler.writeConf();
+					Presentation.Farbeschrift(splitted[1]+" "+splitted[2]+" "+splitted[3]);
+				}
 				else
-					Presentation.update("Farbe nicht Verfügbar", false);
-		},1,""));
+					Presentation.update("the value has to be between 0 and 255", false);
+			}
+			else
+				Presentation.update("Please use space not , between values", false);
+		},1,3,""));
 		call.setCommand("spotify",new Command(() -> open("https://open.spotify.com"),0,""));
 		call.setCommand("link",new Command(() -> {
 			if (!splitted[1].contains("https://"))
@@ -83,7 +111,7 @@ public class Methods {
 		call.setCommand("help",new Command(() -> {
 		    if (splitted.length > 1)
 			    if (call.checkCommands(splitted[1]))
-				    Presentation.update(Filehandeling.Lesen(Iridium.class.getClassLoader().getResource("help/"+splitted[1].trim()+".txt").getPath(),false),false);
+				    Presentation.update(Filehandeling.Lesen(new File(Iridium.class.getClassLoader().getResource("help/"+splitted[1].trim()+".txt").getPath())),false);
 		        else
 		        Presentation.update("command not found",false);
             else
@@ -120,7 +148,6 @@ public class Methods {
 			name = splitted[splitted.length-2];
 			text = splitted[splitted.length-1];
 
-			System.out.println(text +" "+ size + " " + name +" "+ col);
 			try {
 				MyQRCode.createQRImage(text, size, name, col, level, "png");
 			} catch (Exception ignore){}
@@ -202,7 +229,25 @@ public class Methods {
 	}
 
 	public static void runCommand(String f) {
+	    ArrayList<String> s = new ArrayList<>();
 		splitted = f.split("\\s+");
+		String a = "";
+		for (int i = 0;i < splitted.length;i++) {
+            if (splitted[i].contains("\"")) {
+                a += splitted[i].replace("\"","");
+                i++;
+                while (!splitted[i].contains("\"")) {
+                    a += " " + splitted[i];
+                    i++;
+                }
+                a += " " + splitted[i].replace("\"","");
+                s.add(a);
+            }
+            else
+                s.add(splitted[i]);
+        }
+        splitted = new String[s.size()];
+        splitted = s.toArray(splitted);
         call.runCommand(splitted);
 	}
 }

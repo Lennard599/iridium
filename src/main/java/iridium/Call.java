@@ -1,5 +1,6 @@
 package iridium;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -15,18 +16,18 @@ public class Call {
 
     public void runCommand(String[] input) {
         if (Commands.containsKey(input[0].toLowerCase())) {
-            if (Commands.get(input[0].toLowerCase()).getParameter() >= input.length-1)
+            if (Commands.get(input[0].toLowerCase()).getMaxparameter() >= input.length-1 && Commands.get(input[0].toLowerCase()).getMinparameter() <= input.length-1)
             Commands.get(input[0].toLowerCase()).getFunction().run();
             else
-                Presentation.update("to many parameters", false);
+                Presentation.update("too much or little parameters", false);
         }
         else if (getAliasList().contains(input[0].toLowerCase())) {
             for (String k : Commands.keySet())
                 if (Commands.get(k).getAlias().equals(input[0]))
-                    if (Commands.get(k).getParameter() >= input.length-1)
+                    if (Commands.get(k).getMaxparameter() >= input.length-1 && Commands.get(k).getMinparameter() <= input.length-1)
                         Commands.get(k).getFunction().run();
                     else
-                        Presentation.update("to many parameters", false);
+                        Presentation.update("too much or little parameter", false);
         }
         else {
             String a = suggestion(input[0]);
@@ -48,6 +49,14 @@ public class Call {
 
         for (String c : a)
             b += c + " | ";
+        return b;
+    }
+
+    public static ArrayList<String> getCommandsarray(){
+        Set<String> a = Commands.keySet();
+        ArrayList<String> b = new ArrayList<>();
+        for (String c : a)
+            b.add(c);
         return b;
     }
 
@@ -74,12 +83,30 @@ public class Call {
                 match = 0;
             }
         }
-        if (pmatch > 50)
-            return tmp;
+        //if (pmatch > 50)
+         //   return tmp;
         return "";
     }
 
-    private ArrayList<String> getAliasList(){
+    public static ArrayList<String> complete(String a){
+        if (!a.trim().isEmpty()) {
+            ArrayList<String> b = getAliasList();
+            ArrayList<String> c = getCommandsarray();
+            ArrayList<String> d = new ArrayList<>();
+
+            for (String aa : b)
+                if (aa.startsWith(a)) {
+                    d.add(b.get(b.indexOf(aa)));
+                }
+            for (String aa : c)
+                if (aa.startsWith(a))
+                    d.add(c.get(c.indexOf(aa)));
+            return d;
+        }
+        return new ArrayList<>();
+    }
+
+    private static ArrayList<String> getAliasList(){
         ArrayList<String> a = new ArrayList<String>();
         for (String c: Commands.keySet())
             a.add(Commands.get(c).getAlias());

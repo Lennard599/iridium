@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import javax.swing.*;
 
 public class Iridium {
-	public static final String version ="0.3.0";
+	public static final String version ="0.4.0";
 
 	public static JFrame meinFrame = new JFrame("Iridium "+version);
 	public static ImageIcon icon = new ImageIcon(Iridium.class.getClassLoader().getResource("icon.png").getFile());
@@ -178,7 +178,7 @@ public class Iridium {
         visuals.addActionListener(e -> Aus.add(new Options(1, Aus)));
         Programs.addActionListener(e -> Aus.add(new Options(2, Aus)));
 
-        getshort.addActionListener(e -> {
+		getshort.addActionListener(e -> {
 			Methods.getShortcut();
 			Presentation.posi = 0;
 			Presentation.p = 0;
