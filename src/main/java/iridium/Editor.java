@@ -28,30 +28,32 @@ public class Editor extends JPanel {
     boolean saved = true;
     static String a, path = "";
     JComponent parent;
+    JFrame frame;
     static KeyAdapter spezial;
     boolean sure;
     static SimpleAttributeSet center = new SimpleAttributeSet();
     
-    public Editor(ArrayList<String> a, String Path, JComponent parent) {
+    public Editor(ArrayList<String> a, String Path, JComponent parent, JFrame frame) {
         String in = "";
         
         for (int i = 0; i < a.size(); i++)
             in += a.get(i);
         
-        create(in, Path, parent);
+        create(in, Path, parent, frame);
     }
     
-    public Editor(String aa, String Path, JComponent parent) {
-        create(aa, Path, parent);
+    public Editor(String aa, String Path, JComponent parent, JFrame frame) {
+        create(aa, Path, parent, frame);
     }
     
-    private void create(String a, String p, JComponent parent) {
+    private void create(String a, String p, JComponent parent, JFrame frame) {
         this.a = a;
         this.path = p;
         this.parent = parent;
+        this.frame = frame;
+
+        frame.requestFocus();
         setLayout(new BorderLayout());
-        setSize(parent.getSize());
-        
         titlearea = new JTextPane();
         StyledDocument doc = titlearea.getStyledDocument();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
@@ -59,13 +61,17 @@ public class Editor extends JPanel {
         titlearea.setText(path);
         add(titlearea, BorderLayout.NORTH);
         titlearea.setEditable(false);
-        
+        titlearea.setPreferredSize(new Dimension(Iridium.meinFrame.getWidth(),20));
+        titlearea.setMinimumSize(new Dimension(Iridium.meinFrame.getWidth(),20));
+
         controles = new JTextPane();
         aligment("center");
         controles.setText("save: cmd + s / ctrl + s    quit: cmd + x / ctrl + x");
         add(controles, BorderLayout.SOUTH);
         controles.setEditable(false);
-        
+        controles.setPreferredSize(new Dimension(frame.getWidth(),20));
+        controles.setMinimumSize(new Dimension(frame.getWidth(),20));
+
         text = new JTextArea();
         scroll = new JScrollPane(text);
         add(scroll, BorderLayout.CENTER);
@@ -91,14 +97,26 @@ public class Editor extends JPanel {
         titlearea.setBackground(secondary);
         controles.setBackground(secondary);
         Presentation.setColor(Iridium.status,secondary);
-        
+
         try {
             Robot r = new Robot();
             r.keyPress(KeyEvent.VK_TAB);
             r.keyRelease(KeyEvent.VK_TAB);
             r.keyPress(KeyEvent.VK_TAB);
             r.keyRelease(KeyEvent.VK_TAB);
+            r.keyPress(KeyEvent.VK_TAB);
+            r.keyRelease(KeyEvent.VK_TAB);
+            text.setText(text.getText().trim());
         } catch (Exception e){}
+
+    }
+
+    private void end(){
+        frame.remove(this);
+        frame.add(Iridium.scroll,BorderLayout.CENTER);
+        frame.repaint();
+        frame.revalidate();
+        parent.requestFocus();
     }
     
     private static void save(String path) {
@@ -140,84 +158,78 @@ public class Editor extends JPanel {
     }
     
     KeyAdapter normal = new KeyAdapter() {
-    @Override
-    public void keyTyped(KeyEvent e) {
-    if (saved)
-    if (!text.getText().equals(a)) {
-    saved = false;
-    titlearea.setText("*" + titlearea.getText());
-}
-}
+        @Override
+        public void keyTyped(KeyEvent e) {
+            if (saved)
+                if (!text.getText().equals(a)) {
+                    saved = false;
+                    titlearea.setText("*" + titlearea.getText());
+                }
+        }
 
-@Override
-public void keyPressed(KeyEvent e) {
-if ((e.isControlDown() || e.isMetaDown()) && e.getKeyCode() == 83) {
-saved = true;
-titlearea.setText(titlearea.getText().replace("*", ""));
-text.removeKeyListener(normal);
-text.addKeyListener(spezial);
-aligment("left");
-controles.setText("save as: " + path +"|");
-}
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if ((e.isControlDown() || e.isMetaDown()) && e.getKeyCode() == 83) {
+                saved = true;
+                titlearea.setText(titlearea.getText().replace("*", ""));
+                text.removeKeyListener(normal);
+                text.addKeyListener(spezial);
+                aligment("left");
+                controles.setText("save as: " + path +"|");
+            }
 
-if ((e.isControlDown() || e.isMetaDown()) && e.getKeyCode() == 88) {
-if (saved) {
-Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
-parent.removeAll();
-parent.repaint();
-parent.revalidate();
-} else {
-sure = true;
-aligment("left");
-controles.setText("save before quiting? (Y/N):");
-text.setEditable(false);
-}
-}
-if (sure) {
-if (e.getKeyChar() == 'N' || e.getKeyChar() == 'n') {
-Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
-parent.removeAll();
-parent.repaint();
-parent.revalidate();
-} else if (e.getKeyChar() == 'Y' || e.getKeyChar() == 'y') {
-saved = true;
-titlearea.setText(titlearea.getText().replace("*", ""));
-text.addKeyListener(spezial);
-text.removeKeyListener(normal);
-aligment("left");
-controles.setText("save as: " + path +"|");
-text.addKeyListener(new TextareaEngine(controles, false, "save as: ", path, "|", () ->{
-save(getOutput());
-settitle(getOutput());
-Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
-parent.removeAll();
-parent.repaint();
-parent.revalidate();
-}));
-}
-}
-}
+            if ((e.isControlDown() || e.isMetaDown()) && e.getKeyCode() == 88) {
+                if (saved) {
+                    Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
+                    end();
+                } else {
+                    sure = true;
+                    aligment("left");
+                    controles.setText("save before quiting? (Y/N):");
+                    text.setEditable(false);
+                }
+            }
+            if (sure) {
+                if (e.getKeyChar() == 'N' || e.getKeyChar() == 'n') {
+                    Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
+                    end();
+                } else if (e.getKeyChar() == 'Y' || e.getKeyChar() == 'y') {
+                    saved = true;
+                    titlearea.setText(titlearea.getText().replace("*", ""));
+                    text.addKeyListener(spezial);
+                    text.removeKeyListener(normal);
+                    aligment("left");
+                    controles.setText("save as: " + path +"|");
+                    text.addKeyListener(new TextareaEngine(controles, false, "save as: ", path, "|", () ->{
+                        save(getOutput());
+                        settitle(getOutput());
+                        Presentation.setColor(Iridium.status, Presentation.getColor(Iridium.Aus));
+                        end();
+                    }));
+                }
+            }
+        }
 
-@Override
-public void keyReleased(KeyEvent e) {
+        @Override
+        public void keyReleased(KeyEvent e) {
 
-}
-};
+        }
+    };
 
-public static void settitle(String t){
+    public static void settitle(String t){
 path = t;
 }
 
-public static void aligment(String alignment){
-StyleConstants.setAlignment(center,
-alignment == "right"
-? StyleConstants.ALIGN_RIGHT
-: alignment == "center"
-? StyleConstants.ALIGN_CENTER
-: alignment == "left"
-? StyleConstants.ALIGN_LEFT
-: StyleConstants.ALIGN_LEFT);
-StyledDocument doc = controles.getStyledDocument();
-doc.setParagraphAttributes(0, doc.getLength(), center, false);
-}
+    public static void aligment(String alignment){
+        StyleConstants.setAlignment(center,
+        alignment == "right"
+                ? StyleConstants.ALIGN_RIGHT
+                : alignment == "center"
+                ? StyleConstants.ALIGN_CENTER
+                : alignment == "left"
+                ? StyleConstants.ALIGN_LEFT
+                : StyleConstants.ALIGN_LEFT);
+        StyledDocument doc = controles.getStyledDocument();
+        doc.setParagraphAttributes(0, doc.getLength(), center, false);
+    }
 }

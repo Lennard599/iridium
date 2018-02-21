@@ -36,7 +36,7 @@ public class HelpPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String tx = "";
-                if (Call.checkCommands(search.getText().trim())) {
+                if (Call.checkCommands(search.getText().trim(),false)) {
                     ArrayList<String> a = Filehandeling.Lesen(new File(Iridium.class.getClassLoader().getResource("help/"+search.getText().trim()+".txt").getPath()));
                     for (int i = 0; i < a.size(); i++)
                         tx += a.get(i);

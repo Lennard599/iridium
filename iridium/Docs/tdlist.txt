@@ -1,14 +1,14 @@
 Starten von Dateien
+Backup files
+
+
 STT
 Player verbessern
-
-Editor anpassen auf path nicht string auch input ändern
-
-Backup files
 
 P2P
 
 timer in panel
+
 calculator verbessern
 
 help nachricht

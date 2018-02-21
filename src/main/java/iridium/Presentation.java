@@ -70,7 +70,7 @@ public class Presentation {
         }
     }
 
-    private static void setText(){
+    public static void setText(){
         Iridium.Aus.setText(getPrefix(true) + out_l + cursor + out_r + sug);
     }
 
@@ -347,7 +347,7 @@ public class Presentation {
                     Iridium.Aus.setContentType("text/html");
                     Iridium.Aus.setText(getPrefix(false));
                     if (!(out_l+out_r).isEmpty()) {
-                        Methods.runCommand(out_l + out_r);
+                        Methods.runCommand((out_l + out_r).trim());
                         history.add(0, out_l + out_r);
                     }
                     posi = 0;

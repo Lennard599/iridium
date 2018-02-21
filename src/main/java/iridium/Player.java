@@ -66,14 +66,14 @@ public class Player {
                 p = p.toRealPath(LinkOption.NOFOLLOW_LINKS);
                 aa = p.toAbsolutePath().toString();
             } catch (IOException e){
-                Presentation.update("File not FOund", false);
+                Presentation.update("File not Found", false);
             }
             try {
                 f = new FileInputStream(aa);
                 play = new AdvancedPlayer(f);
                 frame = 0;
             } catch (Exception e) {
-                Presentation.update("Mp3 nicht gefunden", false);
+                Presentation.update("Mp3 not found", false);
             }
             stop = false;
         }

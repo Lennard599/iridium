@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import javax.swing.*;
 
 public class Iridium {
-	public static final String version ="0.4.0";
+	public static final String version ="0.4.1";
 
 	public static JFrame meinFrame = new JFrame("Iridium "+version);
 	public static ImageIcon icon = new ImageIcon(Iridium.class.getClassLoader().getResource("icon.png").getFile());

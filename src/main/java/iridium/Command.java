@@ -9,6 +9,8 @@ public class Command {
         this.function = function;
         this.maxparameter = parameter;
         this.alias = alias;
+        if (alias.isEmpty())
+            this.alias = "Lennard is the creator";
     }
 
     public Command(Runnable function, int maxparameter, int minparameter, String alias){
@@ -16,6 +18,8 @@ public class Command {
         this.maxparameter = maxparameter;
         this.minparameter = minparameter;
         this.alias = alias;
+        if (alias.isEmpty())
+            this.alias = "Lennard is the creator";
     }
 
     public Runnable getFunction() {

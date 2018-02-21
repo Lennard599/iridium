@@ -50,7 +50,7 @@ public class Methods {
 					Presentation.update("wrong parameter", false);
 				}
 		},Integer.MAX_VALUE,"calc"));
-		call.setCommand("play",new Command(() ->  Player.Spiele(splitted),1, Integer.MAX_VALUE,""));
+		call.setCommand("play",new Command(() ->  Player.Spiele(splitted[1]),1, 1,""));
 		call.setCommand("stop",new Command(() -> Player.Stop(),0,""));
 		call.setCommand("next",new Command(() -> Player.stop = false,0,""));
 		call.setCommand("create",new Command(() -> Filehandeling.create(splitted[1]),1,1,"touch"));
@@ -110,7 +110,7 @@ public class Methods {
 		call.setCommand("addprogramm",new Command(() -> Programmstart.addProgramm(splitted),Integer.MAX_VALUE,"add"));
 		call.setCommand("help",new Command(() -> {
 		    if (splitted.length > 1)
-			    if (call.checkCommands(splitted[1]))
+			    if (call.checkCommands(splitted[1],false))
 				    Presentation.update(Filehandeling.Lesen(new File(Iridium.class.getClassLoader().getResource("help/"+splitted[1].trim()+".txt").getPath())),false);
 		        else
 		        Presentation.update("command not found",false);
@@ -212,12 +212,10 @@ public class Methods {
 	}
 
 	private static void SetShort(String[] a) {
-		if (call.checkCommands(a[2]))
-		{
+		if (call.checkCommands(a[2],false)) {
 			String ab = "";
 			for (int i = 2;i < a.length;i++)
 				ab += a[i] + " ";
-			System.out.println(ab);
 			ConfHandler.setConf("shortcut:", ab);
 		}
 		else

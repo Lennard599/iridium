@@ -4,6 +4,8 @@ import net.iharder.dnd.FileDrop;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
@@ -34,7 +36,9 @@ public class Filehandeling {
             path = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
         } catch (java.io.IOException e) {}
         new FileDrop(Iridium.scroll, files -> {
-            Presentation.update(Presentation.out_l+" "+files[0].getAbsolutePath(),false);
+            Presentation.out_l += " "+files[0].getAbsolutePath();
+            Presentation.posi = Presentation.out_l.length();
+            Presentation.setText();
         });
     }
 
@@ -109,9 +113,9 @@ public class Filehandeling {
             if (p.toFile().isDirectory())
                 path = p;
             else
-                Presentation.update(p.toString()+"is not a Direktory",false);
+                Presentation.update(p.toString()+"is not a Directory",false);
         } catch (IOException e){
-            Presentation.update(p.toString()+"is not a Direktory",false);
+            Presentation.update(p.toString()+"is not a Directory",false);
         }
     }
 
@@ -170,15 +174,19 @@ public class Filehandeling {
     }
 
     public static void open(String path) {
-        if (path.contains(".txt"))
-            Iridium.Aus.add(new Editor(Lesen(path), path, Iridium.Aus));
+        if (path.contains(".txt")) {
+            Iridium.meinFrame.remove(Iridium.scroll);
+            JPanel jp = new Editor(Lesen(path), path, Iridium.Aus, Iridium.meinFrame);
+            Iridium.meinFrame.add(jp, BorderLayout.CENTER);
+        }
         else if (path.contains(".mp3"))
             Player.Spiele(path);
         else {
             try {
                 XWPFDocument docx = new XWPFDocument(new FileInputStream(toPath(path).toAbsolutePath().toString()));
                 XWPFWordExtractor we = new XWPFWordExtractor(docx);
-                Iridium.Aus.add(new Editor(we.getText(), path, Iridium.Aus));
+                Iridium.meinFrame.remove(Iridium.scroll);
+                Iridium.meinFrame.add(new Editor(we.getText(), path, Iridium.Aus, Iridium.meinFrame));
             } catch (Exception e) {
                 Presentation.update("Error file type not supported", true);
             }

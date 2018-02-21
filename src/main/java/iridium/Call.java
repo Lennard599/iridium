@@ -1,6 +1,5 @@
 package iridium;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -38,9 +37,32 @@ public class Call {
         }
     }
 
-    public static boolean checkCommands(String Command)
-    {
-            return Commands.containsKey(Command);
+    public static boolean checkCommands(String Command ,boolean contains) {
+        if (Commands.containsKey(Command)) {
+            return true;
+        }
+
+        for (String a:Commands.keySet()) {
+            if (Commands.get(a).getAlias().equals(Command)) {
+                return true;
+            }
+        }
+
+        if (contains) {
+            for (String a : Commands.keySet()) {
+                if (Command.startsWith(Commands.get(a).getAlias())) {
+                    return true;
+                }
+            }
+
+            for (String a : Commands.keySet()) {
+                if (Command.startsWith(a)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public static String getCommands(){
