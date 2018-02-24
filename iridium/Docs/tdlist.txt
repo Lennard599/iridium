@@ -1,13 +1,11 @@
-Starten von Dateien
+QR docs
 Backup files
-
+timer in panel
 
 STT
 Player verbessern
 
 P2P
-
-timer in panel
 
 calculator verbessern
 

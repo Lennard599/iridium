@@ -156,7 +156,7 @@ public class Options extends JPanel{
         anwenden.addActionListener(ee -> save());
         anwenden2.addActionListener(ee -> save());
 
-        ArrayList<String> a = Programmstart.getProgramm();
+        ArrayList<String> a = Programmstart.getProgram();
         JPanel links = new JPanel();
         JScrollPane s = new JScrollPane(links);
 
@@ -183,7 +183,7 @@ public class Options extends JPanel{
             Jps[i+1] = new JPanel();
             Pname[i] = new JTextField(8);
             Plink[i] = new JTextField(12);
-            Plink[i].setToolTipText(" path to .exe");
+            Plink[i].setToolTipText(" path to .exe or .app");
             Pname[i].setToolTipText("Start Command");
             try {
                 Pname[i].setText(a.get(j));
@@ -236,14 +236,12 @@ public class Options extends JPanel{
         pane.setSelectedIndex(index);
 
         anwendenp.addActionListener(eee -> {
-            String ad = "";
-            for (int i = 0; i < 10;i++)
-            {
-                ad += Pname[i].getText() + " ";
-                ad += Plink[i].getText() + " ";
-                Programmstart.addProgramm(ad);
-                ad = "";
+            ArrayList<String> ad = new ArrayList<>();
+            for (int i = 0; i < 10;i++) {
+                ad.add(Pname[i].getText());
+                ad.add(Plink[i].getText());
             }
+            Programmstart.addProgram(ad);
         });
         pane.add(new JLabel("if u are able to read this something went wrong"),"X", 3);
         pane.addChangeListener(new ChangeListener() {

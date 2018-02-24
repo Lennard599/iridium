@@ -73,6 +73,7 @@ public class Methods {
 				}
 				Methods.Short(splitted);
 		},Integer.MAX_VALUE,"sc"));
+		call.setCommand("prefix",new Command(() ->{if (splitted[1].equals("-std"))ConfHandler.setConf("stdprefix:","Y");ConfHandler.setConf("prefixtext:", splitted[1]);ConfHandler.setConf("stdprefix:","N");},1,1,""));
 		call.setCommand("background",new Command(() -> {
 			if (splitted.length == 4) {
 				if (splitted[1].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b") && splitted[2].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b") && splitted[3].matches("\\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\\b")) {
@@ -106,8 +107,8 @@ public class Methods {
 					splitted[1] = "https://" + splitted[1];
 				open(splitted[1]);
 		},1,"web"));
-		call.setCommand("start",new Command(() -> Programmstart.ProgrammStart(splitted[1]),1,"launch"));
-		call.setCommand("addprogramm",new Command(() -> Programmstart.addProgramm(splitted),Integer.MAX_VALUE,"add"));
+		call.setCommand("start",new Command(() -> Programmstart.launch(splitted[1]),1,"launch"));
+		call.setCommand("addprogram",new Command(() -> Programmstart.addProgram(splitted[1]+" "+splitted[2]), 2,2,"addp"));
 		call.setCommand("help",new Command(() -> {
 		    if (splitted.length > 1)
 			    if (call.checkCommands(splitted[1],false))

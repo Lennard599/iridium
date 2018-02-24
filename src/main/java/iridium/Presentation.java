@@ -198,7 +198,8 @@ public class Presentation {
                             Object o = t.getTransferData(DataFlavor.stringFlavor);
                             String data = (String) t.getTransferData(DataFlavor.stringFlavor);
                             out_l += data;
-                            Iridium.Aus.setText(Inhalt + prefix + Farbe + out_l + cursor + out_r);
+                            posi = out_l.length();
+                            Iridium.Aus.setText(getPrefix(true) + out_l + cursor + out_r + sug);
                         }
                     }catch (Exception ignore){
 

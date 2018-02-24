@@ -57,7 +57,7 @@ public class ConfHandler {
         File folder = new File("iridium");
         File Dateien = new File("iridium/Docs");
         File Musik = new File("iridium/Music");
-        File Programmeinfo = new File("iridium/Programmeconfig.txt");
+        File Programmeinfo = new File("iridium/Programconfig.txt");
         File file = new File("iridium/Iridiumconfig.txt");
 
         if (!folder.exists())

@@ -95,8 +95,8 @@ public class Filehandeling {
     public static File[] getFiles(boolean out) {
         String inhalt = "";
         File[] a = path.toFile().listFiles();
-        for (File aa : a)
-            inhalt += aa.getName() + "  ";
+        for (int i = 1;i < a.length;i++)
+            inhalt += a[i-1].getName() + "&nbsp;&nbsp;" + (i%3==0 ? "<br>" : "");
         if (out)
             Presentation.update(inhalt, false);
         return a;

@@ -1,11 +1,11 @@
 shortcut: timer 3 
-stdprefix: Y 
+stdprefix: N 
 fontstyle: Menlo 
 name: Lennard 
 backgroundcolor: 0 0 0 
 fontcolor: 255 255 255 
-fontsize: 15 
+fontsize: 17 
 prefixcolor: 255 255 0 
-prefixtext: aa_aaaa 
+prefixtext: λ 
 dontshow: N 
 background: 0 0 0 

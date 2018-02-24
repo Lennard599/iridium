@@ -1,98 +1,91 @@
 package iridium;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Programmstart {
-    public static void ProgrammStart(String Programm) {
-        String b = "";
-        ArrayList<String> a = Filehandeling.Lesen(new File("iridium/Programmeconfig.txt"));
-        int pos = a.indexOf(Programm);
-        for (int i = pos + 1; i < a.size(); i++) {
-            if (!a.get(i).equals("ende"))
-                b += a.get(i) + " ";
-            else
-                break;
-        }
+    static HashMap<String, String> progams = new HashMap<>();
+
+    public static void readPrograms(){
         try {
-            new ProcessBuilder(b).start();
-        } catch (Exception ignore) {
+            File f = new File("./iridium/Programconfig.txt");
+            Scanner sc = new Scanner(f);
+            while (sc.hasNextLine()) {
+                String[] a = sc.nextLine().split("\\s+");
+                String b = "";
+                if (a.length > 1)
+                    for (int i = 1;i < a.length;i++)
+                        b += a[i] + " ";
 
-        }
-
-    }
-
-    public static void addProgramm(String[] a) {
-        String b = "";
-        ArrayList<String> c = Filehandeling.Lesen(new File("iridium/Programmeconfig.txt"));
-        if (!c.contains(a[3]) || !c.contains(a[2])) {
-            for (int i = 0; i < c.size(); i++)
-                b += c.get(i) + " ";
-
-            for (int i = 1; i < a.length; i++)
-                b += a[i] + " ";
-            b += "ende";
-            SchreibenP(b);
-        }
-    }
-
-    public static void addProgramm(String a) {
-        boolean weiter = true;
-        if (a.contains(":/")) {
-            String b = "";
-            ArrayList<String> c = Filehandeling.Lesen(new File("iridium/Programmeconfig.txt"));
-            ArrayList<String> d = getProgramm();
-            for (String e : d)
-                if (a.contains(e)) {
-                    weiter = false;
-                }
-            if (weiter) {
-                for (String e : c)
-                    b += e + " ";
-
-                b += a + " ";
-                b += "ende";
-                SchreibenP(b);
+                progams.put(a[0].trim(),b.trim());
             }
+        } catch (Exception e) {
         }
     }
 
-    public static void SchreibenP(String b) {
-        File file = new File("iridium/Programmeconfig.txt");
+    public static void launch(String program) {
+        try {
+            new ProcessBuilder(progams.get(program)).start();
+        } catch (Exception e) {
+            Presentation.update(e.getMessage(),false);
+        }
+    }
+
+    public static void addProgram(String[] a) {
+        for (int i = 0;i <a.length/2;i = i+2) {
+            progams.put(a[i], a[i + 1]);
+        }
+        writeProgam();
+    }
+
+    public static void addProgram(String a) {
+        String[] b = a.split("\\s+");
+        String bb = "";
+
+        if (b[1].startsWith("./"))
+            bb = Filehandeling.path.toAbsolutePath()+"/";
+        if (!b[0].contains(a)) {
+            if (b.length > 1)
+                for (int i = 1;i < b.length;i++)
+                    bb += b[i] + " ";
+
+            progams.put(b[0],bb);
+            writeProgam();
+        }
+    }
+
+    public static void addProgram(ArrayList<String> a){
+        addProgram(a.toArray(new String[a.size()]));
+    }
+
+    public static void writeProgam() {
+        File file = new File("iridium/Programconfig.txt");
+        ArrayList<String> c = getProgram();
+        String b = "";
         try {
             FileWriter fw = new FileWriter(file);
-            fw.write(b + System.lineSeparator());
+            for (int i = 0; i < c.size(); i = i+2)
+                b += c.get(i) + " " + c.get(i+1) + "\n";
+
+            fw.write(b.trim());
             fw.close();
         } catch (IOException e3) {
             e3.printStackTrace();
         }
+        readPrograms();
     }
 
-    public static ArrayList<String> getProgramm() {
+    public static ArrayList<String> getProgram() {
         ArrayList<String> a = new ArrayList<>();
-        String b = "";
-        File f = new File("iridium/Programmeconfig.txt");
-        try {
-            Scanner sc = new Scanner(f);
-            a.add(sc.next());
-            while (sc.hasNext()) {
-                if (!sc.hasNext("ende"))
-                    b += sc.next();
-                else {
-                    a.add(b);
-                    sc.next();
-                    if (sc.hasNext())
-                        a.add(sc.next());
-                    b = "";
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+        Set<String> b = progams.keySet();
+
+        for (String aa:b) {
+            a.add(aa);
+            a.add(progams.get(aa));
         }
+
         return a;
     }
 }
