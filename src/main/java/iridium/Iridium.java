@@ -17,7 +17,7 @@ public class Iridium {
 	public static void main(String[] args) {
 		if(args.length > 0){
 			String a = "";
-			Updater.delet(args[0]);
+			Updater.delete(args[0]);
 			for (int i = 1; i < args.length; i++)
 				a += args[i]+" ";
 			Presentation.update(a,false);

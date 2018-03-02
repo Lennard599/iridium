@@ -73,6 +73,7 @@ public class Editor extends JPanel {
         controles.setMinimumSize(new Dimension(frame.getWidth(),20));
 
         text = new JTextArea();
+        text.requestFocus();
         scroll = new JScrollPane(text);
         add(scroll, BorderLayout.CENTER);
         text.setText(a);
@@ -97,18 +98,6 @@ public class Editor extends JPanel {
         titlearea.setBackground(secondary);
         controles.setBackground(secondary);
         Presentation.setColor(Iridium.status,secondary);
-
-        try {
-            Robot r = new Robot();
-            r.keyPress(KeyEvent.VK_TAB);
-            r.keyRelease(KeyEvent.VK_TAB);
-            r.keyPress(KeyEvent.VK_TAB);
-            r.keyRelease(KeyEvent.VK_TAB);
-            r.keyPress(KeyEvent.VK_TAB);
-            r.keyRelease(KeyEvent.VK_TAB);
-            text.setText(text.getText().trim());
-        } catch (Exception e){}
-
     }
 
     private void end(){

@@ -28,7 +28,7 @@ public class Updater {
     }
 
     //loading bit stream  and saving it
-    private static void download(String URL,String des) {
+    public static void download(String URL,String des) {
         try {
             URL url = new URL(URL);
             java.io.InputStream inStream = url.openStream();
@@ -54,8 +54,8 @@ public class Updater {
         }
     }
 
-    //delet to delet old version
-    public static void delet(String s){
+    //delete to delete old version
+    public static void delete(String s){
         try {
             File ff = new File(s);
             ff.delete();
@@ -120,28 +120,4 @@ public class Updater {
             System.out.println("unzip "+e);
         }
     }
-
-    /*public static void updateHelp() {
-        if (!httpResponse("http://jannik.ddns.net/iridium.help.version.txt").trim().equals(Iridium.helpversion)) {
-            Presentation.update("installing...", false);
-            download("http://jannik.ddns.net/iridium.help.zip", "iridium.help.zip");
-            File help = new File("iridium/_help/");
-            if (!help.exists())
-                help.mkdir();
-            unzip("iridium.help.zip", "iridium/_help/");
-            File h = new File("iridium/help/");
-            if (!h.exists())
-                h.mkdir();
-            else
-                for (String s : h.list()) {
-                    File currentFile = new File(h.getPath(), s);
-                    currentFile.delete();
-                }
-            h.delete();
-            help.renameTo(h);
-            File ar = new File("iridium.help.zip");
-            ar.delete();
-            Presentation.update("update finished", false);
-        }
-    }*/
 }

@@ -120,7 +120,7 @@ public class Methods {
 		},1,"man"));
 		call.setCommand("commands",new Command(() -> Presentation.update(call.getCommands(),false),0,""));
 		call.setCommand("quit",new Command(() -> System.exit(0),0,"exit"));
-		call.setCommand("QR",new Command(() -> {
+		call.setCommand("qr",new Command(() -> {
 			String text = "";
 			int size = 250;
 			String name = "";
@@ -140,22 +140,31 @@ public class Methods {
 			if(a.contains("-size") && !a.contains("\\-size"))
 				size = Integer.parseInt(a.get(a.indexOf("-size") + 1));
 
-			if(a.contains("-color") && !a.contains("\\-color"))
-				col = b.get(a.get(a.indexOf("-color")+1));
+			if(a.contains("-color") && !a.contains("\\-color")) {
+				col = b.get(a.get(a.indexOf("-color") + 1));
+			}
+			//watt wenn null und r g b values
 
 			if(a.contains("-level") && !a.contains("\\-level"))
 				level = ErrorCorrectionLevel.valueOf(a.get(a.indexOf("-level") + 1));
+			//welche level gibt es
 
 			name = splitted[splitted.length-2];
+			if (name.startsWith("./"))
+				name = Filehandeling.path.toAbsolutePath()+"/"+name;
+			System.out.println(name);
+
 			text = splitted[splitted.length-1];
 
 			try {
-				MyQRCode.createQRImage(text, size, name, col, level, "png");
+				MyQRCode.createQRImage(text, size, name, col, level);
 			} catch (Exception ignore){}
 		},Integer.MAX_VALUE,""));
 		call.setCommand("update",new Command(() ->  {if(splitted.length>1&&splitted[1].equals("-keep"))Updater.update(true);
 		else Updater.update(false);},1,""));
 		call.setCommand("settings",new Command(() -> Iridium.Aus.add(new Options(1,Iridium.Aus)),0,""));
+		call.setCommand("convert", new Command(() -> Filehandeling.markdown2Pdf(splitted[1],splitted[2]),2,2,"to"));
+		call.setCommand("download", new Command(() -> Updater.download(splitted[1],splitted[2]),2,2,"get"));
 	}
 
 	private static void open(String urlString) {
@@ -208,7 +217,6 @@ public class Methods {
 		String a = "";
 		for (int i = 1;i < argument.length;i++)
 			a += argument[i] + " ";
-		System.out.println(ConfHandler.getConf("shortcut:")+ a);
 		Methods.runCommand(ConfHandler.getConf("shortcut:") + a);
 	}
 

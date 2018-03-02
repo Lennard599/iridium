@@ -1,15 +1,17 @@
-QR docs
+vl noch mehr convertierung oder markdown anzeigen
+downloader
 Backup files
 timer in panel
 
 STT
 Player verbessern
 
+Windows Pathing fixen
+
 P2P
+bluetoth
 
 calculator verbessern
-
-help nachricht
 
 commands bearbeiten sprache funktion
 

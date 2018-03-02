@@ -18,9 +18,7 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class MyQRCode {
 
-    public static void createQRImage(String qrCodeText, int size, String name, Color col, ErrorCorrectionLevel level,
-                                      String fileType) throws WriterException, IOException {
-        System.out.println(qrCodeText +" "+ size + " " + name +" "+ col);
+    public static void createQRImage(String qrCodeText, int size, String name, Color col, ErrorCorrectionLevel level) throws WriterException, IOException {
         // Create the ByteMatrix for the QR-Code that encodes the given String
         Hashtable hintMap = new Hashtable();
         hintMap.put(EncodeHintType.ERROR_CORRECTION, level);
@@ -46,8 +44,7 @@ public class MyQRCode {
                 }
             }
         }
-        File qrFile = new File(name + ".png");
-        ImageIO.write(image, fileType, qrFile);
+        File qrFile = new File(name);
+        ImageIO.write(image, name.substring(name.lastIndexOf(".")+1,name.length()), qrFile);
     }
-
 }

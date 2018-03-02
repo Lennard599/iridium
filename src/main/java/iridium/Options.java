@@ -199,7 +199,7 @@ public class Options extends JPanel{
         setLayout(overlay);
 
         fr.addActionListener(eee -> {
-            add(new OutputPanel("Help","with the function program is it possible to create a command witch executes an executable\nEnter the wished command left and the path to the .exe or .app to the left.\nIf you wish to add more programs then 10 feel free to use the command.\nIt is possible to use one command for more then one executable.",parent));
+            add(new OutputPanel("Help","with the function program is it possible to create a command witch executes an executable\nEnter the wished command left and the path to the executable to the left.\nIf you wish to add more programs then 10 feel free to use the command.",parent));
             links.addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {

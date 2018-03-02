@@ -1,6 +1,10 @@
 package iridium;
 
+import com.qkyrie.markdown2pdf.Markdown2PdfConverter;
+import com.qkyrie.markdown2pdf.internal.exceptions.ConversionException;
+import com.qkyrie.markdown2pdf.internal.exceptions.Markdown2PdfLogicException;
 import net.iharder.dnd.FileDrop;
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
@@ -29,6 +33,31 @@ public class Filehandeling {
         }
 
         return p;
+    }
+
+    public static void markdown2Pdf(String source, String destination) {
+        Path p1 = toPath(source);
+        Path p2 = toPath(destination);
+        ArrayList<String> a = Lesen(p1.toFile());
+        String text = "";
+        for (int i = 0;i < a.size();i++)
+            text += a.get(i);
+        final String t = text;
+        try {
+            try {
+                Markdown2PdfConverter
+                        .newConverter()
+                        .readFrom(() -> t)
+                        .writeTo(out -> {
+                            try {
+                                FileUtils.writeByteArrayToFile(p2.toFile(), out);
+                            } catch (IOException e){}
+                        })
+                        .doIt();
+            } catch (Markdown2PdfLogicException e1) {
+            }
+        } catch (ConversionException e2){
+        }
     }
 
     public static void enableFiledrop(){

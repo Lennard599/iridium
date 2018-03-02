@@ -186,24 +186,28 @@ public class Presentation {
         th.start();
     }
 
+    public static String getFromClipboard(){
+        Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+        Transferable t = clpbrd.getContents( null );
+        try {
+            if (t.isDataFlavorSupported(DataFlavor.stringFlavor)) {
+                Object o = t.getTransferData(DataFlavor.stringFlavor);
+                String data = (String) t.getTransferData(DataFlavor.stringFlavor);
+                return data;
+            }
+        }catch (Exception ignore){
+        }
+        return "";
+    }
+
     public static void Mouse(){
         Iridium.Aus.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (e.getButton() == 3){
-                    Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-                    Transferable t = clpbrd.getContents( null );
-                    try {
-                        if (t.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-                            Object o = t.getTransferData(DataFlavor.stringFlavor);
-                            String data = (String) t.getTransferData(DataFlavor.stringFlavor);
-                            out_l += data;
-                            posi = out_l.length();
-                            Iridium.Aus.setText(getPrefix(true) + out_l + cursor + out_r + sug);
-                        }
-                    }catch (Exception ignore){
-
-                    }
+                if (e.getButton() == 3) {
+                    out_l += getFromClipboard();
+                    posi = out_l.length();
+                    setText();
                 }
             }
 
@@ -252,6 +256,19 @@ public class Presentation {
                     ConfHandler.setConf("fontsize:", String.valueOf(s));
                     ConfHandler.writeConf();
                     Presentation.updateProperties();
+                }
+                if ((e.isControlDown() || e.isMetaDown() && e.getExtendedKeyCode() == 86)){
+                    out_l += getFromClipboard();
+                    posi = out_l.length();
+                    setText();
+                }
+                if ((e.isControlDown() || e.isMetaDown() && e.getExtendedKeyCode() == 67)) {
+                    if (Iridium.Aus.getSelectedText() != null) {
+                        String s = Iridium.Aus.getSelectedText();
+                        copyToClipboard(s);
+                        int end = Iridium.Aus.getSelectionEnd();
+                        Iridium.Aus.setSelectionStart(end);
+                    }
                 }
                 if ((e.isMetaDown() || e.isControlDown()) && e.getExtendedKeyCode() == 45){
                     int s = Integer.valueOf(ConfHandler.getConf("fontsize:").trim());
